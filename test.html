@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html > 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    #cursor-shape {
+      transform: translate(-50%, -50%);
+      transition: border-radius 0.3s, transform 0.2s ease;
+    }
+ 
+  
+    .circle { border-radius: 50%; }
+    .square { border-radius: 12px;  }
+    .diamond {
+  border-radius: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+    .blob {
+      border-radius: 35% 65% 55% 45% / 60% 30% 70% 40%;
+      transition: all 0.6s ease-in-out;
+    }
+    body.no-scroll {
+  overflow: hidden;
+}
+  </style>
+  
+  
+</head>
+<body  class="bg-gray-900">
+
+     <!-- Splash Screen -->
+     <div id="splash" class="fixed  inset-0 bg-gray-900 flex flex-col md:p-20 p-3  z-50">
+      <img src="logo.png" alt="DevFusion Logo" class="lg:w-[40%] lg:h-[70%] my-20 lg:my-2 mx-auto mb-10 opacity-0" id="splash-logo">
+      
+  <div class="flex gap-10 fixed bottom-0 mb-20 w-full px-10  py-5">
+      <h1 class="text-[13vw] text-gray-400 animate-pulse font-semibold" id="splash-loading">Loading</h1>
+      <h1 class="text-[13vw] font-bold text-gray-100" id="countup">0%</h1>
+  </div>
+  </div>
+    </div>
+
+
+
+  <!-- header section    -->
+  <header id="header" class="sticky top-0 z-100 inset-x-0 text-gray-300 bg-transparent transition-bg hidden">
+    <nav class=" navBAr flex items-center justify-between px-6 bg-white dark:bg-gray-900/50  lg:px-8  transition-colors duration-300" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img class="h-16 w-auto"
+            src="logo.png" alt="Company Logo">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" id="menu-toggle" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 
+                text-gray-700 dark:text-gray-300 
+                hover:bg-gray-100 dark:hover:bg-gray-800 
+                transition-all duration-300">
+          <span class="sr-only">Open menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5h16.5M3.75 12h16.5M3.75 19h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#home"
+          class="text-sm/6 font-semibold text-black dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-900 text-8xl">Home</a>
+        <a href="#Features"
+          class="text-sm/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Features</a>
+        <a href="#"
+          class="text-sm/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">About</a>
+        <a href="#dev"
+          class="text-sm/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Devlopers</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="./login&sineup.html"
+          class="text-sm/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">
+          Log in <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div id="backdrop" class="fixed inset-0 z-50 hidden"></div>
+      <div id="mobile-menu"
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform translate-x-full transition-transform duration-300">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-14 w-auto"
+              src="logo.png" alt="logo">
+          </a>
+          <button id="menu-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-200 dark:divide-gray-700">
+            <div class="space-y-2 py-6">
+                <a href="#home"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#Features"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Features</a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#dev"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Devloper</a>
+            </div>
+            <div class="py-6">
+                <a href="./login&sineup.html"
+                   class="-mx-3 block rounded-lg px-3 py-2.5 text-black font-semibold text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-700 dark:hover:text-white">
+                   Log in
+                </a>
+                <a  href="https://github.com/riocoder7/app_weside/releases/download/v1.0.0/CodeSpark.apk" download="CodeSpak.apk"
+                 class="-mx-3 block rounded-lg px-3 py-2.5 text-black font-semibold text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-700 dark:hover:text-white">
+                 Download now <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                </svg>
+              </a>
+            </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+    <!-- Hero section -->
+    <div id="hero" class="bg-white dark:bg-gray-900 h-screen ">
+      
+    
+
+      <div id="home" class="relative isolate px-6  lg:px-8">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true">
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+          </div>
+        </div>
+        <div class="mx-auto max-w-2xl py-22 sm:py-48 lg:py-56">
+          <!-- <div class="mb-10 bg-red-500 sm:mb-8 sm:flex justify-center">
+            <div class="flex justify-center items-center px-4 py-6">
+              <div class="relative rounded-full px-4 py-2 text-sm
+                          text-gray-600 dark:text-gray-300
+                          bg-gray-100 dark:bg-gray-800
+                          ring-1 ring-gray-900/10 dark:ring-gray-700
+                          hover:ring-gray-900/20 dark:hover:ring-gray-500
+                          transition-all duration-300 text-center max-w-full sm:max-w-fit">
+                
+                New feature released!
+                
+                <a href="https://github.com/riocoder7/app_weside/releases/download/v1.0.0/CodeSpark.apk" download="CodeSpak.apk"
+                   class="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center ml-2">
+                  Download Now
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="text-center mt-22 ">
+            <h1 class="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-6xl">  Transform Your Ideas Into Digital Reality </h1>
+            <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 ">   Professional Web & App Development for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital solutions tailored to elevate your brand and drive results.</p>
+            <div class="mt-15 flex items-center justify-center gap-x-6 ">
+              <a href="#"
+                class="rounded-md bg-indigo-500   px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">See Pricing</a>
+                
+              <a href="#" class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">Get Quote <span
+                  aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+        </div>
+        <div
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true">
+          <div
+            class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex px-20 py-8 lg:px-8 lg:py-12">
+
+
+     
+    </div>
+    </div>
+  
+      <!-- Services -->
+  <section id="services" class="my-22  ">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16 text-white ">What We Offer</h2>
+      <div class="grid md:grid-cols-3 mt-22 gap-20">
+        <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
+          <img src="https://img.icons8.com/ios/100/ffffff/domain.png" alt="Web" class="mx-auto mb-4" />
+          <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">Website Development</h3>
+          <p class="text-gray-400 group-hover:text-white transition">Responsive, SEO-optimized, and performance-focused websites.</p>
+        </div>
+        <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
+          <img src="https://img.icons8.com/ios/100/ffffff/smartphone.png" alt="App" class="mx-auto mb-4" />
+          <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">Mobile App Development</h3>
+          <p class="text-gray-400 group-hover:text-white transition">Cross-platform apps for Android and iOS using Flutter and React Native.</p>
+        </div>
+        <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
+          <img src="https://img.icons8.com/ios/100/ffffff/design.png" alt="Design" class="mx-auto mb-4" />
+          <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">UI/UX Design</h3>
+          <p class="text-gray-400 group-hover:text-white transition">Modern and intuitive user interfaces crafted in Figma and Adobe XD.</p>
+        </div>
+      </div>
+  
+
+    </div>
+  </section>
+
+   <!-- Pricing -->
+   <section id="pricing" class="my-60 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-white mb-16">Our Packages</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-blue-500">
+          <h3 class="text-2xl font-bold mb-2">Basic</h3>
+          <p class="text-blue-400 text-xl font-semibold mb-4">₹15,000</p>
+          <ul class="text-gray-300 space-y-2 mb-4">
+            <li>Single Page Site</li>
+            <li>Mobile Responsive</li>
+            <li>Simple Contact Form</li>
+            <li>Delivery in 5 Days</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-blue-600 text-white py-2 rounded-lg font-medium">Get Started</a>
+        </div>
+        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-indigo-500">
+          <h3 class="text-2xl font-bold mb-2">Intermediate</h3>
+          <p class="text-indigo-400 text-xl font-semibold mb-4">₹30,000</p>
+          <ul class="text-gray-300 space-y-2 mb-4">
+            <li>3-5 Pages</li>
+            <li>Modern UI/UX</li>
+            <li>Admin Panel (optional)</li>
+            <li>Delivery in 10 Days</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-indigo-600 text-white py-2 rounded-lg font-medium">Choose Plan</a>
+        </div>
+        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-gray-600">
+          <h3 class="text-2xl font-bold mb-2">Advanced</h3>
+          <p class="text-gray-300 text-xl font-semibold mb-4">Custom Quote</p>
+          <ul class="text-gray-300 space-y-2 mb-4">
+            <li>Full-stack Development</li>
+            <li>Custom Features</li>
+            <li>Ongoing Support</li>
+            <li>Project-Based Timeline</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-gray-700 text-white py-2 rounded-lg font-medium">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  
+
+    <!-- circle dot  -->
+  <div id="cursor-shape" class="fixed top-0 left-0 w-10 h-10 bg-indigo-500 rounded-full pointer-events-none z-50 mix-blend-difference">  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="test.js">
+
+    </script>
+</body>
+</html>
