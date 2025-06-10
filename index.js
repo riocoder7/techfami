@@ -132,3 +132,34 @@ Splash_Screen();
  }
     dotButton();
 
+const reviewSlider = () => {
+
+  const topSwiper = new Swiper('.topSwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    speed: 4000,
+    grabCursor: true,
+  });
+
+  const bottomSwiper = new Swiper('.bottomSwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+    speed: 4000,
+    grabCursor: true,
+  });
+
+
+}
+reviewSlider();
+
