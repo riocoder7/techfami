@@ -164,34 +164,5 @@ const reviewSlider = () => {
 
 reviewSlider();
 
-const slide_image = () => {
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.3,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 1.5,
-      },
-      768: {
-        slidesPerView: 2.2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-}
 
-slide_image();
 

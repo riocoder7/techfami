@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coverflow Slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        background-color: #f3f4f6;
+      }
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-6xl px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+        Coverflow Image Slider
+      </h2>
+      <div class="swiper mySwiper mx-auto bg-red-500 ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/voRxaoQsNb5lgOljgV3xwl6OhsoCufsjwYnuZSNKhVw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9iL2I2L0lt/YWdlX2NyZWF0ZWRf/d2l0aF9hX21vYmls/ZV9waG9uZS5wbmcv/OTYwcHgtSW1hZ2Vf/Y3JlYXRlZF93aXRo/X2FfbW9iaWxlX3Bo/b25lLnBuZw')"></div>
+          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/2Rto6WuMWmPeCx37d3zX26Hx2P3_nbuAphoZZ4GIQJY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjA5/MjAyODM4MS9mci9w/aG90by90ZWNobm9s/b2dpZS1kZS1jciVD/MyVBOWF0aW9uLWRp/bWFnZXMtcGFyLWlh/LWxob21tZS11dGls/aXNlLXVuLWxvZ2lj/aWVsLWRpYS1zdXIt/dW4tb3JkaW5hdGV1/ci5qcGc_Yj0xJnM9/NjEyeDYxMiZ3PTAm/az0yMCZjPTMxWG5N/azRxTldhMW5IS19H/TVVFNkQ2VGwyYTh2/ZEh5eHp1Q2ZVT1BJ/LVk9')"></div>
+          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/zYvkuVqxZ-8A-Xj3jqGu6njdckyhSwcqyTnYBWRT9EM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM4/NTk3MDIyMy9waG90/by9ncmVhdC1pZGVh/LW9mLWEtbWFya2V0/aW5nLXN0cmF0ZWd5/LXBsYW4tYXQtYS1j/cmVhdGl2ZS1vZmZp/Y2UuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZ1cF9KOGVr/aFlJYkYzcWlVRW85/dDI4dThYLVVyRk5x/d3J5eVJoQmwzNXc9')"></div>
+          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/1A3wD2zxXL7QusL361C8w2fGfuHUeYwBkdJbws_-Ny0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/OTA0MTc3NS9waG90/by9waG90by1kZXBp/Y3RpbmctdGhlLXBl/cnNvbi13aG8tZm9j/dXNlcy1vbi10aGUt/dGFyZ2V0LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz04Z3Uy/Y2hXU0tlbjFtUnZB/QldoUzROdkk5NDM3/eWF5bUhYUE9tek04/UXlBPQ')"></div>
+          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/Fe6vgniJL46OaEkD1jZp5KNMC2HMOmJtoo459Cd95xo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ2/NDU2MTc5Ny9waG90/by9hcnRpZmljaWFs/LWludGVsbGlnZW5j/ZS1wcm9jZXNzb3It/dW5pdC1wb3dlcmZ1/bC1xdWFudHVtLWFp/LWNvbXBvbmVudC1v/bi1wY2ItbW90aGVy/Ym9hcmQtd2l0aC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/NVRJQ0hHX2JEVmJJ/aUpFZjNjZjItcXVH/dWhYbTBfVHhfUmll/clNaZENRcz0')"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3 seconds
+      disableOnInteraction: false,
+    },
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+      scale: 1,
+    },
+  });
+    </script>
+  </body>
+</html>
