@@ -43,7 +43,7 @@
 
      <!-- Splash Screen -->
      <div id="splash" class="fixed  inset-0 bg-gray-900 flex flex-col md:p-20 p-3  z-50">
-      <img src="logo.png" alt="DevFusion Logo" class="lg:w-[40%] lg:h-[70%] my-20 lg:my-2 mx-auto mb-10 opacity-0" id="splash-logo">
+      <img src="../images/logo.png" alt="DevFusion Logo" class="lg:w-[40%] lg:h-[70%] my-20 lg:my-2 mx-auto mb-10 opacity-0" id="splash-logo">
       
   <div class="flex gap-10 fixed bottom-0 mb-20 w-full px-10  py-5">
       <h1 class="text-[13vw] text-gray-400 animate-pulse font-semibold" id="splash-loading">Loading</h1>
@@ -52,7 +52,25 @@
   </div>
     </div>
 
+<!-- Floating WhatsAppIcons -->
+<div id="whatapps" class=" fixed bottom-5 right-2 z-50 flex flex-col items-end gap-4 hidden">
 
+  <!-- WhatsApp Button -->
+  <div class="relative group">
+    <span
+      class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white text-green-600 text-sm font-semibold px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap">
+      Chat on WhatsApp
+    </span>
+    <a href="https://api.whatsapp.com/send?phone=+919930870979&text=Hello%20DevFusion"
+       target="_blank"
+       class="w-16 h-16 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+           alt="WhatsApp" class="w-16 h-16 object-contain" />
+    </a>
+  </div>
+
+  
+</div>
 
   <!-- header section    -->
   <header id="header" class="sticky top-0 z-100 inset-x-0 text-gray-300 bg-transparent transition-bg hidden">
@@ -61,7 +79,7 @@
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
           <img class="h-16 w-auto"
-            src="logo.png" alt="Company Logo">
+            src="../images/logo.png" alt="Company Logo">
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -264,7 +282,7 @@
   </h1>
  
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8  px-2 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8  px-5 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
 
        <!-- Expertise & Innovation -->
   <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
@@ -302,49 +320,124 @@
   </div>
 </div>
 
-
-   <!-- Pricing -->
-   <section id="pricing" class="my-60 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-white mb-16">Our Packages</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-blue-500">
-          <h3 class="text-2xl font-bold mb-2">Basic</h3>
-          <p class="text-blue-400 text-xl font-semibold mb-4">₹15,000</p>
-          <ul class="text-gray-300 space-y-2 mb-4">
-            <li>Single Page Site</li>
-            <li>Mobile Responsive</li>
-            <li>Simple Contact Form</li>
-            <li>Delivery in 5 Days</li>
-          </ul>
-          <a href="#contact" class="block text-center bg-blue-600 text-white py-2 rounded-lg font-medium">Get Started</a>
-        </div>
-        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-indigo-500">
-          <h3 class="text-2xl font-bold mb-2">Intermediate</h3>
-          <p class="text-indigo-400 text-xl font-semibold mb-4">₹30,000</p>
-          <ul class="text-gray-300 space-y-2 mb-4">
-            <li>3-5 Pages</li>
-            <li>Modern UI/UX</li>
-            <li>Admin Panel (optional)</li>
-            <li>Delivery in 10 Days</li>
-          </ul>
-          <a href="#contact" class="block text-center bg-indigo-600 text-white py-2 rounded-lg font-medium">Choose Plan</a>
-        </div>
-        <div class="bg-gray-800 rounded-2xl p-8 shadow-xl border-t-4 border-gray-600">
-          <h3 class="text-2xl font-bold mb-2">Advanced</h3>
-          <p class="text-gray-300 text-xl font-semibold mb-4">Custom Quote</p>
-          <ul class="text-gray-300 space-y-2 mb-4">
-            <li>Full-stack Development</li>
-            <li>Custom Features</li>
-            <li>Ongoing Support</li>
-            <li>Project-Based Timeline</li>
-          </ul>
-          <a href="#contact" class="block text-center bg-gray-700 text-white py-2 rounded-lg font-medium">Contact Us</a>
-        </div>
+  <!-- show case ui design -->
+<section id="showcase" class="my-60">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 text-white">Showcase of Our UI Designs</h2>
+    <div class="flex flex-col lg:flex-row lg:justify-center lg:gap-10">
+      <div class="text-center">
+        <img src="../images/image1.png" alt="UI Design 1" class="w-full h-auto rounded-lg shadow-lg lg:max-w-[95%] xl:max-w-[95%] mx-auto">
+      </div>
+      <div class="text-center my-5 lg:my-0">
+        <img src="../images/image3.png" alt="UI Design 2" class="w-full h-auto rounded-lg shadow-lg lg:max-w-[95%] xl:max-w-[95%] mx-auto">
       </div>
     </div>
-  </section>
+    
+  </div>
+</section>
 
+  
+ <!--  pricing section   -->
+ <section class="bg-gray-900 py-20 px-4">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-white mb-4">
+      Global Plans for Every Business
+    </h2>
+    <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+      Flexible digital solutions tailored for individuals, startups, and enterprises across the globe. Choose the plan that fits your business needs.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Starter Plan -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold  text-white mb-4">Starter Plan</h3>
+          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
+
+          <ul class="text-left text-gray-300 space-y-2">
+            <li>✓ One-Page Modern Website</li>
+            <li>✓ WhatsApp Chat Integration</li>
+            <li>✓ Responsive Mobile Design</li>
+            <li>✓ SEO Ready Structure</li>
+            <li>✓ Delivery in 3 Days</li>
+            <li>✓ Email Contact Form</li>
+            <li>✓ Basic Analytics Setup</li>
+            <li>✓ Google Maps Integration</li>
+            <li>✓ Custom Domain Setup</li>
+            <li>✓ 1 Month Free Support</li>
+          </ul>
+        </div>
+        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
+
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-600 mb-4">₹9,999 / $60</div>
+          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
+            Choose Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Pro Business Plan -->
+      <div class="bg-green-900 border-2 border-green-500 rounded-2xl shadow-xl p-8 flex flex-col justify-between scale-105">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-center text-green-100 mb-4">Pro Business Plan</h3>
+          <div class="w-full h-[1px] bg-gray-500 my-6"></div>
+
+          <ul class="text-left text-green-100 space-y-2">
+            <li>✓ 5 Pages Website + Admin Panel</li>
+            <li>✓ Advanced Chatbot + Push Notifications</li>
+            <li>✓ Google My Business Listing</li>
+            <li>✓ On-Page SEO Optimization</li>
+            <li>✓ Social Media Integration</li>
+            <li>✓ Blog/News Section</li>
+            <li>✓ Analytics & Traffic Reports</li>
+            <li>✓ Custom Contact Forms</li>
+            <li>✓ Newsletter Integration</li>
+            <li>✓ 3 Months Free Support</li>
+          </ul>
+        </div>
+        <div class="w-full h-[1px] bg-gray-500 my-3"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-4">₹14,999 / $180</div>
+          <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
+            Choose Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-center text-white mb-4">Enterprise Plan</h3>
+          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
+
+          <ul class="text-left text-gray-300 space-y-2">
+            <li>✓ Android & iOS App Development</li>
+            <li>✓ Global Payment Integration</li>
+            <li>✓ Multi-language Support</li>
+            <li>✓ Dedicated Project Manager</li>
+            <li>✓ Real-time Chat & Bot Integration</li>
+            <li>✓ Scalable Admin Dashboard</li>
+            <li>✓ Multi-user Access Control</li>
+            <li>✓ Priority 24x7 Support</li>
+            <li>✓ Security & Backup Setup</li>
+            <li>✓ Ongoing Maintenance & Upgrades</li>
+          </ul>
+        </div>
+        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
+
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-600 mb-4">₹49,999+ / $600+</div>
+          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
+            Contact Us
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- reviews section -->
@@ -528,19 +621,19 @@
       </ul>
     </div>
 
-   <!-- Social -->
-   <div>
-    <h3 class="text-white text-2xl font-bold  mb-3">Follow Us</h3>
-    <div class="flex space-x-4">
-      
-      <a href="https://wa.me/+919930870979" target="_blank">
-        <img src="../whatsapp-cta-btn.webp" alt="WhatsApp" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
-      </a>
-      <a href="https://instagram.com/rio.coder" target="_blank">
-        <img src="../instagram-2.webp" alt="Instagram" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
-      </a>
+    <!-- Social -->
+    <div>
+      <h3 class="text-white text-2xl font-bold  mb-3">Follow Us</h3>
+      <div class="flex space-x-4">
+        
+        <a href="https://wa.me/+919930870979" target="_blank">
+          <img src="../images/whatsapp-cta-btn.webp" alt="WhatsApp" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
+        </a>
+        <a href="https://instagram.com/rio.coder" target="_blank">
+          <img src="../images/instagram-2.webp" alt="Instagram" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
+        </a>
+      </div>
     </div>
-  </div>
   </div>
 
   <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">

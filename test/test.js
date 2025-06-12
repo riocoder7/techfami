@@ -1,21 +1,3 @@
-// const  Splash_Screen = () => {
-//     const splash = document.getElementById('splash');
-//     const main = document.getElementById('mainContent');
-  
-//     setTimeout(() => {
-//       splash.classList.add('hide');
-  
-//       setTimeout(() => {
-//         splash.style.display = 'none';
-//         main.classList.add('show');
-//         document.body.style.overflow = 'auto';
-//       }, 1000); // match fadeSlideOut duration
-//     }, 3500); // splash duration
-  
-  
-//     }
-  
-//     Splash_Screen();
 
 const Splash_Screen = () => {
     document.body.classList.add("no-scroll");
@@ -40,6 +22,7 @@ const Splash_Screen = () => {
             document.getElementById("splash").style.display = "none";
             document.body.classList.remove("no-scroll"); // Re-enable scrolling
             document.getElementById("header").classList.remove("hidden");
+            document.getElementById("whatapps").classList.remove("hidden");
           }
         });
       }
