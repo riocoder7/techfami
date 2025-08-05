@@ -1,170 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coverflow Slider</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <style>
-      body {
-        background-color: #f3f4f6;
-      }
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 400px;
-        border-radius: 20px;
-        overflow: hidden;
-      }
-    </style>
-  </head>
-  <body class="flex items-center justify-center min-h-screen">
-<!-- 
-    <div class="w-full max-w-6xl px-4">
-      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
-        Coverflow Image Slider
-      </h2>
-      <div class="swiper mySwiper mx-auto bg-red-500 ">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/voRxaoQsNb5lgOljgV3xwl6OhsoCufsjwYnuZSNKhVw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9iL2I2L0lt/YWdlX2NyZWF0ZWRf/d2l0aF9hX21vYmls/ZV9waG9uZS5wbmcv/OTYwcHgtSW1hZ2Vf/Y3JlYXRlZF93aXRo/X2FfbW9iaWxlX3Bo/b25lLnBuZw')"></div>
-          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/2Rto6WuMWmPeCx37d3zX26Hx2P3_nbuAphoZZ4GIQJY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjA5/MjAyODM4MS9mci9w/aG90by90ZWNobm9s/b2dpZS1kZS1jciVD/MyVBOWF0aW9uLWRp/bWFnZXMtcGFyLWlh/LWxob21tZS11dGls/aXNlLXVuLWxvZ2lj/aWVsLWRpYS1zdXIt/dW4tb3JkaW5hdGV1/ci5qcGc_Yj0xJnM9/NjEyeDYxMiZ3PTAm/az0yMCZjPTMxWG5N/azRxTldhMW5IS19H/TVVFNkQ2VGwyYTh2/ZEh5eHp1Q2ZVT1BJ/LVk9')"></div>
-          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/zYvkuVqxZ-8A-Xj3jqGu6njdckyhSwcqyTnYBWRT9EM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM4/NTk3MDIyMy9waG90/by9ncmVhdC1pZGVh/LW9mLWEtbWFya2V0/aW5nLXN0cmF0ZWd5/LXBsYW4tYXQtYS1j/cmVhdGl2ZS1vZmZp/Y2UuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZ1cF9KOGVr/aFlJYkYzcWlVRW85/dDI4dThYLVVyRk5x/d3J5eVJoQmwzNXc9')"></div>
-          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/1A3wD2zxXL7QusL361C8w2fGfuHUeYwBkdJbws_-Ny0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI0/OTA0MTc3NS9waG90/by9waG90by1kZXBp/Y3RpbmctdGhlLXBl/cnNvbi13aG8tZm9j/dXNlcy1vbi10aGUt/dGFyZ2V0LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz04Z3Uy/Y2hXU0tlbjFtUnZB/QldoUzROdkk5NDM3/eWF5bUhYUE9tek04/UXlBPQ')"></div>
-          <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://imgs.search.brave.com/Fe6vgniJL46OaEkD1jZp5KNMC2HMOmJtoo459Cd95xo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ2/NDU2MTc5Ny9waG90/by9hcnRpZmljaWFs/LWludGVsbGlnZW5j/ZS1wcm9jZXNzb3It/dW5pdC1wb3dlcmZ1/bC1xdWFudHVtLWFp/LWNvbXBvbmVudC1v/bi1wY2ItbW90aGVy/Ym9hcmQtd2l0aC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/NVRJQ0hHX2JEVmJJ/aUpFZjNjZjItcXVH/dWhYbTBfVHhfUmll/clNaZENRcz0')"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+	overflow: hidden;
+}
+body.visibleSplash {
+	overflow: visible !important;
+}
+.splashScreen {
+	width: 100%;
+ 	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	border-bottom: 5px solid #333;
+	overflow: hidden;
+}
+.loadingContainer {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	overflow: hidden;
+}
+.loadingBox {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.splashLogo {
+	width: 50%;
+	margin: 0 0 50px;
+}
+.loadingBarContainer {
+    width: 100%;
+    background: #eee;
+    height: 10px;
+    display: block;
+    margin: 50px 0 0;
+    overflow: hidden;
+}
+.loadingbar {
+	width: 100%;
+	height:10px;
+	background: #000;
+	position: absolute;
+	left: -100%;
+}
+.loadingCircle {
+	width: 75px;
+	height: 75px;
+	margin: 30px auto 0;
+	background: #fff;
+	display: block;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+}
+.circleOuter {
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.circleLoader {
+	width: 75px;
+	height: 75px;
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%);
+	position: absolute;
+	right: 50%;
+	bottom: 50%;
+	transform-origin: bottom right;
+	z-index: 1;
+	animation: rotateLoader 1.5s linear infinite;
+}
+@keyframes rotateLoader {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.splashBehind {
+	background: red;
+	width: 100%;
+	height: 100vh;
+}
+.splashBehindTwo {
+	background: #fff;
+	width: 100%;
+	height: 100vh;
+}
+  </style>
+</head>
+<body>
+  <div class="splashBody">
+    <div class="splashScreen">
+      <div class="loadingContainer">
+  
+        <div class="loadingBox">
+          <img src="https://vignette.wikia.nocookie.net/borderlands/images/4/42/Vault_logo.png/revision/latest?cb=20100114181536" class="splashLogo">
+          <div class="loadingBarContainer">
+            <div class="loadingbar"></div>
+          </div>
+  
+          <div class="loadingCircle">
+            <div class="circleOuter"></div>
+            <div class="circleLoader"></div>
+          </div>
         </div>
+  
+  
       </div>
     </div>
+   
+    
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // 1. Animate .loadingbar
+  setTimeout(() => {
+    const loadingbar = document.querySelector(".loadingbar");
+    if (loadingbar) {
+      loadingbar.style.transition = "left 3s";
+      loadingbar.style.left = "0";
+    }
+  }, 1500);
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    loop: true,
-    autoplay: {
-      delay: 3000, // 3 seconds
-      disableOnInteraction: false,
-    },
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-      scale: 1,
-    },
-  });
-    </script> -->
-    <section class="bg-gray-900 py-20 px-4">
-      <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-4xl font-extrabold text-white mb-4">
-          Global Plans for Every Business
-        </h2>
-        <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
-          Flexible digital solutions tailored for individuals, startups, and enterprises across the globe. Choose the plan that fits your business needs.
-        </p>
-    
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-          <!-- Starter Plan -->
-          <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
-            <div class="mb-6">
-              <h3 class="text-2xl font-bold  text-white mb-4">Starter Plan</h3>
-              <div class="w-full h-[1px] bg-gray-700 my-6"></div>
+  // 2. Animate .loadingBox opacity
+  setTimeout(() => {
+    const loadingBox = document.querySelector(".loadingBox");
+    if (loadingBox) {
+      loadingBox.style.transition = "opacity 1s";
+      loadingBox.style.opacity = "1";
+    }
+  }, 500);
 
-              <ul class="text-left text-gray-300 space-y-2">
-                <li>✓ One-Page Modern Website</li>
-                <li>✓ WhatsApp Chat Integration</li>
-                <li>✓ Responsive Mobile Design</li>
-                <li>✓ SEO Ready Structure</li>
-                <li>✓ Delivery in 3 Days</li>
-                <li>✓ Email Contact Form</li>
-                <li>✓ Basic Analytics Setup</li>
-                <li>✓ Google Maps Integration</li>
-                <li>✓ Custom Domain Setup</li>
-                <li>✓ 1 Month Free Support</li>
-              </ul>
-            </div>
-            <div class="w-full h-[1px] bg-gray-700 my-3"></div>
+  // 3. Animate .splashScreen slide up
+  setTimeout(() => {
+    const splashScreen = document.querySelector(".splashScreen");
+    if (splashScreen) {
+      splashScreen.style.transition = "top 1.5s";
+      splashScreen.style.top = "-110%";
+    }
+  }, 4500);
 
-            <div class="text-center">
-              <div class="text-3xl font-bold text-green-600 mb-4">₹4,999 / $60</div>
-              <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
-                Choose Plan
-              </button>
-            </div>
-          </div>
-    
-          <!-- Pro Business Plan -->
-          <div class="bg-green-900 border-2 border-green-500 rounded-2xl shadow-xl p-8 flex flex-col justify-between scale-105">
-            <div class="mb-6">
-              <h3 class="text-2xl font-bold text-center text-green-100 mb-4">Pro Business Plan</h3>
-              <div class="w-full h-[1px] bg-gray-500 my-6"></div>
+  // 4. Fade out .loadingCircle
+  setTimeout(() => {
+    const loadingCircle = document.querySelector(".loadingCircle");
+    if (loadingCircle) {
+      loadingCircle.style.transition = "opacity 0.5s";
+      loadingCircle.style.opacity = "0";
+    }
+  }, 4500);
 
-              <ul class="text-left text-green-100 space-y-2">
-                <li>✓ 5 Pages Website + Admin Panel</li>
-                <li>✓ Advanced Chatbot + Push Notifications</li>
-                <li>✓ Google My Business Listing</li>
-                <li>✓ On-Page SEO Optimization</li>
-                <li>✓ Social Media Integration</li>
-                <li>✓ Blog/News Section</li>
-                <li>✓ Analytics & Traffic Reports</li>
-                <li>✓ Custom Contact Forms</li>
-                <li>✓ Newsletter Integration</li>
-                <li>✓ 3 Months Free Support</li>
-              </ul>
-            </div>
-            <div class="w-full h-[1px] bg-gray-500 my-3"></div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-green-700 mb-4">₹14,999 / $180</div>
-              <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
-                Choose Plan
-              </button>
-            </div>
-          </div>
-    
-          <!-- Enterprise Plan -->
-          <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
-            <div class="mb-6">
-              <h3 class="text-2xl font-bold text-center text-white mb-4">Enterprise Plan</h3>
-              <div class="w-full h-[1px] bg-gray-700 my-6"></div>
+  // 5. Add class to body after all done
+  setTimeout(() => {
+    document.body.classList.add("visibleSplash");
+  }, 5000);
+});
 
-              <ul class="text-left text-gray-300 space-y-2">
-                <li>✓ Android & iOS App Development</li>
-                <li>✓ Global Payment Integration</li>
-                <li>✓ Multi-language Support</li>
-                <li>✓ Dedicated Project Manager</li>
-                <li>✓ Real-time Chat & Bot Integration</li>
-                <li>✓ Scalable Admin Dashboard</li>
-                <li>✓ Multi-user Access Control</li>
-                <li>✓ Priority 24x7 Support</li>
-                <li>✓ Security & Backup Setup</li>
-                <li>✓ Ongoing Maintenance & Upgrades</li>
-              </ul>
-            </div>
-            <div class="w-full h-[1px] bg-gray-700 my-3"></div>
-
-            <div class="text-center">
-              <div class="text-3xl font-bold text-green-600 mb-4">₹49,999+ / $600+</div>
-              <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
-                Contact Us
-              </button>
-            </div>
-          </div>
-    
-        </div>
-      </div>
-    </section>
-    
-    
-    
-    
-  </body>
+  </script>
+</body>
 </html>
