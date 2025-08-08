@@ -1,55 +1,48 @@
-// const  Splash_Screen = () => {
-//     const splash = document.getElementById('splash');
-//     const main = document.getElementById('mainContent');
-  
-//     setTimeout(() => {
-//       splash.classList.add('hide');
-  
-//       setTimeout(() => {
-//         splash.style.display = 'none';
-//         main.classList.add('show');
-//         document.body.style.overflow = 'auto';
-//       }, 1000); // match fadeSlideOut duration
-//     }, 3500); // splash duration
-  
-  
-//     }
-  
-//     Splash_Screen();
 
-const Splash_Screen = () => {
-    document.body.classList.add("no-scroll");
- // GSAP Splash Screen Animation
- window.addEventListener("load", () => {
-    gsap.to("#splash-logo", { y: -20, opacity: 1, duration: 1 });
-    gsap.to("#splash-loading", { y: 10, opacity: 1, delay: 0.5, duration: 1 });
-
-    let counter = { val: 0 };
-    gsap.to(counter, {
-      val: 100,
-      duration: 2.5,
-      ease: "power2.out",
-      onUpdate: () => {
-        document.getElementById("countup").innerText = `${Math.floor(counter.val)}%`;
-      },
-      onComplete: () => {
-        gsap.to("#splash", {
-          opacity: 0,
-          duration: 1,
-          onComplete: () => {
-            document.getElementById("splash").style.display = "none";
-            document.body.classList.remove("no-scroll"); // Re-enable scrolling
-            document.getElementById("header").classList.remove("hidden");
-          }
-        });
-      }
-    });
+ const splace_screen =()=>{
+  window.addEventListener("DOMContentLoaded", () => {
+    const loadingBar = document.querySelector(".loadingbar");
+    const loadingBox = document.querySelector(".loadingBox");
+    const splashScreen = document.querySelector(".splashScreen");
+    const loadingCircle = document.querySelector(".loadingCircle");
+    const body = document.body;
+  
+    // Animate loading bar (left: 0)
+    setTimeout(() => {
+      loadingBar.style.transition = "left 3s ease";
+      loadingBar.style.left = "0";
+    }, 1500);
+  
+    // Fade in loadingBox (opacity: 1)
+    setTimeout(() => {
+      loadingBox.style.transition = "opacity 1s ease";
+      loadingBox.style.opacity = "1";
+    }, 500);
+  
+    // Move splash screen up (top: -100%)
+    setTimeout(() => {
+      splashScreen.style.transition = "top 1.5s ease";
+      splashScreen.style.top = "-100%";
+    }, 4500);
+  
+    // Fade out loadingCircle (opacity: 0)
+    setTimeout(() => {
+      loadingCircle.style.transition = "opacity 0.5s ease";
+      loadingCircle.style.opacity = "0";
+    }, 4500);
+  
+    // Enable scroll & reveal main content
+    setTimeout(() => {
+      document.body.classList.add("visibleSplash");
+       const main = document.querySelector("main");
+      main.style.display = "block";
+      main.style.opacity = "1";
+    }, 5000);
   });
   
-}
-Splash_Screen();
 
-
+ }
+ splace_screen();
 
   const troglemanu = () => {
       // Select elements
@@ -163,3 +156,27 @@ const reviewSlider = () => {
 }
 reviewSlider();
 
+const pricing = async () => {
+  await fetch('https://ipapi.co/json/')
+    .then(res => res.json())
+    .then(data => {
+      const countryCode = data.country;
+      const showINR = countryCode === "IN";
+      console.log(showINR)
+
+      // Get all elements with class "inr" and "usd"
+      const inrPrices = document.querySelectorAll('.inr');
+      const usdPrices = document.querySelectorAll('.usd');
+
+      // Show INR, hide USD
+      inrPrices.forEach(el => {
+        el.classList.toggle('hidden', !showINR);
+      });
+      usdPrices.forEach(el => {
+        el.classList.toggle('hidden', showINR);
+      });
+    });
+};
+
+// Wait for DOM to load before running
+document.addEventListener("DOMContentLoaded", pricing);

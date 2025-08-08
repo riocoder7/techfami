@@ -9,6 +9,7 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./css/splace_screen.css" /> 
   <style>
     #cursor-shape {
       transform: translate(-50%, -50%);
@@ -34,7 +35,6 @@
 }
 
 
-
   </style>
   
   
@@ -42,39 +42,53 @@
 <body  class="bg-gray-900">
 
      <!-- Splash Screen -->
-     <div id="splash" class="fixed  inset-0 bg-gray-900 flex flex-col md:p-20 p-3  z-50">
-      <img src="../images/logo.png" alt="DevFusion Logo" class="lg:w-[40%] lg:h-[70%] my-20 lg:my-2 mx-auto mb-10 opacity-0" id="splash-logo">
-      
-  <div class="flex gap-10 fixed bottom-0 mb-20 w-full px-10  py-5">
-      <h1 class="text-[13vw] text-gray-400 animate-pulse font-semibold" id="splash-loading">Loading</h1>
-      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-      <h1 class="text-[13vw] font-bold text-gray-100" id="countup">0%</h1>
-  </div>
-  </div>
-    </div>
+  <div  class="splashScreen ">
+		<div class="loadingContainer">
 
+			<div class="loadingBox flex flex-col justify-center items-center">
+				<img src="../images/logo.png" class="splashLogo">
+          <h1 style="color: white; font-size: 40px;">RIO coder </h1>
+          <h1 class="text-white">Your Ideas. Our Tech. Websites, Apps & Gen AI Bots</h1>
+				<div class="loadingBarContainer">
+					<div class="loadingbar"></div>
+				</div>
+
+				<div class="loadingCircle">
+					<div class="circleOuter"></div>
+					<div class="circleLoader"></div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+<main style="display: none;">
 <!-- Floating WhatsAppIcons -->
-<div id="whatapps" class=" fixed bottom-5 bg-red-500 right-2 z-50 flex flex-col items-end gap-4 hidden">
+<div id="whatsapp" class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-4">
 
-  <!-- WhatsApp Button -->
+  <!-- WhatsApp Button with Tooltip -->
   <div class="relative group">
+    <!-- Tooltip -->
     <span
-      class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-white text-green-600 text-sm font-semibold px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap">
+      class="absolute right-full mr-3 top-1/2 -translate-y-1/2 transform bg-white text-green-600 text-sm font-semibold px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap">
       Chat on WhatsApp
     </span>
-    <a href="https://api.whatsapp.com/send?phone=+919930870979&text=Hello%20DevFusion"
+
+    <!-- Button -->
+    <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20DevFusion"
        target="_blank"
+       rel="noopener noreferrer"
        class="w-16 h-16 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-           alt="WhatsApp" class="w-16 h-16 object-contain" />
+           alt="WhatsApp" class="w-full h-full object-contain" />
     </a>
   </div>
 
-  
 </div>
 
   <!-- header section    -->
-  <header id="header" class="sticky top-0 z-100 inset-x-0 text-gray-300 bg-transparent transition-bg hidden">
+  <header id="header" class="sticky top-0 z-100 inset-x-0 text-gray-300 bg-transparent transition-bg ">
     <nav class=" navBAr flex items-center justify-between px-6 bg-white dark:bg-gray-900/95  lg:px-8  transition-colors duration-300" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
@@ -98,12 +112,12 @@
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="#home"
           class="text-xl/6 font-semibold text-black dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-900 text-8xl">Home</a>
-        <a href="#Features"
-          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Features</a>
-        <a href="#"
-          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">About</a>
+        <a href="#services"
+          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Services</a>
+        <a href="#pricing"
+          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Pricing</a>
         <a href="#dev"
-          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Devlopers</a>
+          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Contect US</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="./login&sineup.html"
@@ -123,7 +137,7 @@
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
             <img class="h-14 w-auto"
-              src="logo.png" alt="logo">
+              src="../images/logo.png" alt="logo">
           </a>
           <button id="menu-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
@@ -138,12 +152,12 @@
             <div class="space-y-2 py-6">
                 <a href="#home"
                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
-                <a href="#Features"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Features</a>
-                <a href="#"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#services"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
+                <a href="#pricing"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Pricing</a>
                 <a href="#dev"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Devloper</a>
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contect US</a>
             </div>
             <div class="py-6">
                 <a href="./login&sineup.html"
@@ -207,10 +221,13 @@
             <h1 class="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-6xl">  Transform Your Ideas Into Digital Reality </h1>
             <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 ">   Professional Web & App Development for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital solutions tailored to elevate your brand and drive results.</p>
             <div class="mt-15 flex items-center justify-center gap-x-6 ">
-              <a href="#"
+              <a href="#pricing"
                 class="rounded-md bg-indigo-500   px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">See Pricing</a>
                 
-              <a href="#" class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">Get Quote <span
+                <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20DevFusion"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">Book Free consultation <span
                   aria-hidden="true">→</span></a>
             </div>
           </div>
@@ -233,98 +250,10 @@
     </div>
     </div>
   
-      
-  <!-- Services -->
-<section id="services" class="my-22">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-16 text-white">What We Offer</h2>
-    <div class="grid md:grid-cols-3 mt-22 gap-20">
-      <!-- Existing Services -->
-      <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
-        <img src="https://img.icons8.com/ios/100/ffffff/domain.png" alt="Web" class="mx-auto mb-4" />
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">Website Development</h3>
-        <p class="text-gray-400 group-hover:text-white transition">Responsive, SEO-optimized, and performance-focused websites.</p>
-      </div>
-      <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
-        <img src="https://img.icons8.com/ios/100/ffffff/smartphone.png" alt="App" class="mx-auto mb-4" />
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">Mobile App Development</h3>
-        <p class="text-gray-400 group-hover:text-white transition">Cross-platform apps for Android and iOS using Flutter and React Native.</p>
-      </div>
-      <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
-        <img src="https://img.icons8.com/ios/100/ffffff/design.png" alt="Design" class="mx-auto mb-4" />
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">UI/UX Design</h3>
-        <p class="text-gray-400 group-hover:text-white transition">Modern and intuitive user interfaces crafted in Figma and Adobe XD.</p>
-      </div>
-
-      <!-- New AI Services -->
-      <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
-        <img src="https://img.icons8.com/ios/100/ffffff/artificial-intelligence.png" alt="AI Dev" class="mx-auto mb-4" />
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">AI Development</h3>
-        <p class="text-gray-400 group-hover:text-white transition">Custom solutions using machine learning, computer vision, and natural language processing.</p>
-      </div>
-      <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
-        <img src="https://img.icons8.com/ios/100/ffffff/brain.png" alt="GenAI" class="mx-auto mb-4" />
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">Generative AI</h3>
-        <p class="text-gray-400 group-hover:text-white transition">Develop AI-powered tools for content creation, image generation, and smart automation.</p>
-      </div>
-      <div class="group border border-indigo-400 rounded-2xl shadow-lg p-8 text-center hover:bg-indigo-400 hover:shadow-xl transition">
-        <img src="https://img.icons8.com/ios-filled/100/ffffff/bot.png" alt="Chatbot" class="mx-auto mb-4" />
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2 group-hover:text-white transition">AI Chatbots</h3>
-        <p class="text-gray-400 group-hover:text-white transition">Build smart, conversational assistants for customer support and business automation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- why schoose us section -->
-<div class="container mx-auto px-4 py-16 md:py-24">
-  <h1 class="text-4xl md:text-5xlb text-indigo-400 font-bold text-center mb-12 md:mb-16">
-      Why Choose Our <br/> <span class="text-white text-3xl"> for Your Business?</span>
-  </h1>
- 
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8  px-5 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
-
-       <!-- Expertise & Innovation -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Unmatched Expertise & Innovation</h2>
-    <p class="text-gray-400 leading-relaxed">
-      From full-stack web apps to Generative AI chatbots — our team delivers future-ready digital solutions that set your brand apart.
-    </p>
-  </div>
-
-  <!-- Custom Development -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Custom-Built Solutions</h2>
-    <p class="text-gray-400 leading-relaxed">
-      We craft personalized web, mobile, and AI products — designed specifically for your goals, not from generic templates.
-    </p>
-  </div>
-
-  <!-- Collaboration -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Transparent Collaboration</h2>
-    <p class="text-gray-400 leading-relaxed">
-      We partner with you every step of the way — offering real-time updates, agile feedback loops, and crystal-clear communication.
-    </p>
-  </div>
-
-  <!-- Measurable ROI -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Measurable Impact & ROI</h2>
-    <p class="text-gray-400 leading-relaxed">
-      We don’t just build — we grow your business. Our focus is on impact-driven tech that boosts engagement and maximizes returns.
-    </p>
-  </div>
-
-
-  </div>
-</div>
-
   <!-- show case ui design -->
 <section id="showcase" class="py-28 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
   <!-- <h1 class="text-4xl font-bold text-center mb-16 text-white">Showcase of Our UI Designs</h1> -->
-  <h2 class="text-5xl md:text-3xl text-center mb-16 font-bold ">
+  <h2 class="text-5xl md:text-3xl lg:text-5xl text-center mb-16 font-bold ">
     Showcase of Our UI Designs
   </h2>
   
@@ -436,10 +365,435 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 </div>
 
 
+</section>      
+
+
+
+<!-- Contact Section -->
+<section class="bg-gray-900 text-white py-16 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Start Your Project</h2>
+    <p class="text-center text-gray-400 mb-10">Web, app, or AI — let’s build something smart together.</p>
+
+    <form class="space-y-6 bg-gray-800 p-8 rounded-xl shadow-lg" id="contactForm">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Name -->
+        <div>
+          <label class="block text-sm font-medium text-gray-300">Full Name</label>
+          <input type="text" name="name" required placeholder="John Doe"
+            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-gray-300">Email Address</label>
+          <input type="email" name="email" required placeholder="you@example.com"
+            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block text-sm font-medium text-gray-300">Phone Number</label>
+          <input type="tel" name="phone" required placeholder="+91 9876543210"
+            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Location -->
+        <div>
+          <label class="block text-sm font-medium text-gray-300">Your Location</label>
+          <input type="text" name="location" required placeholder="Mumbai, India"
+            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+      </div>
+
+      <!-- Updated Service Dropdown -->
+      <div>
+        <label class="block text-sm font-medium text-gray-300">I'm looking for</label>
+        <select name="service" required
+          class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Select a service</option>
+          <option value="web">Website Development</option>
+          <option value="app">Mobile App Development</option>
+          <option value="both">Both Web & App</option>
+          <option value="ai">AI Development (ML, NLP, CV)</option>
+          <option value="genai">Generative AI (Content, Image, Automation)</option>
+          <option value="chatbot">AI Chatbots (Support, Automation)</option>
+        </select>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block text-sm font-medium text-gray-300">Your Message</label>
+        <textarea name="message" rows="5" required placeholder="Tell us about your idea or project..."
+          class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">Send
+          Message</button>
+      </div>
+    </form>
+
+    <!-- Success Message -->
+    <div id="successMessage"
+      class="hidden mt-6 text-green-400 text-center font-medium transition-opacity duration-500">
+      ✅ Your message has been sent! We'll be in touch shortly.
+    </div>
+  </div>
 </section>
+
+
+
+
+ <!-- service section new  -->
+<section id="services" class="bg-gray-900 py-20">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <div class="px-4 mb-10 mx-auto text-left max-w-3xl">
+      
+      <h2 class="text-4xl font-semibold text-white mb-3 text-center">Consultancy Services</h2>
+      <span class="text-sm text-indigo-400 uppercase tracking-widest mb-2 block text-center">Design & Strategy</span>
+      <p class="text-gray-300">
+        Build smarter digital products with expert guidance. At DigiDrafts, we offer consultancy in full-stack web & app development, scalable cloud architectures, and DevOps strategy. Our team helps turn your ideas into production-ready solutions—fast, efficient, and built to scale.
+      </p>
+    </div>
+    
+    
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!--weside Service Card -->
+      <div class="relative h-[480px]  ">
+        <!-- Gradient border effect using ::before -->
+        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
+             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+        </div>
+      
+        <!-- Actual Card Content -->
+        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
+          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm0 0c-1.5 2-1.5 4 0 6s1.5 4 0 6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Website Development & Design</h3>
+          
+          <p class="text-gray-400 text-sm">
+            We craft modern, user-friendly websites tailored to your brand, focusing on speed, responsiveness, and functionality.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            Whether you're building a portfolio, an eCommerce store, or a business website, we deliver scalable solutions to bring your vision online.
+          </p>
+        
+          <!-- Bullet Points -->
+          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
+            <li>Custom UI/UX Web Design</li>
+            <li>Responsive Layouts (Mobile & Desktop)</li>
+            <li>Landing Pages & Business Sites</li>
+            <li>eCommerce Store Integration</li>
+            <li>SEO-Optimized Development</li>
+            <li>Performance Optimization</li>
+          </ul>
+        
+          
+        </div>
+        <!-- Button fixed at bottom -->
+        <div class="absolute bottom-3 left-0 w-full flex justify-center">
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+            Get Started →
+          </button>
+        </div>
+        
+      </div>
+      
+      
+
+      <!--app  Service Card -->
+      <div class="relative md:h-[480px] h-[500px]">
+        <!-- Gradient border effect using ::before -->
+        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
+             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+        </div>
+      
+        <!-- Actual Card Content -->
+        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
+          <!-- Modern App Icon -->
+          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
+            <!-- Mobile App Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z" />
+            </svg>
+          </div>
+      
+          <h3 class="text-xl font-semibold text-white mb-2">App Development & Design</h3>
+      
+          <p class="text-gray-400 text-sm">
+            We build high-performance, scalable mobile apps that deliver smooth user experiences across Android and iOS.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            From idea to deployment, we work closely with you to design, develop, and launch apps that meet real-world needs.
+          </p>
+      
+          <!-- Bullet Points -->
+          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
+            <li>Custom Android & iOS App Development</li>
+            <li>Cross-Platform Development (React Native)</li>
+            <li>User-Centric UI/UX Design</li>
+            <li>API Integration & Firebase Backend</li>
+            <li>Push Notifications & Analytics</li>
+            <li>App Store Deployment & Support</li>
+          </ul>
+        </div>
+      
+        <!-- Button fixed at bottom -->
+        <div class="absolute bottom-3 left-0 w-full flex justify-center">
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+            Get Started →
+          </button>
+        </div>
+      </div>
+      
+
+      <!-- chat ai Service Card -->
+      <div class="relative h-[480px]">
+        <!-- Gradient border effect using ::before -->
+        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
+             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+        </div>
+      
+        <!-- Actual Card Content -->
+        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
+          <!-- Icon -->
+          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 8h10M7 12h6m-6 4h10M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H7l-4 4V6a2 2 0 012-2z" />
+            </svg>
+          </div>
+      
+          <!-- Heading -->
+          <h3 class="text-xl font-semibold text-white mb-2">AI Chatbot Integration</h3>
+      
+          <!-- Description -->
+          <p class="text-gray-400 text-sm">
+            Deploy intelligent chatbots that interact with your users in real-time across platforms like websites, mobile apps, and messaging apps.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            Automate support, increase engagement, and boost conversions using AI-driven responses trained to match your business needs.
+          </p>
+      
+          <!-- Bullet Points -->
+          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
+            <li>Live Website Chatbots</li>
+            <li>Mobile App Chatbot Integration</li>
+            <li>WhatsApp & Messenger Bots</li>
+            <li>Customer Assistant Bots</li>
+            <li>AI-Powered FAQ & Helpdesk</li>
+            <li>Lead Generation via Conversational UI</li>
+          </ul>
+        </div>
+      
+        <!-- Button -->
+        <div class="absolute bottom-3 left-0 w-full flex justify-center">
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+            Get Started →
+          </button>
+        </div>
+      </div>
+      
+
+
+      <!--ui/ux desing  Service Card -->
+      <div class="relative h-[480px]">
+        <!-- Gradient border effect using ::before -->
+        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
+             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+        </div>
+      
+        <!-- Actual Card Content -->
+        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
+          <!-- Icon -->
+          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 10l4.553 2.276A2 2 0 0121 14.118V18a2 2 0 01-2 2H5a2 2 0 01-2-2v-3.882a2 2 0 011.447-1.842L9 10m6 0V6a3 3 0 00-6 0v4m6 0H9" />
+            </svg>
+          </div>
+      
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-white mb-2">UI / UX Design</h3>
+      
+          <!-- Description -->
+          <p class="text-gray-400 text-sm">
+            We design modern, intuitive user interfaces that enhance user experience, usability, and brand engagement across all devices.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            From wireframes to interactive prototypes, our design approach is focused on user behavior, functionality, and brand alignment.
+          </p>
+      
+          <!-- Bullet Points -->
+          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
+            <li>High-Fidelity Prototypes</li>
+            <li>Wireframing & User Flows</li>
+            <li>Mobile & Web App UI Design</li>
+            <li>Interactive Design Systems</li>
+            <li>Brand-Centered Visuals</li>
+            <li>User Testing & Iteration</li>
+          </ul>
+        </div>
+      
+        <!-- Button -->
+        <div class="absolute bottom-3 left-0 w-full flex justify-center">
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+            Get Started →
+          </button>
+        </div>
+      </div>
+      
+
+
+      <!--gen ai  Service Card -->
+      <div class="relative h-[480px]">
+        <!-- Gradient border effect using ::before -->
+        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
+             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+        </div>
+      
+        <!-- Actual Card Content -->
+        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
+          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.75 3a1 1 0 011-1h2.5a1 1 0 011 1v1.25h-4.5V3zM4 7.5A2.5 2.5 0 016.5 5h11A2.5 2.5 0 0120 7.5v2.086a1.5 1.5 0 010 2.828V16.5a2.5 2.5 0 01-2.5 2.5h-11A2.5 2.5 0 014 16.5v-4.086a1.5 1.5 0 010-2.828V7.5z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Generative AI</h3>
+          
+          <p class="text-gray-400 text-sm">
+            We build intelligent generative AI solutions that produce text, images, code, and more—automating workflows and enhancing creativity.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            Unlock new levels of efficiency and personalization with AI models tailored for your business operations, customer support, and content generation.
+          </p>
+      
+          <!-- Bullet Points -->
+          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
+            <li>AI Chatbots & Virtual Assistants</li>
+            <li>Custom GPT & LLM Integrations</li>
+            <li>Content & Copy Generation</li>
+            <li>AI-Based Design & Media Tools</li>
+            <li>Voice & Language AI Solutions</li>
+            <li>Workflow Automation with AI</li>
+          </ul>
+        </div>
+      
+        <!-- Button fixed at bottom -->
+        <div class="absolute bottom-3 left-0 w-full flex justify-center">
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+            Get Started →
+          </button>
+        </div>
+      </div>
+      
+
+
+      <!-- ai dev   Service Card -->
+      <div class="relative md:h-[480px] h-[520px]">
+        <!-- Gradient border effect using ::before -->
+        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
+             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+        </div>
+      
+        <!-- Actual Card Content -->
+        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
+          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
+            🤖
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">AI Development</h3>
+          
+          <p class="text-gray-400 text-sm">
+            We build intelligent AI-driven solutions to help automate processes, improve decision-making, and transform digital experiences.
+          </p>
+          <p class="text-gray-400 text-sm mt-2">
+            From idea to deployment, we develop machine learning models, chatbots, and automation pipelines tailored to your goals.
+          </p>
+      
+          <!-- Bullet Points -->
+          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
+            <li>AI Chatbot Development (OpenAI, Rasa, etc.)</li>
+            <li>Custom Machine Learning Solutions</li>
+            <li>Business Workflow Automation</li>
+            <li>AI-Powered Recommendation Systems</li>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Predictive Analytics & Forecasting</li>
+          </ul>
+        </div>
+      
+        <!-- Button fixed at bottom -->
+        <div class="absolute bottom-3 left-0 w-full flex justify-center">
+          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+            Get Started →
+          </button>
+        </div>
+      </div>
+      
+
+
+    </div>
+  </div>
+</section>
+
+<!-- why schoose us section -->
+<div class="container mx-auto px-4 py-16 md:py-24">
+  <h1 class="text-4xl md:text-5xlb text-indigo-400 font-bold text-center mb-12 md:mb-16">
+      Why Choose Our <br/> <span class="text-white text-3xl"> for Your Business?</span>
+  </h1>
+ 
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8  px-5 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
+
+       <!-- Expertise & Innovation -->
+  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
+    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Unmatched Expertise & Innovation</h2>
+    <p class="text-gray-400 leading-relaxed">
+      From full-stack web apps to Generative AI chatbots — our team delivers future-ready digital solutions that set your brand apart.
+    </p>
+  </div>
+
+  <!-- Custom Development -->
+  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
+    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Custom-Built Solutions</h2>
+    <p class="text-gray-400 leading-relaxed">
+      We craft personalized web, mobile, and AI products — designed specifically for your goals, not from generic templates.
+    </p>
+  </div>
+
+  <!-- Collaboration -->
+  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
+    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Transparent Collaboration</h2>
+    <p class="text-gray-400 leading-relaxed">
+      We partner with you every step of the way — offering real-time updates, agile feedback loops, and crystal-clear communication.
+    </p>
+  </div>
+
+  <!-- Measurable ROI -->
+  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
+    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Measurable Impact & ROI</h2>
+    <p class="text-gray-400 leading-relaxed">
+      We don’t just build — we grow your business. Our focus is on impact-driven tech that boosts engagement and maximizes returns.
+    </p>
+  </div>
+
+
+  </div>
+</div>
+
+
   
  <!--  pricing section   -->
- <section class="bg-gray-900 py-20 px-4">
+ <section id="pricing" class="bg-gray-900 py-20 px-4">
   <div class="max-w-7xl mx-auto text-center">
     <h2 class="text-4xl font-extrabold text-white mb-4">
       Global Plans for Every Business
@@ -461,10 +815,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
             <li>✓ WhatsApp Chat Integration</li>
             <li>✓ Responsive Mobile Design</li>
             <li>✓ SEO Ready Structure</li>
-            <li>✓ Delivery in 3 Days</li>
+            <li>✓ Delivery in 15 Days</li>
             <li>✓ Email Contact Form</li>
             <li>✓ Basic Analytics Setup</li>
-            <li>✓ Google Maps Integration</li>
+            <li>✓ Google Maps Showcase</li>
             <li>✓ Custom Domain Setup</li>
             <li>✓ 1 Month Free Support</li>
           </ul>
@@ -472,7 +826,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <div class="w-full h-[1px] bg-gray-700 my-3"></div>
 
         <div class="text-center">
-          <div class="text-3xl font-bold text-green-600 mb-4">₹9,999 / $60</div>
+          <div class="StarterPlan text-4xl font-bold mb-4">
+            <span class="inr text-green-600">₹9,999</span>
+            <span class="usd text-green-600 hidden">$150</span>
+          </div>
           <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
             Choose Plan
           </button>
@@ -500,7 +857,11 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         </div>
         <div class="w-full h-[1px] bg-gray-500 my-3"></div>
         <div class="text-center">
-          <div class="text-3xl font-bold text-white mb-4">₹14,999 / $180</div>
+          
+          <div class="BusinessPlan text-4xl font-bold mb-4">
+            <span class="inr text-white">₹14,999</span>
+            <span class="usd text-white hidden">$200</span>
+          </div>
           <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
             Choose Plan
           </button>
@@ -529,7 +890,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <div class="w-full h-[1px] bg-gray-700 my-3"></div>
 
         <div class="text-center">
-          <div class="text-3xl font-bold text-green-600 mb-4">₹49,999+ / $600+</div>
+          <div class="EnterprisePlan text-4xl font-bold mb-4">
+            <span class="inr text-green-600">₹49,999 +</span>
+            <span class="usd text-green-600 hidden">$700+</span>
+          </div>
           <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
             Contact Us
           </button>
@@ -689,6 +1053,7 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
 
 
+
   <!-- Footer -->
 <footer class="bg-gray-800 text-gray-300 py-10 mt-20">
   <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -696,8 +1061,11 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     <!-- Logo & About -->
     <div>
       <!-- <h2 class="text-2xl font-bold text-white mb-3">YourBrand</h2> -->
-      <img src="logo.png" alt="Logo" class="w-16 h-16 mb-3">
-      <p class="text-sm">Crafting digital experiences that connect and inspire.</p>
+      <img src="../images/logo.png" alt="Logo" class="w-16 h-16 mb-3">
+      <h1 class="text-xl text-white font-bold">Bringing Your Ideas to Life — Web & App Made Simple.</h1>
+      <p class="my-5 text-md">We build sleek, responsive websites and apps for individuals and businesses — fast, modern, and built to grow with you.</p>
+
+
     </div>
 
     <!-- Links -->
@@ -730,7 +1098,7 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <a href="https://wa.me/+919930870979" target="_blank">
           <img src="../images/whatsapp-cta-btn.webp" alt="WhatsApp" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
         </a>
-        <a href="https://instagram.com/rio.coder" target="_blank">
+        <a href="https://instagram.com/techfami" target="_blank">
           <img src="../images/instagram-2.webp" alt="Instagram" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
         </a>
       </div>
@@ -738,18 +1106,19 @@ Whether you're a small shop, service provider, startup, or personal brand — we
   </div>
 
   <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-    &copy; 2025 YourBrand. All rights reserved.
+    &copy; 2025 TechFami. All rights reserved.
   </div>
 </footer>
 
 
   
-  
+</main>
 
     <!-- circle dot  -->
   <div id="cursor-shape" class="fixed top-0 left-0 w-10 h-10 bg-indigo-500 rounded-full pointer-events-none z-50 mix-blend-difference">  </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="index.js"> </script>
+  <script src="./js/index.js"> </script>
+
 </body>
 </html>
