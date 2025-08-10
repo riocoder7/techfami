@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Techfami</title>
+  <link rel="icon"   href="./images/logo2.png">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Swiper JS -->
@@ -42,13 +43,13 @@
 <body  class="bg-gray-900">
 
      <!-- Splash Screen -->
-  <div  class="splashScreen ">
+  <div  class="splashScreen p-10">
 		<div class="loadingContainer">
 
-			<div class="loadingBox flex flex-col justify-center items-center">
+			<div class="loadingBox flex flex-col justify-center items-center p-10">
 				<img src="./images/logo.png" class="splashLogo">
-          <h1 style="color: white; font-size: 40px;">RIO coder </h1>
-          <h1 class="text-white">Your Ideas. Our Tech. Websites, Apps & Gen AI Bots</h1>
+          <h1 style="color: white; font-size: 40px;">TechFami </h1>
+          <h1 class="text-white">Your Ideas. Our Tech. Websites,<br/> Apps & Gen AI Bots</h1>
 				<div class="loadingBarContainer">
 					<div class="loadingbar"></div>
 				</div>
@@ -375,42 +376,43 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Start Your Project</h2>
     <p class="text-center text-gray-400 mb-10">Web, app, or AI — let’s build something smart together.</p>
 
-    <form class="space-y-6 bg-gray-800 p-8 rounded-xl shadow-lg" id="contactForm">
+    <form class="space-y-6 bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg" id="contactForm">
+      <!-- Fields -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Name -->
         <div>
-          <label class="block text-sm font-medium text-gray-300">Full Name</label>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
           <input type="text" name="name" required placeholder="John Doe"
-            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
 
         <!-- Email -->
         <div>
-          <label class="block text-sm font-medium text-gray-300">Email Address</label>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
           <input type="email" name="email" required placeholder="you@example.com"
-            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
 
         <!-- Phone -->
         <div>
-          <label class="block text-sm font-medium text-gray-300">Phone Number</label>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
           <input type="tel" name="phone" required placeholder="+91 9876543210"
-            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
 
         <!-- Location -->
         <div>
-          <label class="block text-sm font-medium text-gray-300">Your Location</label>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Your Location</label>
           <input type="text" name="location" required placeholder="Mumbai, India"
-            class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
       </div>
 
-      <!-- Updated Service Dropdown -->
+      <!-- Service Dropdown -->
       <div>
-        <label class="block text-sm font-medium text-gray-300">I'm looking for</label>
+        <label class="block text-sm font-medium text-gray-300 mb-1">I'm looking for</label>
         <select name="service" required
-          class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="">Select a service</option>
           <option value="web">Website Development</option>
           <option value="app">Mobile App Development</option>
@@ -423,16 +425,17 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
       <!-- Message -->
       <div>
-        <label class="block text-sm font-medium text-gray-300">Your Message</label>
+        <label class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
         <textarea name="message" rows="5" required placeholder="Tell us about your idea or project..."
-          class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
-      <!-- Submit Button -->
+      <!-- Submit -->
       <div>
         <button type="submit"
-          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">Send
-          Message</button>
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">
+          Send Message
+        </button>
       </div>
     </form>
 
@@ -443,6 +446,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     </div>
   </div>
 </section>
+
+
+
 
 
 
@@ -859,7 +865,7 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <div class="text-center">
           
           <div class="BusinessPlan text-4xl font-bold mb-4">
-            <span class="inr text-white">₹14,999</span>
+            <span class="inr text-white">₹19,999</span>
             <span class="usd text-white hidden">$200</span>
           </div>
           <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
@@ -918,36 +924,36 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <!-- Review Card -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“This AI tool is amazing. Saves me hours daily!”</p>
+          <p class="text-sm mb-4">“The mobile app exceeded our  expectations and <br/>runs flawlessly.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=1" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=11" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Sarah T.</h4>
-              <p class="text-xs text-gray-400">Manager</p>
+              <h4 class="text-sm font-semibold">Emily R.</h4>
+              <p class="text-xs text-gray-400">App Project</p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“This AI tool is amazing. Saves me hours daily!”</p>
+          <p class="text-sm mb-4">“Our new website is fast, modern, and <br/>user-friendly. Perfect!”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=1" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=12" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Sarah T.</h4>
-              <p class="text-xs text-gray-400">Manager</p>
+              <h4 class="text-sm font-semibold">James K.</h4>
+              <p class="text-xs text-gray-400">Web Project</p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“This AI tool is amazing. Saves me hours daily!”</p>
+          <p class="text-sm mb-4">“The design and development process was <br/> smooth and professional.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=1" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=13" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Sarah T.</h4>
-              <p class="text-xs text-gray-400">Manager</p>
+              <h4 class="text-sm font-semibold">Sophia L.</h4>
+              <p class="text-xs text-gray-400">Design & Dev</p>
             </div>
           </div>
         </div>
@@ -955,24 +961,24 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“This AI tool is amazing. Saves me hours daily!”</p>
+          <p class="text-sm mb-4">“The AI solution they built saved us  hours of <br/> manual work.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=1" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=14" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Sarah T.</h4>
-              <p class="text-xs text-gray-400">Manager</p>
+              <h4 class="text-sm font-semibold">Michael B.</h4>
+              <p class="text-xs text-gray-400">AI Solutions</p>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“This AI tool is amazing. Saves me hours daily!”</p>
+          <p class="text-sm mb-4">“AI integration made our workflows faster <br/> and  more accurate.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=1" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=15" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Sarah T.</h4>
-              <p class="text-xs text-gray-400">Manager</p>
+              <h4 class="text-sm font-semibold">Olivia W.</h4>
+              <p class="text-xs text-gray-400">AI Solutions</p>
             </div>
           </div>
         </div>
@@ -984,65 +990,74 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     <!-- Bottom Row -->
     <div class="swiper bottomSwiper">
       <div class="swiper-wrapper">
+
+         
+        <!-- AI Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Incredibly easy to use and accurate.”</p>
+          <p class="text-sm mb-4">“AI integration made our workflows faster<br/> and more accurate.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=3" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=15" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">David P.</h4>
-              <p class="text-xs text-gray-400">Consultant</p>
-            </div>
-          </div>
-        </div>
-        <!-- Add more swiper-slide cards here -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Incredibly easy to use and accurate.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=3" class="w-8 h-8 rounded-full" />
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">David P.</h4>
-              <p class="text-xs text-gray-400">Consultant</p>
+              <h4 class="text-sm font-semibold">Olivia W.</h4>
+              <p class="text-xs text-gray-400">AI Solutions</p>
             </div>
           </div>
         </div>
 
+        <!-- Web Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Incredibly easy to use and accurate.”</p>
+          <p class="text-sm mb-4">“The website redesign boosted our <br/>sales and engagement.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=3" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=16" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">David P.</h4>
-              <p class="text-xs text-gray-400">Consultant</p>
+              <h4 class="text-sm font-semibold">Chris M.</h4>
+              <p class="text-xs text-gray-400">Web Project</p>
             </div>
           </div>
         </div>
 
+        <!-- App Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Incredibly easy to use and accurate. ”</p>
+          <p class="text-sm mb-4">“Our business app runs smoothly and<br/> scales perfectly.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=3" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=17" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">David P.</h4>
-              <p class="text-xs text-gray-400">Consultant</p>
+              <h4 class="text-sm font-semibold">Liam P.</h4>
+              <p class="text-xs text-gray-400">App Project</p>
             </div>
           </div>
         </div>
 
+        <!-- E-Commerce Web Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Incredibly easy to use and accurate.”</p>
+          <p class="text-sm mb-4">“Our e-commerce platform is sleek, fast,<br/> and conversion-friendly.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=3" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=18" class="w-8 h-8 rounded-full" />
             <div class="text-left">
-              <h4 class="text-sm font-semibold">David P.</h4>
-              <p class="text-xs text-gray-400">Consultant</p>
+              <h4 class="text-sm font-semibold">Noah T.</h4>
+              <p class="text-xs text-gray-400">Web Project</p>
             </div>
           </div>
         </div>
+
+        <!-- Automation AI Review -->
+        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
+          <div class="mb-2 text-yellow-400">★★★★★</div>
+          <p class="text-sm mb-4">“The AI automation cut our processing <br/>time in half.”</p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="https://i.pravatar.cc/100?img=19" class="w-8 h-8 rounded-full" />
+            <div class="text-left">
+              <h4 class="text-sm font-semibold">Isabella H.</h4>
+              <p class="text-xs text-gray-400">AI Solutions</p>
+            </div>
+          </div>
+        </div>
+
+       
       </div>
     </div>
   </div>
