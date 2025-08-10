@@ -4,13 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Techfami</title>
-  <link rel="icon"   href="./images/logo2.png">
+  <link rel="icon" href="./images/logo2.png">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./css/splace_screen.css" /> 
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <style>
     #cursor-shape {
       transform: translate(-50%, -50%);
@@ -36,9 +41,16 @@
 }
 
 
+
+@keyframes scaleUp {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-scaleUp {
+    animation: scaleUp 0.25s ease-out;
+  }
   </style>
-  
-  
+
 </head>
 <body  class="bg-gray-900">
 
@@ -112,13 +124,13 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="#home"
-          class="text-xl/6 font-semibold text-black dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-900 text-8xl">Home</a>
+          class="text-lg font-semibold text-black dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-900 text-8xl">Home</a>
         <a href="#services"
-          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Services</a>
+          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Services</a>
         <a href="#pricing"
-          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Pricing</a>
-        <a href="#dev"
-          class="text-xl/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Contect US</a>
+          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Pricing</a>
+        <a href="#ContactUs"
+          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Contect US</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="./login&sineup.html"
@@ -157,7 +169,7 @@
                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
                 <a href="#pricing"
                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Pricing</a>
-                <a href="#dev"
+                <a href="#ContactUs"
                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contect US</a>
             </div>
             <div class="py-6">
@@ -204,11 +216,13 @@
               <a href="#pricing"
                 class="rounded-md bg-indigo-500   px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">See Pricing</a>
                 
-                <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20DevFusion"
+                <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">Book Free consultation <span
-                  aria-hidden="true">→</span></a>
+                class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">
+                Book Free Consultation <span aria-hidden="true">→</span>
+             </a>
+             
             </div>
           </div>
 
@@ -236,6 +250,7 @@
   <h2 class="text-5xl md:text-3xl lg:text-5xl text-center mb-16 font-bold ">
     Showcase of Our UI Designs
   </h2>
+  
   
 
   <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
@@ -349,86 +364,6 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
 
 
-<!-- Contact Section -->
-<section class="bg-gray-900 text-white py-16 px-4">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Start Your Project</h2>
-    <p class="text-center text-gray-400 mb-10">Web, app, or AI — let’s build something smart together.</p>
-
-    <form class="space-y-6 bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg" id="contactForm">
-      <!-- Fields -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Name -->
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
-          <input type="text" name="name" required placeholder="John Doe"
-            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-
-        <!-- Email -->
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
-          <input type="email" name="email" required placeholder="you@example.com"
-            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-
-        <!-- Phone -->
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
-          <input type="tel" name="phone" required placeholder="+91 9876543210"
-            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-
-        <!-- Location -->
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">Your Location</label>
-          <input type="text" name="location" required placeholder="Mumbai, India"
-            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-      </div>
-
-      <!-- Service Dropdown -->
-      <div>
-        <label class="block text-sm font-medium text-gray-300 mb-1">I'm looking for</label>
-        <select name="service" required
-          class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <option value="">Select a service</option>
-          <option value="web">Website Development</option>
-          <option value="app">Mobile App Development</option>
-          <option value="both">Both Web & App</option>
-          <option value="ai">AI Development (ML, NLP, CV)</option>
-          <option value="genai">Generative AI (Content, Image, Automation)</option>
-          <option value="chatbot">AI Chatbots (Support, Automation)</option>
-        </select>
-      </div>
-
-      <!-- Message -->
-      <div>
-        <label class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
-        <textarea name="message" rows="5" required placeholder="Tell us about your idea or project..."
-          class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Submit -->
-      <div>
-        <button type="submit"
-          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">
-          Send Message
-        </button>
-      </div>
-    </form>
-
-    <!-- Success Message -->
-    <div id="successMessage"
-      class="hidden mt-6 text-green-400 text-center font-medium transition-opacity duration-500">
-      ✅ Your message has been sent! We'll be in touch shortly.
-    </div>
-  </div>
-</section>
-
-
-
-
 
 
 
@@ -485,7 +420,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         </div>
         <!-- Button fixed at bottom -->
         <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+          <button class="get-started-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
+          data-service="Website Development & Design"
+          >
             Get Started →
           </button>
         </div>
@@ -534,8 +471,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       
         <!-- Button fixed at bottom -->
         <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
-            Get Started →
+          <button class="get-started-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
+          data-service="App Development & Design"
+          >
+             Get Started →
           </button>
         </div>
       </div>
@@ -582,8 +521,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       
         <!-- Button -->
         <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
-            Get Started →
+          <button class="get-started-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
+          data-service="AI Chatbot Integration"
+          >       
+          Get Started →
           </button>
         </div>
       </div>
@@ -631,8 +572,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       
         <!-- Button -->
         <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
-            Get Started →
+          <button class="get-started-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
+          data-service="UI / UX Design"
+          >              Get Started →
           </button>
         </div>
       </div>
@@ -676,7 +618,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       
         <!-- Button fixed at bottom -->
         <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
+          <button class="get-started-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
+          data-service="Generative AI"
+          >   
             Get Started →
           </button>
         </div>
@@ -718,8 +662,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       
         <!-- Button fixed at bottom -->
         <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md">
-            Get Started →
+          <button class="get-started-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
+          data-service="AI Development"
+          >    Get Started →
           </button>
         </div>
       </div>
@@ -730,62 +675,21 @@ Whether you're a small shop, service provider, startup, or personal brand — we
   </div>
 </section>
 
-<!-- why schoose us section -->
-<div class="container mx-auto px-4 py-16 md:py-24">
-  <h1 class="text-4xl md:text-5xlb text-indigo-400 font-bold text-center mb-12 md:mb-16">
-      Why Choose Our <br/> <span class="text-white text-3xl"> for Your Business?</span>
-  </h1>
+
+
  
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8  px-5 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
-
-       <!-- Expertise & Innovation -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Unmatched Expertise & Innovation</h2>
-    <p class="text-gray-400 leading-relaxed">
-      From full-stack web apps to Generative AI chatbots — our team delivers future-ready digital solutions that set your brand apart.
-    </p>
-  </div>
-
-  <!-- Custom Development -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Custom-Built Solutions</h2>
-    <p class="text-gray-400 leading-relaxed">
-      We craft personalized web, mobile, and AI products — designed specifically for your goals, not from generic templates.
-    </p>
-  </div>
-
-  <!-- Collaboration -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Transparent Collaboration</h2>
-    <p class="text-gray-400 leading-relaxed">
-      We partner with you every step of the way — offering real-time updates, agile feedback loops, and crystal-clear communication.
-    </p>
-  </div>
-
-  <!-- Measurable ROI -->
-  <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Measurable Impact & ROI</h2>
-    <p class="text-gray-400 leading-relaxed">
-      We don’t just build — we grow your business. Our focus is on impact-driven tech that boosts engagement and maximizes returns.
-    </p>
-  </div>
-
-
-  </div>
-</div>
-
-
-  
  <!--  pricing section   -->
  <section id="pricing" class="bg-gray-900 py-20 px-4">
   <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-4xl font-extrabold text-white mb-4">
+    <div class="flex flex-col justify-center items-center mb-12 ">
+    <h2 class="md:text-5xl text-3xl font-extrabold text-white mb-4">
       Global Plans for Every Business
     </h2>
-    <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+    <p class="text-gray-400  max-w-2xl mx-auto">
       Flexible digital solutions tailored for individuals, startups, and enterprises across the globe. Choose the plan that fits your business needs.
     </p>
+    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
+  </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -815,9 +719,14 @@ Whether you're a small shop, service provider, startup, or personal brand — we
             <span class="inr text-green-600">₹9,999</span>
             <span class="usd text-green-600 hidden">$150</span>
           </div>
-          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
-            Choose Plan
+          <a href="https://wa.me/919930870979?text=Hello,%20I%20am%20interested%20in%20the%20Starter%20Plan%20🚀%20priced%20at%20₹9,999.%20Please%20provide%20more%20details."
+          target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp to discuss your project and get a quote">
+          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition"
+          data-service="Website Development & Design">
+         
+            Choose Plan →
           </button>
+        </a>
         </div>
       </div>
 
@@ -828,16 +737,17 @@ Whether you're a small shop, service provider, startup, or personal brand — we
           <div class="w-full h-[1px] bg-gray-500 my-6"></div>
 
           <ul class="text-left text-green-100 space-y-2">
-            <li>✓ 5 Pages Website + Admin Panel</li>
-            <li>✓ Advanced Chatbot + Push Notifications</li>
-            <li>✓ Google My Business Listing</li>
+            <li>✓ 5 Pages Dynamic Website + Admin Panel</li>
+            <li>✓ Server Backend & Database Integration</li>
             <li>✓ On-Page SEO Optimization</li>
             <li>✓ Social Media Integration</li>
-            <li>✓ Blog/News Section</li>
-            <li>✓ Analytics & Traffic Reports</li>
-            <li>✓ Custom Contact Forms</li>
-            <li>✓ Newsletter Integration</li>
-            <li>✓ 3 Months Free Support</li>
+            <li>✓ Custom Contact & Newsletter Forms</li>
+            <li class="text-center">OR</li>
+            <li>✓ Native Android & iOS App Development</li>
+            <li>✓ API & Database Connectivity</li>
+            <li>✓ Push Notifications & Advanced Chatbot</li>
+            <li>✓ Google Play & App Store Deployment</li>
+            <li>✓ 3 Months Free Support & Maintenance</li>
           </ul>
         </div>
         <div class="w-full h-[1px] bg-gray-500 my-3"></div>
@@ -845,11 +755,14 @@ Whether you're a small shop, service provider, startup, or personal brand — we
           
           <div class="BusinessPlan text-4xl font-bold mb-4">
             <span class="inr text-white">₹19,999</span>
-            <span class="usd text-white hidden">$200</span>
+            <span class="usd text-white hidden">$300</span>
           </div>
+          <a href="https://wa.me/919930870979?text=Hello,%20I%20am%20interested%20in%20the%20Pro%20Business%20Plan%20🚀%20priced%20at%20₹19,999.%20Please%20provide%20more%20details."
+           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
           <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
             Choose Plan
           </button>
+          </a>
         </div>
       </div>
 
@@ -879,24 +792,279 @@ Whether you're a small shop, service provider, startup, or personal brand — we
             <span class="inr text-green-600">₹49,999 +</span>
             <span class="usd text-green-600 hidden">$700+</span>
           </div>
+          <a href="https://wa.me/919930870979?text=Hello,%20I%20am%20interested%20in%20the%20Enterprise%20Plan%20🚀%20priced%20at%20₹49,999+.%20Please%20provide%20more%20details."
+           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
           <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
             Contact Us
           </button>
+          </a>
         </div>
       </div>
 
     </div>
   </div>
+  
+
+
+</section>
+
+
+
+<!-- why schoose us section -->
+<div class="container mx-auto px-4 py-16 md:py-24">
+  <div class="flex flex-col justify-center items-center mb-12 md:mb-16">
+    <h1 class="text-2xl sm:text-3xl md:text-5xl text-indigo-400 font-bold text-center leading-snug">
+      Why Choose <span class="text-white">Our Agency</span><br/> 
+      <span class="text-lg sm:text-xl md:text-2xl text-white">to Win in Your Market</span>
+    </h1>
+    
+    
+    <p class="text-gray-300 max-w-2xl text-center">
+      In today’s fast-moving digital world, staying ahead isn’t optional — it’s survival.  
+      We don’t just keep you in the race — we put you in pole position.
+    </p>
+    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-5 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
+
+    <!-- Expertise & Innovation -->
+    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+      <div>
+        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Elite Expertise & Future-Ready Innovation</h2>
+        <p class="text-gray-400 leading-relaxed">
+          From AI-powered chatbots to high-performing full-stack platforms — we deliver 
+          cutting-edge solutions your competitors can’t match.  
+          <span class="text-white font-semibold">Work with us, and stay 3 steps ahead.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Custom Development -->
+    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m-6 0H5V7h14v10h-4" />
+      </svg>
+      <div>
+        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">100% Tailored to Your Business</h2>
+        <p class="text-gray-400 leading-relaxed">
+          No cookie-cutter templates. Every product is engineered for your unique vision,  
+          so you stand out in a crowded market — and make your competition irrelevant.
+        </p>
+      </div>
+    </div>
+
+    <!-- Collaboration -->
+    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10a2 2 0 012-2h2M12 12v.01M8 16h.01M16 16h.01" />
+      </svg>
+      <div>
+        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">True Partnership, Not Just a Service</h2>
+        <p class="text-gray-400 leading-relaxed">
+          We work like an extension of your team — giving you instant updates,  
+          fast iterations, and full transparency so you never feel “left in the dark.”
+        </p>
+      </div>
+    </div>
+
+    <!-- Measurable ROI -->
+    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 11V3h2v8h5l-6 9-6-9h5z" />
+      </svg>
+      <div>
+        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Results That Actually Pay Off</h2>
+        <p class="text-gray-400 leading-relaxed">
+          Every project is laser-focused on boosting revenue, engagement, and brand authority.  
+          <span class="text-white font-semibold">If it doesn’t grow your business, it’s not good enough for us.</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="flex justify-center mt-8">
+    
+    <a href="https://wa.me/919930870979?text=Hi%20there!%20🚀%20I%27m%20looking%20for%20a%20professional%20team%20to%20help%20me%20build%20and%20grow%20my%20business%20online.%20I%27m%20interested%20in%20your%20web%2Fapp%20development%20and%20AI%20solutions.%20Can%20we%20discuss%20my%20project%20details%20and%20get%20a%20quote%3F" 
+    target="_blank" 
+    class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold text-lg transition duration-300 flex items-center space-x-2">
+   <span>🚀 Let’s Build Your Next Big Win</span>
+ </a>
+ 
+
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<section id="ContactUs" class="bg-gray-900 text-white py-16 px-4">
+  <div class="text-center flex justify-center items-center flex-col">
+  <h2 class="text-4xl md:text-5xl font-bold mb-4">Start Your Project</h2>
+  <p class="text-gray-400 mb-5">Your ideas, our expertise — crafting websites, apps, and AI solutions that truly stand out.</p>
+  <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 "></div>
+</div>
+
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-10">
+    <!-- contact info section  -->
+    <div class="w-full 2  p-5 h-full ">
+        <h1 class="text-4xl"> Get In Touch  </h1>
+        <div class="w-32 h-1 bg-[#3b82f6]"> </div>
+
+
+        <div class="my-10">
+          <div class="flex flex-row gap-1 items-center">
+            <img src="./images/logo.png" alt="logo" class="w-20 h-20"  />
+            <h1 class="text-2xl"> TechFami</h1>
+          </div>
+          <p>
+            At TechFami, we specialize in cutting-edge web and app design and development tailored to bring your ideas to life. 
+            Our expertise extends to AI-powered solutions that help businesses innovate and automate smarter workflows. 
+            We are passionate about delivering quality, creativity, and technology combined with dedication to fuel your growth. 
+            Let’s work together to build impactful digital experiences that inspire and motivate success.
+          </p>
+          
+        </div>
+
+        <div class="flex flex-row gap-6 md:gap-10 my-10 items-center"> 
+        
+            <i class="fa-solid fa-envelope text-2xl md:text-3xl text-[#3b82f6]"></i>
+              <a href="mailto:info@techfami.com">
+           <h1 class="text-xl md:text-2xl"> info@techfami.com <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
+          </a>
+           
+        </div>   
+
+
+        <div >
+          <a href="tel:+9199308709797" class="flex flex-row gap-6 md:gap-5 my-10 items-center ">
+          <i class="fa-solid fa-phone-flip  text-2xl md:text-3xl text-[#3b82f6]"></i>
+          <h1 class="text-lg md:text-2xl">+91 99308709797  (india) <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
+        </a>
+        </div>     
+
+        <div>
+          <h1 class="text-2xl"> Social Media </h1>
+          <div class="w-28 h-1 bg-[#3b82f6]"> </div>
+          <div class="flex flex-row gap-3 my-5 lg:gap-10">
+            <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+              <a href="https://instagram.com/techfami" target="_blank" rel="noopener noreferrer">
+             <i class="fa-brands fa-instagram text-4xl" ></i>
+            </a>
+            </div>
+          
+            <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+              <a href="https://linkedin.com/company/tech-fami" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin text-4xl"></i>
+            </a>
+             </div>
+
+             <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+              <a href="https://twitter.com/tech_fami" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter text-4xl hover:text-blue-500"></i>
+            </a>
+             </div>
+          
+             <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+              <i class="fa-brands fa-facebook text-4xl"></i>
+             </div>
+         
+        </div>
+
+  
+
+        </div>
+
+      
+
+    </div>
+    
+    <!-- Right Side: Contact Form -->
+    <div class="relative">
+      <!-- Contact Form -->
+      <form id="contactForm" class="space-y-6 bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg" >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+            <input type="text" name="name" required placeholder="John Doe"
+              class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+            <input type="email" name="email" required placeholder="you@example.com"
+              class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
+            <input type="tel" name="phone" required placeholder="+91 9876543210"
+              class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Company Name </label>
+            <input type="text" name="companyname" required placeholder="TechFami pvt ltd "
+              class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Your Location</label>
+            <input type="text" name="location" required placeholder="Mumbai, India"
+              class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+        </div>
+    
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">I'm looking for</label>
+          <select name="service" required
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Select a service</option>
+            <option value="Website Development">Website Development</option>
+            <option value="Mobile App Development">Mobile App Development</option>
+            <option value="Both Web & App">Both Web & App</option>
+            <option value="AI Development">AI Development</option>
+            <option value="Generative AI">Generative AI</option>
+            <option value="chatbot AI Chatbots">AI Chatbots</option>
+          </select>
+        </div>
+    
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
+          <textarea name="message" rows="5" required placeholder="Tell us about your idea or project..."
+            class="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+    
+        <div>
+          <button type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">
+            Send Message
+          </button>
+        </div>
+      </form>
+    
+      <!-- Right-Side Popup -->
+      <div id="popupMessage"
+  class="hidden fixed top-20 text-sm right-0 transform translate-x-full bg-green-300 text-white px-6 py-3 rounded-lg shadow-lg font-medium transition-all duration-500 ease-in-out z-50">
+  ✅ Your message has been sent! We'll be in touch shortly.
+</div>
+    </div>
+  </div>
+
 </section>
 
 
 <!-- reviews section -->
 <section class="relative  py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-16">
+  <div class="max-w-7xl mx-auto px-4 text-center ">
+    <div class="flex flex-col justify-center items-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-bold text-white ">
       What Our Clients Say
     </h2>
+    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
 
+  </div>
     <!-- Top Row -->
     <div class="swiper topSwiper mb-12">
       <div class="swiper-wrapper">
@@ -1043,11 +1211,6 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 </section>
 
 
-
-
-
-
-
   <!-- Footer -->
 <footer class="bg-gray-800 text-gray-300 py-10 mt-20">
   <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -1106,7 +1269,51 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 </footer>
 
 
-  
+<!-- Modal enqury form  -->
+<div id="serviceModal" class="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center hidden">
+  <div class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 w-full max-w-lg rounded-2xl shadow-2xl p-8 relative border border-gray-700">
+    
+    <!-- Close Button -->
+    <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-white text-lg">✖</button>
+    
+    <!-- Modal Title -->
+    <h2 id="modalTitle" class="text-2xl text-indigo-400 font-bold mb-6">Plan Inquiry</h2>
+    
+    <!-- Form -->
+    <form id="inquiryForm" class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" name="fullName" placeholder="Full Name" class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500" required>
+        <input type="email" name="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500" required>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4">
+        <!-- Country Code -->
+        <select name="countryCode" class="p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500">
+          <option value="+1">🇺🇸 +1</option>
+          <option value="+44">🇬🇧 +44</option>
+          <option value="+61">🇦🇺 +61</option>
+          <option value="+91" selected>🇮🇳 +91</option>
+          <option value="+971">🇦🇪 +971</option>
+          <option value="+81">🇯🇵 +81</option>
+          <option value="+49">🇩🇪 +49</option>
+          <option value="+33">🇫🇷 +33</option>
+          <option value="+86">🇨🇳 +86</option>
+        </select>
+
+        <!-- Phone Number -->
+        <input type="tel" name="phone" placeholder="Phone Number" class="col-span-2 p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500" required>
+      </div>
+
+      <textarea name="message" placeholder="Tell us about your idea or project..." class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500 h-28" required></textarea>
+      
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg shadow-lg transition duration-300">
+        <span class="btn-text">Send Inquiry</span>
+        <span class="loader hidden border-2 border-white border-t-transparent rounded-full w-5 h-5 animate-spin"></span>
+      </button>
+    </form>
+  </div>
+</div>
+
 </main>
 
     <!-- circle dot  -->
@@ -1114,6 +1321,8 @@ Whether you're a small shop, service provider, startup, or personal brand — we
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="./js/index.js"> </script>
-
+  <script src="./js/submitForm.js" type="module"></script>
+  <script src="./js/inquiry.js" type="module"> </script>
+  
 </body>
 </html>
