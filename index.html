@@ -63,6 +63,8 @@
   .animate-scaleUp {
     animation: scaleUp 0.25s ease-out;
   }
+
+  
   </style>
 
 </head>
@@ -73,9 +75,10 @@
 		<div class="loadingContainer">
 
 			<div class="loadingBox flex flex-col justify-center items-center p-10">
-				<img src="./images/logo.png" class="splashLogo">
+				<img src="./images/logo.png" class="splashLogo" alt="techfami logo ">
           <h1 style="color: white; font-size: 40px;">TechFami </h1>
-          <h1 class="text-white">Your Ideas. Our Tech. Websites,<br/> Apps & Gen AI Bots</h1>
+          <h1 class="text-white hero-title">Your Ideas. Our Tech.<br/>Websites • Mobile Apps • AI-Powered Solutions</h1>
+
 				<div class="loadingBarContainer">
 					<div class="loadingbar"></div>
 				</div>
@@ -108,7 +111,7 @@
        rel="noopener noreferrer"
        class="w-16 h-16 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-           alt="WhatsApp" class="w-full h-full object-contain" />
+           alt="WhatsApp techfami " class="w-full h-full object-contain" />
     </a>
   </div>
 
@@ -121,7 +124,7 @@
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
           <img class="h-16 w-auto"
-            src="./images/logo.png" alt="Company Logo">
+            src="./images/logo.png" alt="techfami Logo">
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -139,7 +142,9 @@
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="#home"
           class="text-lg font-semibold text-black dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-900 text-8xl">Home</a>
-        <a href="#services"
+          <!-- <a href="/about.html"
+          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">About</a> -->
+          <a href="#services"
           class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Services</a>
         <a href="#pricing"
           class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Pricing</a>
@@ -147,10 +152,10 @@
           class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Contect US</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="./login&sineup.html"
-          class="text-sm/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">
-          Log in <span aria-hidden="true">&rarr;</span>
-        </a>
+      
+       <span   class="text-sm/6 font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">
+           <span aria-hidden="true">&rarr;</span>
+        </span>
       </div>
     </nav>
 
@@ -164,7 +169,7 @@
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
             <img class="h-14 w-auto"
-              src="./images/logo.png" alt="logo">
+              src="./images/logo.png" alt="techfami techFami logo ">
           </a>
           <button id="menu-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
@@ -178,25 +183,35 @@
           <div class="-my-6 divide-y divide-gray-200 dark:divide-gray-700">
             <div class="space-y-2 py-6">
                 <a href="#home"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
                 <a href="#services"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
+                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
                 <a href="#pricing"
+                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Pricing</a>
+                <a href="#ContactUs"
+                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contect US</a>
+            </div>
+            <div class="py-4">
+                
+              <div class="space-y-2 py-6">
+                <!-- <a href="#home"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About Us </a> -->
+                <!-- <a href="#career"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Career Page</a> -->
+                <!-- <a href="#pricing"
                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Pricing</a>
                 <a href="#ContactUs"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contect US</a>
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contect US</a> -->
             </div>
-            <div class="py-6">
-                <a href="./login&sineup.html"
-                   class="-mx-3 block rounded-lg px-3 py-2.5 text-black font-semibold text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-700 dark:hover:text-white">
-                   Log in
-                </a>
-                <a  href="https://github.com/riocoder7/app_weside/releases/download/v1.0.0/CodeSpark.apk" download="CodeSpak.apk"
-                 class="-mx-3 block rounded-lg px-3 py-2.5 text-black font-semibold text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-700 dark:hover:text-white">
-                 Download now <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                </svg>
-              </a>
+
+              <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">
+              Book Free Consultation <span aria-hidden="true">→</span>
+           </a>
+           
+              
             </div>
         </div>
         
@@ -223,12 +238,15 @@
         <div class="mx-auto max-w-2xl py-22 sm:py-48 lg:py-56">
          
 
-          <div class="text-center mt-22 ">
+          <div class="text-center  ">
             <h1 class="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-6xl">  Transform Your Ideas Into Digital Reality </h1>
-            <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 ">   Professional Web & App Development for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital solutions tailored to elevate your brand and drive results.</p>
+            <!-- <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 "> Professional Web, Mobile App Desing & Development and AI-powered solutions  for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital solutions tailored to elevate your brand and drive results.</p> -->
+            <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 "> Custom Web & Mobile App Design & Development, along with AI-powered solutions for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital experiences tailored to elevate your brand and drive results.  </p> 
             <div class="mt-15 flex items-center justify-center gap-x-6 ">
-              <a href="#pricing"
-                class="rounded-md bg-indigo-500   px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">See Pricing</a>
+              <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-md bg-indigo-500   px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">Let’s Automate Now</a>
                 
                 <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
                 target="_blank"
@@ -261,16 +279,16 @@
   <!-- show case ui design -->
 <section id="showcase" class="py-28 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
   <!-- <h1 class="text-4xl font-bold text-center mb-16 text-white">Showcase of Our UI Designs</h1> -->
-  <h2 class="text-5xl md:text-3xl lg:text-5xl text-center mb-16 font-bold ">
+  <!-- <h2 class="text-5xl md:text-3xl lg:text-5xl text-center mb-16 font-bold ">
     Showcase of Our UI Designs
-  </h2>
+  </h2> -->
   
   
 
   <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
      <!-- Image -->
      <div class="lg:w-1/2">
-      <img src="./images/image1.png" alt="UI Design Showcase" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
+      <img src="./images/image1.png" alt="UI Design Showcase Techfami" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
     </div>
 
     
@@ -290,11 +308,11 @@
         <li>✓ Secure Payments & Order Management</li>
       </ul>
 
-      <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
+      <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20Multi-Vendor%20Ecommerce%20App%2C%20Website%2C Mobile apps%20and%20AI%20Solutions%20with%20Automation%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
       target="_blank"
       rel="noopener noreferrer"
        class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-        Book Free consultation
+       ✨ Book Free consultation →
       </a>
     </div>
 
@@ -325,17 +343,17 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     </ul>
 
 
-    <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
+    <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20Mobile%20App%20Development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you." 
     target="_blank"
     rel="noopener noreferrer"
      class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-      Book Free consultation
+     ✨ Book Free consultation →
      </a>
    </div>
 
     <!-- Image -->
     <div class="lg:w-1/2">
-      <img src="./images/image3.png" alt="UI Design Showcase" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
+      <img src="./images/image3.png" alt="UI Design Showcase TechFami" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
     </div>
 
   
@@ -346,10 +364,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
    
 <!-- Image -->
 <div class="lg:w-1/2">
-  <img src="./images/wesideimage.jpg" alt="UI Design Showcase" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
+  <img src="./images/wesideimage.jpg" alt="UI Design Showcase techfami " class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
 </div>
    
-  <!-- Text Content -->
+  <!-- Text Content webside section  -->
   <div class="lg:w-1/2 px-4 lg:px-0 lg:text-left">
     <h2 class="text-4xl md:text-4xl font-bold mb-6">
        Your Business, Powered by a Stunning Website 💻
@@ -368,11 +386,12 @@ Whether you're a small shop, service provider, startup, or personal brand — we
    </ul>
 
 
-   <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
+   <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20Website%20Development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you." 
+   target="_blank" 
    target="_blank"
    rel="noopener noreferrer"
     class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-     Book Free consultation
+    ✨ Book Free consultation →
     </a>
   </div>
 
@@ -381,6 +400,48 @@ Whether you're a small shop, service provider, startup, or personal brand — we
  
   
 </div>
+
+<div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 my-36">
+   
+
+     
+    <!-- Text Content webside section  -->
+    <div class="lg:w-1/2 px-4 lg:px-0 lg:text-left">
+      <h2 class="text-4xl md:text-4xl font-bold mb-6">
+        Your Business, Powered by AI Automation 🤖 
+      </h2>
+      <p class="text-lg text-gray-400 mb-6">
+        Reimagine how your business works with intelligent AI solutions — automating tasks, engaging customers, and unlocking new growth opportunities.
+      </p>
+  
+      <ul class="text-left text-gray-200 space-y-2 my-5">
+       <li>✓ AI Chatbots for Websites, Apps & Messaging</li>
+       <li>✓ Customer Support Bots, Virtual Assistants & AI-Powered Helpdesk </li>
+       <li>✓ Business Workflow & Process Automation  </li>
+       <li>✓ Custom GPT & LLM Integrations for Tailored Business Workflows</li>
+       <li>✓ AI-Powered Recommendation Systems & Personalization</li>
+       <li>✓ Predictive Analytics & Smart Data Insights </li>
+     </ul>
+  
+  
+     <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20AI%20Automation%20Solutions.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
+     target="_blank"
+     rel="noopener noreferrer"
+      class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
+      ✨ Book Free consultation →
+      </a>
+    </div>
+
+      <!-- Image -->
+  <div class="lg:w-1/2">
+    <img src="/images/ai automation .png" alt="UI Design Showcase techfami " class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
+  </div>
+  
+     
+  
+   
+    
+  </div>
 
 
 </section>      
@@ -700,137 +761,6 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
 
 
- 
- <!--  pricing section   -->
- <section id="pricing" class="bg-gray-900 py-20 px-4">
-  <div class="max-w-7xl mx-auto text-center">
-    <div class="flex flex-col justify-center items-center mb-12 ">
-    <h2 class="md:text-5xl text-3xl font-extrabold text-white mb-4">
-      Global Plans for Every Business
-    </h2>
-    <p class="text-gray-400  max-w-2xl mx-auto">
-      Flexible digital solutions tailored for individuals, startups, and enterprises across the globe. Choose the plan that fits your business needs.
-    </p>
-    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
-  </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Starter Plan -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
-        <div class="mb-6">
-          <h3 class="text-2xl font-bold  text-white mb-4">Starter Plan</h3>
-          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
-
-          <ul class="text-left text-gray-300 space-y-2">
-            <li>✓ One-Page Modern Website</li>
-            <li>✓ WhatsApp Chat Integration</li>
-            <li>✓ Responsive Mobile Design</li>
-            <li>✓ SEO Ready Structure</li>
-            <li>✓ Delivery in 15 Days</li>
-            <li>✓ Email Contact Form</li>
-            <li>✓ Basic Analytics Setup</li>
-            <li>✓ Google Maps Showcase</li>
-            <li>✓ Custom Domain Setup</li>
-            <li>✓ 1 Month Free Support</li>
-          </ul>
-        </div>
-        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
-
-        <div class="text-center">
-          <div class="StarterPlan text-4xl font-bold mb-4">
-            <span class="inr text-green-600">₹9,999</span>
-            <span class="usd text-green-600 hidden">$150</span>
-          </div>
-          <a href="https://wa.me/919930870979?text=Hello,%20I%20am%20interested%20in%20the%20Starter%20Plan%20🚀%20priced%20at%20₹9,999.%20Please%20provide%20more%20details."
-          target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp to discuss your project and get a quote">
-          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition"
-          data-service="Website Development & Design">
-         
-            Choose Plan →
-          </button>
-        </a>
-        </div>
-      </div>
-
-      <!-- Pro Business Plan -->
-      <div class="bg-green-900 border-2 border-green-500 rounded-2xl shadow-xl p-8 flex flex-col justify-between scale-105">
-        <div class="mb-6">
-          <h3 class="text-2xl font-bold text-center text-green-100 mb-4">Pro Business Plan</h3>
-          <div class="w-full h-[1px] bg-gray-500 my-6"></div>
-
-          <ul class="text-left text-green-100 space-y-2">
-            <li>✓ 5 Pages Dynamic Website + Admin Panel</li>
-            <li>✓ Server Backend & Database Integration</li>
-            <li>✓ On-Page SEO Optimization</li>
-            <li>✓ Social Media Integration</li>
-            <li>✓ Custom Contact & Newsletter Forms</li>
-            <li class="text-center">OR</li>
-            <li>✓ Native Android & iOS App Development</li>
-            <li>✓ API & Database Connectivity</li>
-            <li>✓ Push Notifications & Advanced Chatbot</li>
-            <li>✓ Google Play & App Store Deployment</li>
-            <li>✓ 3 Months Free Support & Maintenance</li>
-          </ul>
-        </div>
-        <div class="w-full h-[1px] bg-gray-500 my-3"></div>
-        <div class="text-center">
-          
-          <div class="BusinessPlan text-4xl font-bold mb-4">
-            <span class="inr text-white">₹19,999</span>
-            <span class="usd text-white hidden">$300</span>
-          </div>
-          <a href="https://wa.me/919930870979?text=Hello,%20I%20am%20interested%20in%20the%20Pro%20Business%20Plan%20🚀%20priced%20at%20₹19,999.%20Please%20provide%20more%20details."
-           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
-          <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
-            Choose Plan
-          </button>
-          </a>
-        </div>
-      </div>
-
-      <!-- Enterprise Plan -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
-        <div class="mb-6">
-          <h3 class="text-2xl font-bold text-center text-white mb-4">Enterprise Plan</h3>
-          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
-
-          <ul class="text-left text-gray-300 space-y-2">
-            <li>✓ Android & iOS App Development</li>
-            <li>✓ Global Payment Integration</li>
-            <li>✓ Multi-language Support</li>
-            <li>✓ Dedicated Project Manager</li>
-            <li>✓ Real-time Chat & Bot Integration</li>
-            <li>✓ Scalable Admin Dashboard</li>
-            <li>✓ Multi-user Access Control</li>
-            <li>✓ Priority 24x7 Support</li>
-            <li>✓ Security & Backup Setup</li>
-            <li>✓ Ongoing Maintenance & Upgrades</li>
-          </ul>
-        </div>
-        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
-
-        <div class="text-center">
-          <div class="EnterprisePlan text-4xl font-bold mb-4">
-            <span class="inr text-green-600">₹49,999 +</span>
-            <span class="usd text-green-600 hidden">$700+</span>
-          </div>
-          <a href="https://wa.me/919930870979?text=Hello,%20I%20am%20interested%20in%20the%20Enterprise%20Plan%20🚀%20priced%20at%20₹49,999+.%20Please%20provide%20more%20details."
-           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
-          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
-            Contact Us
-          </button>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  
-
-
-</section>
-
 
 
 <!-- why schoose us section -->
@@ -941,7 +871,7 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
         <div class="my-10">
           <div class="flex flex-row gap-1 items-center">
-            <img src="./images/logo.png" alt="logo" class="w-20 h-20"  />
+            <img src="./images/logo.png" alt=" techfami logo" class="w-20 h-20"  />
             <h1 class="text-2xl"> TechFami</h1>
           </div>
           <p>
@@ -955,9 +885,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
         <div class="flex flex-row gap-6 md:gap-10 my-10 items-center"> 
         
-            <i class="fa-solid fa-envelope text-2xl md:text-3xl text-[#3b82f6]"></i>
+            <i class="fa-solid fa-envelope text-2xl  text-[#3b82f6]"></i>
               <a href="mailto:info@techfami.com">
-           <h1 class="text-xl md:text-2xl"> info@techfami.com <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
+           <h1 class="text-xl"> info@techfami.com <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
           </a>
            
         </div>   
@@ -965,8 +895,8 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
         <div >
           <a href="tel:+9199308709797" class="flex flex-row gap-6 md:gap-5 my-10 items-center ">
-          <i class="fa-solid fa-phone-flip  text-2xl md:text-3xl text-[#3b82f6]"></i>
-          <h1 class="text-lg md:text-2xl">+91 99308709797  (india) <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
+          <i class="fa-solid fa-phone-flip  text-2xl  text-[#3b82f6]"></i>
+          <h1 class="text-xl ">+91 99308709797  (india) <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
         </a>
         </div>     
 
@@ -974,25 +904,25 @@ Whether you're a small shop, service provider, startup, or personal brand — we
           <h1 class="text-2xl"> Social Media </h1>
           <div class="w-28 h-1 bg-[#3b82f6]"> </div>
           <div class="flex flex-row gap-3 my-5 lg:gap-10">
-            <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+            <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
               <a href="https://instagram.com/techfami" target="_blank" rel="noopener noreferrer">
              <i class="fa-brands fa-instagram text-4xl" ></i>
             </a>
             </div>
           
-            <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+            <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
               <a href="https://linkedin.com/company/tech-fami" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-linkedin text-4xl"></i>
             </a>
              </div>
 
-             <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+             <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
               <a href="https://twitter.com/tech_fami" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-twitter text-4xl hover:text-blue-500"></i>
             </a>
              </div>
           
-             <div class=" flex  w-16 h-16 rounded-full bg-gray-800 items-center justify-center">
+             <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
               <i class="fa-brands fa-facebook text-4xl"></i>
              </div>
          
@@ -1078,6 +1008,141 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 </section>
 
 
+ <!--  pricing section   -->
+ <section id="pricing" class="bg-gray-900 py-20 px-4">
+  <div class="max-w-7xl mx-auto text-center">
+    <div class="flex flex-col justify-center items-center mb-12 ">
+    <h2 class="md:text-5xl text-3xl font-extrabold text-white mb-4">
+      Global Plans for Every Business
+    </h2>
+    <p class="text-gray-400  max-w-2xl mx-auto">
+      Flexible digital solutions tailored for individuals, startups, and enterprises across the globe. Choose the plan that fits your business needs.
+    </p>
+    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
+  </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Starter Plan -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold  text-white mb-4">Starter Plan</h3>
+         
+          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
+          
+          <ul class="text-left text-gray-300 space-y-2">
+            <li>✓ One-Page Modern Website</li>
+            <li>✓ WhatsApp Chat Integration</li>
+            <li>✓ Responsive Mobile Design</li>
+            <li>✓ SEO Ready Structure</li>
+            <li>✓ Delivery in 15 Days</li>
+            <li>✓ Email Contact Form</li>
+            <li>✓ Basic Analytics Setup</li>
+            <li>✓ Google Maps Showcase</li>
+            <li>✓ Custom Domain Setup</li>
+            <li>✓ 1 Month Free Support</li>
+          </ul>
+        </div>
+        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
+
+        <div class="text-center">
+          <div class="StarterPlan text-4xl font-bold mb-4">
+            
+            <span class="inr text-green-600">₹9,999</span>
+            
+            <span class="usd text-green-600 hidden">$180</span>
+          </div>
+          <a href="https://wa.me/919930870979?text=Hello Techfami,%20I%20am%20interested%20in%20the%20Starter%20Plan%20🚀%20Please%20provide%20more%20details."
+          target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp to discuss your project and get a quote">
+          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition"
+          data-service="Website Development & Design">
+         
+            Choose Plan →
+          </button>
+        </a>
+        </div>
+      </div>
+
+      <!-- Pro Business Plan -->
+      <div class="bg-green-900 border-2 border-green-500 rounded-2xl shadow-xl p-8 flex flex-col justify-between scale-105">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-center text-green-100 mb-4">Pro Business Plan</h3>
+          <div class="w-full h-[1px] bg-gray-500 my-6"></div>
+
+          <ul class="text-left text-green-100 space-y-2">
+            
+            <li class="text-sm  sm:text-md">✓ 5 Pages Dynamic Website + Admin Panel</li>
+            <li class="text-sm  sm:md">✓ Server Backend & Database Integration</li>
+            <li class="text-sm  sm:md">✓ On-Page SEO Optimization</li>
+            <li class="text-sm  sm:md">✓ Social Media Integration</li>
+            <li class="text-sm  sm:md">✓ Custom Contact & Newsletter Forms</li>
+            <li class="text-center font-bold text-xl"> Option 2 👇🏻</li>
+            <li class="text-sm  sm:md">✓ Native Android & iOS App Development</li>
+            <li class="text-sm  sm:md">✓ API & Database Connectivity</li>
+            <li class="text-sm  sm:md">✓ Push Notifications & Advanced Chatbot</li>
+            <li class="text-sm  sm:md">✓ Google Play & App Store Deployment</li>
+            <li class="text-sm  sm:md">✓ 3 Months Free Support & Maintenance</li>
+          </ul>
+        </div>
+        <div class="w-full h-[1px] bg-gray-500 my-3"></div>
+        <div class="text-center">
+          
+          <div class="BusinessPlan text-4xl font-bold mb-4">
+            <span class="inr text-white">₹24,999</span>
+            <span class="usd text-white hidden">$370</span>
+          </div>
+          <a href="https://wa.me/919930870979?text=Hello Techfami, %20I%20am%20interested%20in%20the%20Pro%20Business%20Plan%20🚀%20%20Please%20provide%20more%20details."
+           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
+          <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
+            Choose Plan
+          </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-center text-white mb-4">✨ Enterprise Plan</h3>
+          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
+
+          <ul class="text-left text-gray-300 space-y-2">
+            <li>✓ Complete Multi-Platform Business Ecosystem</li>
+            <li>✓ Android & iOS App for Customers</li>
+            <li>✓ Android & iOS App for Sellers & Delivery Staff</li>
+            <li>✓ Responsive Business Website </li>
+            <li>✓ Full-featured Admin Dashboard</li>
+            <li>✓ Real-time Chat & Bot Integration</li>
+            <li>✓ Scalable Admin Dashboard</li>
+            <li>✓ Multi-user Access Control</li>
+            <li>✓ Secure Payments & Order Management</li>
+            <li>✓ Real-time Chat & AI Bot Integration</li>
+            <li>✓ Ongoing Maintenance & Upgrades</li>
+          </ul>
+        </div>
+        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
+
+        <div class="text-center">
+          <div class="EnterprisePlan text-4xl font-bold mb-4">
+            <span class="inr text-green-600">₹49,999 +</span>
+            <span class="usd text-green-600 hidden">$700+</span>
+          </div>
+          <a href="https://wa.me/919930870979?text=Hello Techfami ,%20I%20am%20interested%20in%20the%20Enterprise%20Plan.%20🚀%20Please%20provide%20more%20details."
+           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
+          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
+            Contact Us
+          </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+
+</section>
+
 <!-- reviews section -->
 <section class="relative  py-20 overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 text-center ">
@@ -1094,23 +1159,11 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <!-- Review Card -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The mobile app exceeded our  expectations and <br/>runs flawlessly.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=11" class="w-8 h-8 rounded-full" />
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Emily R.</h4>
-              <p class="text-xs text-gray-400">App Project</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
           <p class="text-sm mb-4">“Our new website is fast, modern, and <br/>user-friendly. Perfect!”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=12" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=sana" class="w-8 h-8 rounded-full" alt="Priya K"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">James K.</h4>
+              <h4 class="text-sm font-semibold">Vishal K.</h4>
               <p class="text-xs text-gray-400">Web Project</p>
             </div>
           </div>
@@ -1118,24 +1171,36 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The design and development process was <br/> smooth and professional.”</p>
+          <p class="text-sm mb-4">“The design and development process was <br/>smooth and professional.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=13" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=amit" class="w-8 h-8 rounded-full" alt="Amit R"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Sophia L.</h4>
+              <h4 class="text-sm font-semibold">Amit R.</h4>
               <p class="text-xs text-gray-400">Design & Dev</p>
             </div>
           </div>
         </div>
 
+        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
+          <div class="mb-2 text-yellow-400">★★★★★</div>
+          <p class="text-sm mb-4">“The AI solution they built saved us hours of <br/>manual work.”</p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="https://i.pravatar.cc/100?u=sarfarz" class="w-8 h-8 rounded-full" alt="Sneha M"/>
+            <div class="text-left">
+              <h4 class="text-sm font-semibold">Sneha M.</h4>
+              <p class="text-xs text-gray-400">AI Solutions</p>
+            </div>
+          </div>
+        </div>
+
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The AI solution they built saved us  hours of <br/> manual work.”</p>
+          <p class="text-sm mb-4">“AI integration made our workflows faster <br/>and more accurate.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=14" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=vikram" class="w-8 h-8 rounded-full" alt="Vikram J"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Michael B.</h4>
+              <h4 class="text-sm font-semibold">Vikram J.</h4>
               <p class="text-xs text-gray-400">AI Solutions</p>
             </div>
           </div>
@@ -1143,12 +1208,12 @@ Whether you're a small shop, service provider, startup, or personal brand — we
 
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“AI integration made our workflows faster <br/> and  more accurate.”</p>
+          <p class="text-sm mb-4">“The e-commerce platform is sleek, fast, <br/>and user-friendly.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=15" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=aditya" class="w-8 h-8 rounded-full" alt="Aditya M"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Olivia W.</h4>
-              <p class="text-xs text-gray-400">AI Solutions</p>
+              <h4 class="text-sm font-semibold">Aditya M.</h4>
+              <p class="text-xs text-gray-400">Web Project</p>
             </div>
           </div>
         </div>
@@ -1165,11 +1230,11 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <!-- AI Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“AI integration made our workflows faster<br/> and more accurate.”</p>
+          <p class="text-sm mb-4">“AI automation cut our processing time <br/>in half.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=15" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=isha" class="w-8 h-8 rounded-full" alt="Isha D"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Olivia W.</h4>
+              <h4 class="text-sm font-semibold">Isha D.</h4>
               <p class="text-xs text-gray-400">AI Solutions</p>
             </div>
           </div>
@@ -1180,9 +1245,9 @@ Whether you're a small shop, service provider, startup, or personal brand — we
           <div class="mb-2 text-yellow-400">★★★★★</div>
           <p class="text-sm mb-4">“The website redesign boosted our <br/>sales and engagement.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=16" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=ananya" class="w-8 h-8 rounded-full" alt="Ananya P"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Chris M.</h4>
+              <h4 class="text-sm font-semibold">Ananya P.</h4>
               <p class="text-xs text-gray-400">Web Project</p>
             </div>
           </div>
@@ -1191,11 +1256,11 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <!-- App Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Our business app runs smoothly and<br/> scales perfectly.”</p>
+          <p class="text-sm mb-4">“Our business app runs smoothly and <br/>scales perfectly.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=17" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=kavya" class="w-8 h-8 rounded-full" alt="Kavya R"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Liam P.</h4>
+              <h4 class="text-sm font-semibold">Kavya R.</h4>
               <p class="text-xs text-gray-400">App Project</p>
             </div>
           </div>
@@ -1204,29 +1269,41 @@ Whether you're a small shop, service provider, startup, or personal brand — we
         <!-- E-Commerce Web Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Our e-commerce platform is sleek, fast,<br/> and conversion-friendly.”</p>
+          <p class="text-sm mb-4">“The AI solution saved us hours and improved<br/> accuracy.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=18" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?u=siddharth" class="w-8 h-8 rounded-full" alt="Siddharth M"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Noah T.</h4>
-              <p class="text-xs text-gray-400">Web Project</p>
+              <h4 class="text-sm font-semibold">Siddharth M.</h4>
+              <p class="text-xs text-gray-400">AI Solutions</p>
             </div>
           </div>
+
         </div>
 
         <!-- Automation AI Review -->
         <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
           <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The AI automation cut our processing <br/>time in half.”</p>
+          <p class="text-sm mb-4">“The app integration improved workflow <br/>efficiency greatly.”</p>
           <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=19" class="w-8 h-8 rounded-full" />
+            <img src="https://i.pravatar.cc/100?img=16" class="w-8 h-8 rounded-full" alt="Neha R"/>
             <div class="text-left">
-              <h4 class="text-sm font-semibold">Isabella H.</h4>
-              <p class="text-xs text-gray-400">AI Solutions</p>
+              <h4 class="text-sm font-semibold">Neha R.</h4>
+              <p class="text-xs text-gray-400">App Project</p>
             </div>
           </div>
         </div>
 
+        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
+          <div class="mb-2 text-yellow-400">★★★★★</div>
+          <p class="text-sm mb-4">“The mobile app exceeded our expectations and <br/>runs flawlessly.”</p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="https://i.pravatar.cc/100?u=rahul" class="w-8 h-8 rounded-full" alt="Rahul S"/>
+            <div class="text-left">
+              <h4 class="text-sm font-semibold">Rahul S.</h4>
+              <p class="text-xs text-gray-400">App Project</p>
+            </div>
+          </div>
+        </div>
        
       </div>
     </div>
@@ -1241,7 +1318,7 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     <!-- Logo & About -->
     <div>
       <!-- <h2 class="text-2xl font-bold text-white mb-3">YourBrand</h2> -->
-      <img src="./images/logo.png" alt="Logo" class="w-16 h-16 mb-3">
+      <img src="./images/logo.png" alt="techfami.com  Logo" class="w-16 h-16 mb-3">
       <h1 class="text-xl text-white font-bold">Bringing Your Ideas to Life — Web & App Made Simple.</h1>
       <p class="my-5 text-md">We build sleek, responsive websites and apps for individuals and businesses — fast, modern, and built to grow with you.</p>
 
@@ -1255,7 +1332,7 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       <ul class="space-y-2 text-sm">
         <li><a href="#" class="hover:text-white transition">Home</a></li>
         <li><a href="#" class="hover:text-white transition">About</a></li>
-        <li><a href="#" class="hover:text-white transition">Services</a></li>
+        <li><a href="#services" class="hover:text-white transition">Services</a></li>
         <li><a href="#" class="hover:text-white transition">Contact</a></li>
       </ul>
     </div>
@@ -1264,10 +1341,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
     <div>
       <h3 class="text-white text-2xl font-bold  mb-3">Services</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white transition">Web Design</a></li>
-        <li><a href="#" class="hover:text-white transition">App Development</a></li>
-        <li><a href="#" class="hover:text-white transition">Branding</a></li>
-        <li><a href="#" class="hover:text-white transition">Marketing</a></li>
+        <li><a href="#services" class="hover:text-blue-500 transition">Web Design & Development</a></li>
+        <li><a href="#services" class="hover:text-white transition">Mobile Apps Development</a></li>
+        <li><a href="#services" class="hover:text-white transition">AI-powered solutions</a></li>
+        <li><a href="#services" class="hover:text-white transition">Let’s Automate Now</a></li>
       </ul>
     </div>
 
@@ -1277,10 +1354,10 @@ Whether you're a small shop, service provider, startup, or personal brand — we
       <div class="flex space-x-4">
         
         <a href="https://wa.me/+919930870979" target="_blank">
-          <img src="./images/whatsapp-cta-btn.webp" alt="WhatsApp" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
+          <img src="./images/whatsapp-cta-btn.webp" alt="WhatsApp techfami" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
         </a>
         <a href="https://instagram.com/techfami" target="_blank">
-          <img src="./images/instagram-2.webp" alt="Instagram" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
+          <img src="./images/instagram-2.webp" alt="Instagram techfami" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
         </a>
       </div>
     </div>

@@ -43,31 +43,37 @@
 
  }
  splace_screen();
+ 
+ const troglemanu = () => {
+  // Select elements
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('backdrop');
+  const mobileLinks = document.querySelectorAll('.mobilLink');
 
-  const troglemanu = () => {
-      // Select elements
-      const menuToggle = document.getElementById('menu-toggle');
-      const menuClose = document.getElementById('menu-close');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const backdrop = document.getElementById('backdrop');
+  // Function to open menu
+  function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      backdrop.classList.remove('hidden');
+  }
+
+  // Function to close menu
+  function closeMenu() {
+      mobileMenu.classList.add('translate-x-full');
+      backdrop.classList.add('hidden');
+  }
+
+  // Event listeners
+  menuToggle.addEventListener('click', openMenu);
+  menuClose.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
   
-      // Function to open menu
-      function openMenu() {
-        mobileMenu.classList.remove('translate-x-full');
-        backdrop.classList.remove('hidden');
-      }
-  
-      // Function to close menu
-      function closeMenu() {
-        mobileMenu.classList.add('translate-x-full');
-        backdrop.classList.add('hidden');
-      }
-  
-      // Event listeners
-      menuToggle.addEventListener('click', openMenu);
-      menuClose.addEventListener('click', closeMenu);
-      backdrop.addEventListener('click', closeMenu);
-    }
+  // Fix: Loop through each mobile link and add event listener
+  mobileLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+  });
+}
   
     troglemanu();
   
@@ -180,3 +186,4 @@ const pricing = async () => {
 
 // Wait for DOM to load before running
 document.addEventListener("DOMContentLoaded", pricing);
+
