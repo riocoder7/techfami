@@ -187,3 +187,5 @@ const pricing = async () => {
 // Wait for DOM to load before running
 document.addEventListener("DOMContentLoaded", pricing);
 
+
+

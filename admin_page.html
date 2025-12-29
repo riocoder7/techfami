@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFami Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <style>
+        body {
+            
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .status-new { background: #8b5cf6; }
+        .status-contacted { background: #3b82f6; }
+        .status-completed { background: #10b981; }
+        .hover-scale:hover { transform: scale(1.02); transition: all 0.3s; }
+        .modal-overlay {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#0B1220]/90 hidden"  id="adminBody">
+  
+    <!-- Header -->
+    <header class="glass-effect border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+          <div class="flex justify-between items-center py-3 sm:py-4">
+      
+            <!-- LEFT SIDE -->
+            <div class="flex items-center space-x-3">
+             
+              <!-- LOGO -->
+              <div class="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-cube text-white text-lg sm:text-xl"></i>
+              </div>
+      
+              <!-- TITLE -->
+              <h1 class="text-lg sm:text-2xl font-bold text-white whitespace-nowrap">
+                TechFami Dashboard
+              </h1>
+            </div>
+      
+            <!-- RIGHT SIDE -->
+            <div class="flex items-center space-x-3 sm:space-x-4">
+      
+              <!-- SEARCH (DESKTOP ONLY) -->
+              <div class="relative hidden md:block">
+                <input
+                  type="text"
+                  id="searchBar"
+                  placeholder="Search leads..."
+                  class="bg-white/10 text-white px-4 py-2 pr-10 rounded-lg border border-white/20
+                         focus:outline-none focus:ring-2 focus:ring-purple-500 w-64"
+                >
+                <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+              </div>
+      
+              <!-- NOTIFICATION -->
+              <button class="relative p-2 text-gray-300 hover:text-white hidden sm:block">
+                <i class="fas fa-bell text-xl"></i>
+                <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+              </button>
+      
+              <!-- USER -->
+              <div class="hidden sm:flex items-center space-x-2 text-white">
+                <i class="fas fa-user-circle text-2xl"></i>
+                <span>Admin</span>
+              </div>
+      
+              <!-- ✅ NEW RIGHT-SIDE TOGGLE (MOBILE ONLY) -->
+              <button
+              onclick="toggleSidebarRight()"
+              class="md:hidden text-white px-3 py-2 rounded-lg border border-white/20"
+            >
+              ☰
+            </button>
+      
+            </div>
+          </div>
+      
+        </div>
+      </header>
+      
+      <div
+      id="rightPanel"
+      class="fixed top-0 right-0 z-50 h-full w-[80%] sm:w-[60%]
+             bg-[#0B1220]
+             transform translate-x-full
+             transition-transform duration-300
+             md:hidden"
+    >
+      <!-- Right panel content -->
+    </div>
+
+    <div class="relative w-full min-h-screen bg-[#0B1220]">
+
+        <!-- MOBILE OVERLAY -->
+        <div
+          id="overlay"
+          onclick="toggleSidebar()"
+          class="fixed inset-0 bg-black/60 z-40 hidden md:hidden"
+        ></div>
+      
+        <!-- DESKTOP FLEX WRAPPER -->
+        <div class="flex min-h-screen w-full">
+
+      
+          <!-- SIDEBAR -->
+          <aside
+          id="sidebar"
+          class="glass-effect fixed md:static top-0 left-0 z-50
+                 h-full md:h-auto
+                 w-[75%] sm:w-[60%] md:w-[22%]
+                 bg-[#0b1220]
+                 transform -translate-x-full md:translate-x-0
+                 transition-transform duration-300
+                 md:border-r md:border-white/20
+                 p-4 overflow-y-auto"
+        >
+        <div class=" rounded-xl p-4 space-y-4">
+        
+          
+
+  
+
+            <!-- Lead Type Filters -->
+            <div class="space-y-5">
+              <button onclick="filterLeads('all')" class="filter-btn w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                All Leads
+              </button>
+          
+              <button onclick="filterLeads('contact')" class="filter-btn w-full px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition">
+                Contact Forms
+              </button>
+          
+              <button onclick="filterLeads('meet')" class="filter-btn w-full px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition">
+                Google Meet
+              </button>
+          
+              <button onclick="filterLeads('callback')" class="filter-btn w-full px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition">
+                Callbacks
+              </button >
+
+              <button class="filter-btn w-full px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition">
+                Adds Lead create 
+              </button>
+            </div>
+          
+            <!-- Divider -->
+            <div class="h-px bg-white/10"></div>
+          
+            <!-- Status Filter -->
+            <select
+              id="statusFilter"
+              onchange="filterByStatus()"
+              class="w-full bg-white/10 text-white px-4 py-2 rounded-lg border border-white/20
+                     focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              <option value="all">All Status</option>
+              <option value="new">New</option>
+              <option value="contacted">Contacted</option>
+              <option value="completed">Completed</option>
+            </select>
+          
+            <!-- Export Button -->
+            <button
+              onclick="exportData()"
+              class="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              <i class="fas fa-download mr-2"></i> Export Data
+            </button>
+          
+          </div>
+          
+        
+        </aside>
+        
+          
+          
+      
+          <!-- MAIN CONTENT -->
+          <main
+          class="w-screen md:w-auto md:flex-1 p-4 bg-[#0B1220] min-h-screen overflow-x-hidden">
+    
+
+  
+        <!-- card show -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="glass-effect rounded-xl p-6 hover-scale cursor-pointer">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-gray-400 text-sm">Total Leads</p>
+                        <h3 class="text-3xl font-bold text-white mt-2" id="totalLeads">4565</h3>
+                        <p class="text-green-400 text-sm mt-2"><i class="fas fa-arrow-up"></i> 12% from last month</p>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-users text-purple-400 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-effect rounded-xl p-6 hover-scale cursor-pointer">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-gray-400 text-sm">Contact Forms</p>
+                        <h3 class="text-3xl font-bold text-white mt-2" id="contactForms">2345</h3>
+                        <p class="text-green-400 text-sm mt-2"><i class="fas fa-arrow-up"></i> 8% from last month</p>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-file-alt text-blue-400 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-effect rounded-xl p-6 hover-scale cursor-pointer">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-gray-400 text-sm">Google Meet Requests</p>
+                        <h3 class="text-3xl font-bold text-white mt-2" id="meetRequests">1234</h3>
+                        <p class="text-green-400 text-sm mt-2"><i class="fas fa-arrow-up"></i> 15% from last month</p>
+                    </div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-video text-green-400 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-effect rounded-xl p-6 hover-scale cursor-pointer">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-gray-400 text-sm">Callback Requests</p>
+                        <h3 class="text-3xl font-bold text-white mt-2" id="callbackRequests">986</h3>
+                        <p class="text-green-400 text-sm mt-2"><i class="fas fa-arrow-up"></i> 10% from last month</p>
+                    </div>
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-phone text-yellow-400 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Leads Table -->
+          <div class="glass-effect rounded-xl overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-white/5 border-b border-white/10">
+                        <tr>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">ID</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Name</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Contact</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Type</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Message</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Location</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Date</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsTable" class="divide-y divide-white/10">
+                        <!-- Leads will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+  <!-- Modal for Lead Details -->
+     <div id="detailsModal" class="hidden fixed inset-0 bg-bg-[#0A1120] backdrop-blur-sm z-50 flex items-center justify-center modal-overlay">
+        <div class="bg-[#0A1120] rounded-xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-white">Lead Details</h2>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div id="modalContent" class="text-white space-y-4">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+            <div class="flex gap-4 mt-6">
+                <button onclick="markAsContacted()" class="flex-1 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition">
+                    <i class="fas fa-check mr-2"></i>Mark as Contacted
+                </button>
+                <button onclick="closeModal()" class="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+        </main>
+        
+      
+        </div>
+      
+      </div>
+      
+      
+      
+
+<script type="module" src="/js/admin_page.js"> </script>
+<script src="/js/admin_page_ui.js"></script>
+    </body>
+    </html>
