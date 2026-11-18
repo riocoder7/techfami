@@ -703,7 +703,7 @@ body.menu-open { overflow: hidden; }
 /* ── footer wordmark ── */
 .site-footer { padding-bottom: 0; overflow: hidden; }
 .wordmark { margin-top: clamp(.5rem, 2vw, 2rem); font-family: var(--serif); font-weight: 700; font-size: clamp(3.6rem, 22vw, 19rem); letter-spacing: -.065em; line-height: 1.08; text-align: center; color: var(--indigo); white-space: nowrap; overflow: hidden; padding: .02em .02em .14em; user-select: none; }
-.wm-l { display: inline-block; transform: translateY(105%); transition: transform 1s var(--ease) calc(var(--i) * 70ms), color .3s; will-change: transform; }
+.wm-l { display: inline-block; transform: translateY(105%); transition: transform 1s var(--ease) calc(var(--i) * 70ms), color .3s; }
 .wordmark.in .wm-l { transform: none; }
 .wordmark.in .wm-l:hover { color: var(--lime); transform: translateY(-5%); transition: transform .4s var(--ease), color .2s; }
 @media (prefers-reduced-motion: reduce) { .wm-l { transform: none !important; transition: none !important; } }
@@ -1096,7 +1096,7 @@ h2.display { font-size: clamp(2.5rem, 5.6vw, 4.5rem); line-height: 1.04; letter-
 
 /* ── section titles: letters rise from behind a mask ── */
 .t-split .wd { display: inline-block; overflow: hidden; vertical-align: top; padding: .04em 0 .17em; margin: -.04em 0 -.17em; }
-.t-split .lt { display: inline-block; transform: translateY(115%); transition: transform .9s var(--ease) var(--d, 0ms); will-change: transform; }
+.t-split .lt { display: inline-block; transform: translateY(115%); transition: transform .9s var(--ease) var(--d, 0ms); }
 .t-split.in .lt { transform: none; }
 @media (prefers-reduced-motion: reduce) { .t-split .lt { transform: none !important; transition: none !important; } }
 
@@ -1104,3 +1104,6 @@ h2.display { font-size: clamp(2.5rem, 5.6vw, 4.5rem); line-height: 1.04; letter-
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 button, input, select, textarea { font: inherit; }
 @supports not selector(:has(*)) { .idea-box input[aria-invalid="true"] { border-color: #ff8f7e; } }
+
+/* ── performance: skip rendering far-below-the-fold sections until they are near the screen ── */
+#why, #reviews, #faq, .site-footer { content-visibility: auto; contain-intrinsic-size: auto 720px; }

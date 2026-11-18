@@ -13,11 +13,13 @@
   const setMenu = open => {
     menu.classList.toggle("open", open);
     menu.setAttribute("aria-hidden", String(!open));
+    menu.inert = !open;
     toggle?.setAttribute("aria-expanded", String(open));
     document.body.classList.toggle("menu-open", open);
     if (open) { backdrop.classList.remove("hidden"); requestAnimationFrame(() => backdrop.classList.add("show")); }
     else { backdrop.classList.remove("show"); setTimeout(() => !menu.classList.contains("open") && backdrop.classList.add("hidden"), 400); }
   };
+  menu.inert = true;
   toggle?.addEventListener("click", () => setMenu(true));
   $("#menu-close")?.addEventListener("click", () => setMenu(false));
   backdrop?.addEventListener("click", () => setMenu(false));

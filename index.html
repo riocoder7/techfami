@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-d5hVH4/dKMXreO+PwafOzk65zq0DaKrOVEE+YscbfU4=' https://cdnjs.cloudflare.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; base-uri 'none'; form-action 'self'; object-src 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-PG3Y4Sw6uvMg8hYvif8EdsIGQsD+6r32cHUTX1wMC18=' https://cdnjs.cloudflare.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; base-uri 'none'; form-action 'self'; object-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Website, Mobile App, AI &amp; SaaS Development | Techfami</title>
@@ -60,9 +60,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" />
-  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("js")}</script>
-  <link rel="stylesheet" href="./css/styles.css?v=20261118m" />
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" /></noscript>
+  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("js")};var l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap";document.head.appendChild(l)</script>
+  <link rel="stylesheet" href="./css/styles.css?v=20261118n" />
 </head>
 <body>
 
@@ -621,11 +623,11 @@
         <option value="+971">🇦🇪 +971</option>
         <option value="other">Other</option>
       </select>
-      <input id="manualCountryCode" type="text" placeholder="+Code" class="hidden" style="width:34%" />
-      <input maxlength="24" type="tel" name="phone" required placeholder="Phone number" autocomplete="tel-national" style="flex:1" />
+      <input id="manualCountryCode" type="text" aria-label="Country code" placeholder="+Code" class="hidden" style="width:34%" />
+      <input maxlength="24" type="tel" name="phone" required aria-label="Phone number" placeholder="Phone number" autocomplete="tel-national" style="flex:1" />
     </div>
-    <input maxlength="24" type="tel" name="whatsapp" required placeholder="WhatsApp number" />
-    <input maxlength="160" type="email" name="email" required placeholder="Email address" autocomplete="email" />
+    <input maxlength="24" type="tel" name="whatsapp" required aria-label="WhatsApp number" placeholder="WhatsApp number" />
+    <input maxlength="160" type="email" name="email" required aria-label="Email address" placeholder="Email address" autocomplete="email" />
     <button id="submitCallback" type="submit">Submit request</button>
   </form>
 
@@ -642,8 +644,8 @@
     <h2 id="modalTitle">Plan inquiry</h2>
     <form id="inquiryForm">
       <div class="grid2">
-        <input maxlength="120" type="text" name="fullName" placeholder="Full Name" />
-        <input maxlength="160" type="email" name="email" placeholder="Email Address" />
+        <input maxlength="120" type="text" name="fullName" aria-label="Full Name" placeholder="Full Name" />
+        <input maxlength="160" type="email" name="email" aria-label="Email Address" placeholder="Email Address" />
       </div>
       <div class="grid3">
         <select name="countryCode" aria-label="Country code">
@@ -657,9 +659,9 @@
           <option value="+33">🇫🇷 +33</option>
           <option value="+86">🇨🇳 +86</option>
         </select>
-        <input maxlength="24" type="tel" name="phone" placeholder="Phone Number" />
+        <input maxlength="24" type="tel" name="phone" aria-label="Phone Number" placeholder="Phone Number" />
       </div>
-      <textarea maxlength="3000" name="message" rows="4" placeholder="Tell us about your idea or project..."></textarea>
+      <textarea maxlength="3000" name="message" rows="4" aria-label="Tell us about your idea or project..." placeholder="Tell us about your idea or project..."></textarea>
       <button type="submit"><span class="btn-text">Send Inquiry</span><span class="loader hidden border-2 border-white border-t-transparent rounded-full w-5 h-5 animate-spin"></span></button>
     </form>
   </div>
@@ -668,9 +670,9 @@
 <div id="popupMessage" class="hidden fixed top-20 text-sm right-0 transform translate-x-full bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg font-medium transition-all duration-500 ease-in-out z-[100]"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="./js/index.js?v=20261118m" defer></script>
-<script src="./js/submitForm.js?v=20261118m" type="module"></script>
-<script src="./js/inquiry.js?v=20261118m" type="module"></script>
-<script src="./js/book_consultation.js?v=20261118m" type="module"></script>
+<script src="./js/index.js?v=20261118n" defer></script>
+<script src="./js/submitForm.js?v=20261118n" type="module"></script>
+<script src="./js/inquiry.js?v=20261118n" type="module"></script>
+<script src="./js/book_consultation.js?v=20261118n" type="module"></script>
 </body>
 </html>
