@@ -1,7 +1,6 @@
 
 
-import { db } from "../config/firebaseConfig.js";
-import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+// Firebase is loaded only when the form is submitted.
 
 const modal = document.getElementById("serviceModal");
 const modalTitle = document.getElementById("modalTitle");
@@ -60,6 +59,8 @@ inquiryForm.addEventListener("submit", async (e) => {
   submitBtn.disabled = true;
 
   try {
+    const { db } = await import("../config/firebaseConfig.js");
+    const { collection, addDoc, serverTimestamp } = await import("https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js");
     await addDoc(collection(db, "inquiryForm"), {
       fullName,
       email,

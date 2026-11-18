@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin sign in</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; frame-src https://techfami-1d931.firebaseapp.com; base-uri 'none'; form-action 'self'; object-src 'none'" />
+  <link rel="icon" href="../images/logo2.png" />
+  <link rel="stylesheet" href="./admin.css?v=6" />
+</head>
+<body class="login-body">
+  <noscript><p class="notice">JavaScript is required to sign in.</p></noscript>
+  <main class="login-card" aria-labelledby="t">
+    <img class="login-logo" src="../images/logo.png" alt="" width="48" height="48" />
+    <h1 id="t">Admin sign in</h1>
+    <p class="muted">Authorised staff only. Every attempt is checked by the server.</p>
+
+    <form id="loginForm" novalidate autocomplete="on">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="username" required maxlength="160" />
+      <label for="password">Password</label>
+      <div class="pw">
+        <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="200" />
+        <button type="button" id="showPw" class="ghost" aria-pressed="false">Show</button>
+      </div>
+      <label for="secret">Secret key</label>
+      <div class="pw">
+        <input id="secret" name="secret" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required maxlength="200" />
+        <button type="button" id="showKey" class="ghost" aria-pressed="false">Show</button>
+      </div>
+      <p id="msg" class="msg" role="alert" hidden></p>
+      <button id="submit" type="submit" class="primary">Sign in</button>
+    </form>
+    <p class="fine"><a href="./signup.html">Request access</a> if you do not have an account yet.</p>
+  </main>
+  <script type="module" src="./login.js?v=6"></script>
+</body>
+</html>

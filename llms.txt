@@ -1,0 +1,42 @@
+# Techfami
+
+> Techfami is a technology company that builds websites, mobile apps, AI chatbots, generative AI solutions and a cloud ERP for garment, textile, manufacturing and trading businesses. Tagline: "Your Ideas. Our Tech."
+
+## Our promise
+- Free demo first: tell us your idea and our team creates a demo of it at no charge.
+- You do not pay first. We continue only after you confirm the demo.
+
+## Services
+- Website Development & Design
+- App Development & Design (mobile)
+- AI Chatbot Integration
+- UI / UX Design
+- Generative AI
+- AI Development
+- Maintenance and new features for existing websites, web apps and mobile apps
+- Consultancy: full-stack development, cloud architecture, DevOps
+
+## Service pages
+- [Website development](https://www.techfami.com/website-development.html): one-page and dynamic websites, from INR 19,999 (about USD 250)
+- [Mobile app development](https://www.techfami.com/mobile-app-development.html): native Android and iOS apps, from INR 39,999 (about USD 450)
+- [AI solutions](https://www.techfami.com/ai-solutions.html): AI chatbots for website and WhatsApp, generative AI, custom AI development and automation
+- [SaaS development](https://www.techfami.com/saas-development.html): idea to first version, multi-user access, admin dashboard, payments
+- [Maintenance and new features](https://www.techfami.com/software-maintenance.html): bug fixes, updates and new features for websites, web apps and mobile apps you already have
+
+## Products
+- [Products page](https://www.techfami.com/products.html): details of Techfami ERP modules and who it is for
+- [Techfami ERP](https://erp.techfami.com): cloud ERP for garment, textile, manufacturing and trading businesses. Covers production, inventory, GST invoicing and billing, challans and payments.
+
+## Pages
+- [About](https://www.techfami.com/about.html): who we are, what we do and our promise
+- [Home](https://www.techfami.com/): services, products, pricing plans and contact form
+- [Services](https://www.techfami.com/#services)
+- [FAQ](https://www.techfami.com/#faq): answers on the free demo, pricing, timelines and support
+- [Pricing](https://www.techfami.com/#pricing)
+- [Contact](https://www.techfami.com/#ContactUs): email and contact form are on this section
+
+## Contact
+- Phone / WhatsApp: +91 9930870979
+- LinkedIn: https://www.linkedin.com/company/tech-fami
+- Instagram: https://www.instagram.com/techfami
+- X / Twitter: https://twitter.com/tech_fami

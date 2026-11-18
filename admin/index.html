@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin dashboard</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; frame-src https://techfami-1d931.firebaseapp.com; base-uri 'none'; form-action 'none'; object-src 'none'" />
+  <link rel="icon" href="../images/logo2.png" />
+  <link rel="stylesheet" href="./admin.css?v=6" />
+</head>
+<body>
+  <noscript><p class="notice">JavaScript is required.</p></noscript>
+
+  <!-- nothing from the database is shown until the server has approved this account -->
+  <div id="gate" class="status">Checking your session…</div>
+
+  <div id="app" hidden>
+    <header class="top">
+      <div class="brand"><img src="../images/logo.png" alt="" width="32" height="32" /><span>Techfami admin</span></div>
+      <div class="who"><span id="whoEmail"></span><span id="sessionLeft" class="timer" role="timer"></span><button id="signOut" class="ghost" type="button">Sign out</button></div>
+    </header>
+
+    <main class="wrap">
+      <section class="kpis" aria-label="Summary">
+        <div class="kpi"><b id="kTotal">0</b><span>All submissions</span></div>
+        <div class="kpi"><b id="kNew">0</b><span>New (not handled yet)</span></div>
+        <div class="kpi"><b id="kToday">0</b><span>Received today</span></div>
+        <div class="kpi"><b id="kDone">0</b><span>Done</span></div>
+      </section>
+
+      <div class="tabs" role="tablist" aria-label="Submission type" id="tabs"></div>
+
+      <div class="bar">
+        <input id="search" type="search" placeholder="Search name, email, phone, message…" aria-label="Search" maxlength="100" />
+        <select id="statusFilter" aria-label="Filter by status">
+          <option value="all">All statuses</option><option value="new">New</option><option value="contacted">Contacted</option><option value="done">Done</option>
+        </select>
+        <span class="grow"></span>
+        <button id="exportCsv" class="ghost" type="button">Export CSV</button>
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Received</th><th>Who</th><th>Contact</th><th>Details</th><th>Status</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty" class="empty" hidden>Nothing here yet.</p>
+      </div>
+      <p id="status" class="status" role="status"></p>
+    </main>
+
+    <dialog id="dlg" aria-labelledby="dlgTitle">
+      <h2 id="dlgTitle">Submission</h2>
+      <dl id="dlgBody"></dl>
+      <div class="dlg-actions" id="dlgActions"></div>
+    </dialog>
+  </div>
+
+  <script type="module" src="./admin.js?v=6"></script>
+</body>
+</html>

@@ -1,9 +1,9 @@
-import { db } from "../config/firebaseConfig.js";
-import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+// Firebase is loaded only when the form is submitted, so the popup itself always works.
 
 
 window.addEventListener("load", () => {
     const popup = document.getElementById("consultPopup");
+    if (!popup) return;
     popup.classList.add("opacity-0", "translate-x-16");
   
     setTimeout(() => {
@@ -16,10 +16,8 @@ window.addEventListener("load", () => {
 const popup = document.getElementById("consultPopup");
 const actionButtons = document.getElementById("actionButtons");
 const callbackForm = document.getElementById("callbackForm");
-const meetSection = document.getElementById("meetSection");
 const successMsg = document.getElementById("successMsg");
 
-const meetBtn = document.getElementById("meetBtn");
 const callbackBtn = document.getElementById("callbackBtn");
 const closeBtn = document.getElementById("closePopupBtn");
 const countrySelect = document.getElementById("countryCodeSelect");
@@ -31,23 +29,17 @@ const  TextData = document.getElementById('textdata');
 
 
 //ui handel 
-meetBtn.addEventListener("click", () => {
-    actionButtons.classList.add("hidden");
-    meetSection.classList.remove("hidden");
-    popup.classList.add("w-[360px]");
-  });
-  
-  callbackBtn.addEventListener("click", () => {
+  callbackBtn?.addEventListener("click", () => {
     actionButtons.classList.add("hidden");
     callbackForm.classList.remove("hidden");
     popup.classList.add("w-[360px]");
   });
   
-  closeBtn.addEventListener("click", closePopup);
+  closeBtn?.addEventListener("click", closePopup);
 
 
 // country code 
-countrySelect.addEventListener("change", () => {
+countrySelect?.addEventListener("change", () => {
     if (countrySelect.value === "other") {
       countrySelect.classList.add("hidden");
       manualCountry.classList.remove("hidden");
@@ -59,23 +51,20 @@ countrySelect.addEventListener("change", () => {
 
 //  form data 
 
-callbackForm.addEventListener("submit", async (e) => {
+callbackForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
   
     const countryCode =
       manualCountry.value || countrySelect.value;
   
-    const phone =
-      callbackForm.querySelector('input[placeholder="Phone Number"]').value.trim();
-  
-    const whatsapp =
-      callbackForm.querySelector('input[placeholder="WhatsApp Number"]').value.trim();
-  
-    const email =
-      callbackForm.querySelector('input[placeholder="Email Address"]').value.trim();
-  
+    // fields are read by name, so changing placeholder text can never break the form again
+    const field = n => (callbackForm.elements[n]?.value || "").trim();
+    const phone = field("phone");
+    const whatsapp = field("whatsapp");
+    const email = field("email");
+
     if (!countryCode || !phone || !email) {
-      alert("Please fill all required fields");
+      alert("Please add your country code, phone number and email so we can call you back.");
       return;
     }
   
@@ -83,6 +72,8 @@ callbackForm.addEventListener("submit", async (e) => {
     submitBtn.disabled = true;
   
     try {
+      const { db } = await import("../config/firebaseConfig.js");
+    const { collection, addDoc, serverTimestamp } = await import("https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js");
       await addDoc(collection(db, "CallBackReq"), {
         countryCode,
         phone,
@@ -92,7 +83,6 @@ callbackForm.addEventListener("submit", async (e) => {
       });
   
       callbackForm.classList.add("hidden");
-      meetSection.classList.add("hidden");
       actionButtons.classList.add("hidden");
       TextData.classList.add("hidden");
       closeBtn.classList.add('hiddden');
@@ -102,7 +92,7 @@ callbackForm.addEventListener("submit", async (e) => {
   
     } catch (err) {
       console.error(err);
-      alert("Something went wrong");
+      alert("Sorry, we could not send your request. Please check your internet connection and try again, or message us on WhatsApp.");
     } finally {
       submitBtn.textContent = "Submit Request";
       submitBtn.disabled = false;
@@ -122,7 +112,6 @@ function closePopup() {
       TextData.classList.remove("hidden");
       closeBtn.classList.remove('hiddden');
       callbackForm.classList.add("hidden");
-      meetSection.classList.add("hidden");
       successMsg.classList.add("hidden");
     }, 400);
   }

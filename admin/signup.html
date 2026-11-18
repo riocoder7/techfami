@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request admin access</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; frame-src https://techfami-1d931.firebaseapp.com; base-uri 'none'; form-action 'self'; object-src 'none'" />
+  <link rel="icon" href="../images/logo2.png" />
+  <link rel="stylesheet" href="./admin.css?v=6" />
+</head>
+<body class="login-body">
+  <noscript><p class="notice">JavaScript is required.</p></noscript>
+  <main class="login-card" aria-labelledby="t">
+    <img class="login-logo" src="../images/logo.png" alt="" width="48" height="48" />
+    <h1 id="t">Request admin access</h1>
+    <p class="muted">Your request is saved as <b>inactive</b>. You can sign in only after an administrator approves it.</p>
+
+    <form id="signupForm" novalidate autocomplete="off">
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="off" required maxlength="160" />
+      <label for="password">Password (12+ characters)</label>
+      <div class="pw">
+        <input id="password" name="password" type="password" autocomplete="new-password" required maxlength="200" />
+        <button type="button" id="showPw" class="ghost" aria-pressed="false">Show</button>
+      </div>
+      <label for="secret">Secret key (10+ characters, different from the password)</label>
+      <div class="pw">
+        <input id="secret" name="secret" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required maxlength="200" />
+        <button type="button" id="showKey" class="ghost" aria-pressed="false">Show</button>
+      </div>
+      <p id="msg" class="msg" role="alert" hidden></p>
+      <button id="submit" type="submit" class="primary">Send request</button>
+    </form>
+    <p class="fine">Keep your password and secret key somewhere safe. They cannot be recovered. <a href="./login.html">Back to sign in</a></p>
+  </main>
+  <script type="module" src="./signup.js?v=6"></script>
+</body>
+</html>

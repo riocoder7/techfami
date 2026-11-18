@@ -1,2463 +1,652 @@
 <!DOCTYPE html>
-<html > 
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-d5hVH4/dKMXreO+PwafOzk65zq0DaKrOVEE+YscbfU4=' https://cdnjs.cloudflare.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; base-uri 'none'; form-action 'self'; object-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Techfami | Web & App Development, AI Solutions, Digital Transformation</title>
-  <meta name="description" content="Techfami - Your trusted partner for professional web development, app development, AI solutions, and digital transformation services. Let's build your digital future together!">
-  <meta property="og:url" content="https://techfami.com" />
+  <title>Website, Mobile App, AI &amp; SaaS Development | Techfami</title>
+  <meta name="description" content="Techfami builds websites, mobile apps, AI solutions and SaaS products. Tell us your idea and get a free demo first. You pay only after you approve it.">
+  <link rel="canonical" href="https://www.techfami.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Techfami" />
+  <meta name="theme-color" content="#0a1228" />
+  <meta name="color-scheme" content="light" />
+  <meta name="keywords" content="web development, app development, AI solutions, AI chatbot, generative AI, UI UX design, ERP software, garment ERP, Techfami" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Techfami" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://www.techfami.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.techfami.com/images/logo2.png" />
+  <meta property="og:title" content="Website, Mobile App, AI & SaaS Development | Techfami" />
+  <meta property="og:description" content="Techfami builds websites, mobile apps, AI solutions and SaaS products. Tell us your idea and get a free demo first. You pay only after you approve it." />
+  <meta property="og:image" content="https://www.techfami.com/images/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Techfami: tell us your idea and get a free demo first" />
 
   <!-- Twitter Card meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Techfami | Web & App Development, AI Solutions, Digital Transformation" />
-  <meta name="twitter:description" content="Techfami - Your trusted partner for professional web development, app development, AI solutions, and digital transformation services. Let's build your digital future together!" />
-  <meta name="twitter:image" content="https://techfami.com/images/logo2.png" />
-
+  <meta name="twitter:title" content="Website, Mobile App, AI & SaaS Development | Techfami" />
+  <meta name="twitter:description" content="Techfami builds websites, mobile apps, AI solutions and SaaS products. Tell us your idea and get a free demo first. You pay only after you approve it." />
+  <meta name="twitter:image" content="https://www.techfami.com/images/og-card.png" />
   <meta name="twitter:site" content="@tech_fami" />
   <meta name="twitter:creator" content="@tech_fami" />
 
- <link rel="icon" href="./images/logo2.png" >
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="./css/splace_screen.css" /> 
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-  <style>
-    #cursor-shape {
-      transform: translate(-50%, -50%);
-      transition: border-radius 0.3s, transform 0.2s ease;
-    }
-    .swiper-slide {
-  width: auto !important;
+  <link rel="icon" href="./images/logo2.png" />
+  <link rel="apple-touch-icon" href="./images/logo.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {"@type":"Organization","@id":"https://www.techfami.com/#organization","name":"Techfami","alternateName":"TechFami","url":"https://www.techfami.com/","logo":{"@type":"ImageObject","url":"https://www.techfami.com/images/logo2.png"},"email":"info@techfami.com","telephone":"+919930870979","description":"Techfami builds websites, mobile apps, AI chatbots, generative AI solutions and cloud ERP software for businesses.","sameAs":["https://www.instagram.com/techfami","https://www.linkedin.com/company/tech-fami","https://twitter.com/tech_fami"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@techfami.com","telephone":"+919930870979","availableLanguage":["English","Hindi"]}},
+  {"@type":"WebSite","@id":"https://www.techfami.com/#website","url":"https://www.techfami.com/","name":"Techfami","publisher":{"@id":"https://www.techfami.com/#organization"},"inLanguage":"en"},
+  {"@type":"WebPage","@id":"https://www.techfami.com/#webpage","url":"https://www.techfami.com/","name":"Website, Mobile App, AI & SaaS Development | Techfami","description":"Techfami builds websites, mobile apps, AI solutions and SaaS products. Tell us your idea and get a free demo first. You pay only after you approve it.","isPartOf":{"@id":"https://www.techfami.com/#website"},"about":{"@id":"https://www.techfami.com/#organization"},"inLanguage":"en"},
+  {"@type":"ProfessionalService","@id":"https://www.techfami.com/#service","name":"Techfami","url":"https://www.techfami.com/","image":"https://www.techfami.com/images/logo2.png","telephone":"+919930870979","email":"info@techfami.com","areaServed":"Worldwide","parent":{"@id":"https://www.techfami.com/#organization"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Techfami Services","itemListElement":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Development & Design","serviceType":"Web development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"App Development & Design","serviceType":"Mobile app development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Chatbot Integration","serviceType":"AI chatbot development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"UI / UX Design","serviceType":"UI/UX design"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Generative AI","serviceType":"Generative AI solutions"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Development","serviceType":"AI software development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"SaaS Product Development","serviceType":"SaaS development"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Maintenance & New Features","serviceType":"Software maintenance and feature development"}}]}},
+  {"@type":"SoftwareApplication","@id":"https://www.techfami.com/#erp","name":"Techfami ERP","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://erp.techfami.com","description":"Cloud-based ERP for garment, textile, manufacturing and trading businesses: production, inventory, GST billing, challans and payments.","publisher":{"@id":"https://www.techfami.com/#organization"}}
+ ]
 }
+  </script>
 
-  
-    .circle { border-radius: 50%; }
-    .square { border-radius: 12px;  }
-    .diamond {
-  border-radius: 0%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-    .blob {
-      border-radius: 35% 65% 55% 45% / 60% 30% 70% 40%;
-      transition: all 0.6s ease-in-out;
-    }
-    body.no-scroll {
-  overflow: hidden;
-}
-
-
-
-@keyframes scaleUp {
-    0% { transform: scale(0.9); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-  .animate-scaleUp {
-    animation: scaleUp 0.25s ease-out;
-  }
-
-  
-  </style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" />
+  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("js")}</script>
+  <link rel="stylesheet" href="./css/styles.css?v=20261118m" />
 </head>
-<body  class="bg-gray-900">
+<body>
 
-     <!-- Splash Screen -->
-  <div  class="splashScreen p-10">
-		<div class="loadingContainer">
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-phone-app" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 8.7 5 8.7-5"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-upright" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-x-social" viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+</svg>
 
-			<div class="loadingBox flex flex-col justify-center items-center p-10">
-				<img src="./images/logo.png" class="splashLogo" alt="techfami logo ">
-          <h1 style="color: white; font-size: 40px;">TechFami </h1>
-          <h1 class="text-white hero-title">Your Ideas. Our Tech.<br/>Websites • Mobile Apps • AI-Powered Solutions</h1>
-
-				<div class="loadingBarContainer">
-					<div class="loadingbar"></div>
-				</div>
-
-				<div class="loadingCircle">
-					<div class="circleOuter"></div>
-					<div class="circleLoader"></div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-
-
-
-
-
-<main style="display: none;">
-<!-- CTA SECTION  -->
-<div
-  id="consultPopup"
-  class="fixed bottom-36 right-3 w-[310px]  rounded-2xl 
-         bg-[#0B1220]/90 backdrop-blur-xl
-         border border-white/10 shadow-2xl
-         p-5 z-50
-         opacity-0 translate-x-16
-         transition-all duration-700 ease-out">
-
-  <!-- Close Button -->
-  <button id="closePopupBtn"
-    class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl">
-    ✕
-  </button>
-<div id="textdata" class="">
-  <h4 id="" class="text-white text-xl font-semibold mb-2">
-    Book a Free Consultation 🚀
-  </h4>
-
-  <p class="text-gray-400 text-md mb-8">
-    Let’s discuss your website or mobile app idea in a quick call.
-  </p>
-</div>
-
-
-  <!-- ACTION BUTTONS -->
-  <div id="actionButtons" class="flex gap-3">
-    <button id="meetBtn"
-      class="flex-1 text-center rounded-lg py-2 text-sm font-medium
-         bg-gradient-to-r from-indigo-500 to-purple-600
-         text-white">
-  Book Google Meet
-</button>
-
-      <!-- GOOGLE MEET INLINE -->
-<div id="meetSection" class="hidden mt-4">
-  <p class="text-sm text-gray-400 mb-2">
-    Select a convenient time. A Google Meet link will be created automatically.
-  </p>
-
-  <iframe
-    src="https://calendly.com/yourname/google-meet?hide_event_type_details=1&hide_gdpr_banner=1"
-    class="w-full h-[420px] rounded-lg border border-white/10"
-    frameborder="0">
-  </iframe>
-</div>
-
-    <button
-    id="callbackBtn"
-      class="flex-1 rounded-lg py-2 text-sm font-medium
-             border border-indigo-500 text-indigo-400">
-      Call Back
-    </button>
-  </div>
-
-  <!-- FORM -->
-  <form
-  id="callbackForm"
-    class="hidden mt-4 space-y-3">
-
-    <div class="w-full gap-3 flex">
-      <!-- Country Code Select -->
-      <select
-      id="countryCodeSelect"
-        class="w-[25%] h-[40px] rounded-lg bg-[#121a2a]
-               border border-white/10 px-2 text-sm text-white
-               focus:outline-none focus:border-indigo-500
-               appearance-none cursor-pointer">
-        <option value="" disabled selected>Code</option>
-        <option value="+91">🇮🇳 +91</option>
-        <option value="+1">🇺🇸 +1</option>
-        <option value="+44">🇬🇧 +44</option>
-        <option value="+971">🇦🇪 +971</option>
-        <option value="other">🌍 Other</option>
-      </select>
-    
-      <!-- Manual Country Code -->
-      <input
-        id="manualCountryCode"
-        type="text"
-        placeholder="+Code"
-        class="hidden w-[25%] h-[40px] rounded-lg bg-[#121a2a]
-               border border-white/10 px-2 text-sm text-white
-               focus:outline-none focus:border-indigo-500"
-      />
-      <input
-      type="tel"
-      required
-      placeholder="Phone Number"
-      class="flex-1 h-[40px] rounded-lg bg-[#121a2a]
-             border border-white/10 px-3 text-white
-             focus:outline-none focus:border-indigo-500"
-    />
-    
-        
-      
-    </div>
-  
-    
-
-    <input type="tel" required placeholder="WhatsApp Number"
-      class="w-full rounded-lg bg-[#121a2a] border border-white/10 px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
-
-    <input type="email" required placeholder="Email Address"
-      class="w-full rounded-lg bg-[#121a2a] border border-white/10 px-3 py-2 text-white focus:outline-none focus:border-indigo-500">
-
-      <!-- <input type="text"
-     placeholder="Enter Your message or Enter your Ideas"
-     class="w-full h-[150px] rounded-lg bg-[#121a2a] border border-white/10 px-3 py-2 text-white focus:outline-none focus:border-indigo-500"
-     > -->
-    <button id="submitCallback" type="submit"
-      class="w-full rounded-lg py-2 text-sm font-medium
-             bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-      Submit Request
-    </button>
-  </form>
-
-  <!-- SUCCESS -->
-  <div
-  id="successMsg"
-  class="hidden mt-6 flex items-center gap-3 rounded-xl 
-         bg-green-500/10 border border-green-400/30
-         px-4 py-3">
-
-  <!-- Success Icon -->
-  <div
-    class="flex h-9 w-9 items-center justify-center rounded-full
-           bg-green-500/20 text-green-400">
-    ✔
-  </div>
-
-  <!-- Text -->
-  <div>
-    <p class="text-green-400 font-medium text-sm">
-      Request sent successfully
-    </p>
-    <p class="text-gray-400 text-xs">
-      Our team will contact you shortly.
-    </p>
-  </div>
-
-</div>
-
-</div>
-
-
-<!-- Floating WhatsAppIcons -->
-<div id="whatsapp" class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-4">
-
-  <!-- WhatsApp Button with Tooltip -->
-  <div class="relative group">
-    <!-- Tooltip -->
-    <span
-      class="absolute right-full mr-3 top-1/2 -translate-y-1/2 transform bg-white text-green-600 text-sm font-semibold px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap">
-      Chat on WhatsApp
-    </span>
-
-    <!-- Button -->
-    <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20TechFami"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="w-16 h-16 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-           alt="WhatsApp techfami " class="w-full h-full object-contain" />
+<!-- ═══ Header ═══ -->
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Techfami home">
+      <img src="./images/logo.png" alt="Techfami logo" width="38" height="38" />
+      <span>Techfami</span>
     </a>
-  </div>
-
-</div>
-
-  <!-- header section    -->
-  <header id="header" class="sticky top-0 z-100 inset-x-0 text-gray-300 bg-transparent transition-bg ">
-    <nav class=" navBAr flex items-center justify-between px-6 bg-gray-900/95  lg:px-8  transition-colors duration-300" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-16 w-auto"
-            src="./images/logo.png" alt="techfami Logo">
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" id="menu-toggle" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 
-                text-gray-300 
-                hover:bg-gray-800 
-                transition-all duration-300">
-          <span class="sr-only">Open menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5h16.5M3.75 12h16.5M3.75 19h16.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#home"
-          class="text-lg font-semibold text-white dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-900 text-8xl">Home</a>
-          
-          <a href="#products"
-          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Products</a>
-          <a href="#services"
-          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Services</a>
-        <a href="#pricing"
-          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Pricing</a>
-        <a href="#ContactUs"
-          class="text-lg font-semibold text-gray-300 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">Contect US</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      
-       <span   class="text-sm/6 font-semibold text-white dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">
-           <span aria-hidden="true">&rarr;</span>
-        </span>
-      </div>
-    </nav>
-
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div id="backdrop" class="fixed inset-0 z-50 hidden"></div>
-      <div id="mobile-menu"
-        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform translate-x-full transition-transform duration-300">
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-14 w-auto"
-              src="./images/logo.png" alt="techfami techFami logo ">
-          </a>
-          <button id="menu-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-white hover:bg-gray-800 ">
-            <span class="sr-only">Close menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              aria-hidden="true" data-slot="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-200 dark:divide-gray-700">
-            <div class="space-y-2 py-6">
-                <a href="#home"
-                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700">Home</a>
-                <a href="#products"
-                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-200 hover:bg-gray-700">Products</a>
-                <a href="#services"
-                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-200 hover:bg-gray-700">Services</a>
-                <a href="#pricing"
-                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-200 hover:bg-gray-700">Pricing</a>
-                <a href="#ContactUs"
-                   class="mobilLink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-200 hover:bg-gray-700">Contect US</a>
-            </div>
-            <div class="py-4">
-                
-              <div class="space-y-2 py-6">
-                <!-- <a href="#home"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About Us </a> -->
-                <!-- <a href="#career"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Career Page</a> -->
-                <!-- <a href="#pricing"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Pricing</a>
-                <a href="#ContactUs"
-                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contect US</a> -->
-            </div>
-
-              <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">
-              Book Free Consultation <span aria-hidden="true">→</span>
-           </a>
-           
-              
-            </div>
-        </div>
-        
-        </div>
-      </div>
-    </div>
-
-
-  </header>
-
-    <!-- Hero section -->
-    <div id="hero" class="bg-gray-900 h-screen ">
-      
-    
-
-      <div id="home" class="relative isolate px-6  lg:px-8">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true">
-          <div
-            class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-          </div>
-        </div>
-        <div class="mx-auto max-w-2xl py-22 sm:py-48 lg:py-56">
-         
-
-          <div class="text-center  ">
-            <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl">  Transform Your Ideas Into Digital Reality </h1>
-            <!-- <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 "> Professional Web, Mobile App Desing & Development and AI-powered solutions  for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital solutions tailored to elevate your brand and drive results.</p> -->
-            <p class="mt-12 text-lg font-medium text-gray-400 sm:text-xl/8 "> Custom Web & Mobile App Design & Development, along with AI-powered solutions for individuals and businesses — delivering visually stunning, user-friendly, and high-performing digital experiences tailored to elevate your brand and drive results.  </p> 
-            <div class="mt-15 flex items-center justify-center gap-x-6 ">
-              <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-md  bg-gradient-to-r from-indigo-500 to-purple-600 text-white   px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400">Let’s Automate Now</a>
-                
-                <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20website%20and%20mobile%20app%20development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm/6 border p-2 rounded-lg px-5 font-semibold text-indigo-400">
-                Book Free Consultation <span aria-hidden="true">→</span>
-             </a>
-             
-            </div>
-          </div>
-
-        </div>
-        <div
-          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-          aria-hidden="true">
-          <div
-            class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-          </div>
-        </div>
-      </div>
-      
-      <div class="flex px-20 py-8 lg:px-8 lg:py-12">
-
-
-     
-    </div>
-    </div>
-  
-  <!-- show case ui design -->
-<section id="showcase" class="py-28 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-  <!-- <h1 class="text-4xl font-bold text-center mb-16 text-white">Showcase of Our UI Designs</h1> -->
-  <!-- <h2 class="text-5xl md:text-3xl lg:text-5xl text-center mb-16 font-bold ">
-    Showcase of Our UI Designs
-  </h2> -->
-  
-  
-
-  <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
-     <!-- Image -->
-     <div class="lg:w-1/2">
-      <img src="./images/image1.png" alt="UI Design Showcase Techfami" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
-    </div>
-
-    
-    <!-- Text Content -->
-    <div class="lg:w-1/2 px-4 lg:text-left lg:px-0">
-      <h2 class="text-4xl md:text-4xl font-bold mb-6">
-         Multi-Vendor Ecommerce App & Website. 🛒
-      </h2>
-      <p class="text-lg text-gray-400 mb-6">
-        Launch your own complete ecommerce platform — with everything you need to connect customers, sellers, and delivery partners.
-      </p>
-      <ul class="text-left text-gray-200 space-y-2 my-5">
-        <li> ✓ Android & iOS App for Customers</li>
-        <li>✓ Android & iOS App for Sellers & Delivery Staff</li>
-        <li>✓ Responsive Website </li>
-        <li>✓ Full-featured Admin Dashboard</li>
-        <li>✓ Secure Payments & Order Management</li>
-      </ul>
-
-      <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20Multi-Vendor%20Ecommerce%20App%2C%20Website%2C Mobile apps%20and%20AI%20Solutions%20with%20Automation%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
-      target="_blank"
-      rel="noopener noreferrer"
-       class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-       ✨ Book Free consultation →
-      </a>
-    </div>
-
-   
-    
-  </div>
-  
-  <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 my-36">
-   
-
-   
-   <!-- Text Content -->
-   <div class="lg:w-1/2 px-4 lg:px-0 lg:text-left">
-     <h2 class="text-4xl md:text-4xl font-bold mb-6">
-       Your Online Store, Inside a Mobile App 📱
-     </h2>
-     <p class="text-lg text-gray-400 mb-6">
-      Bring your products, services, or ideas to life with a fully customized mobile app built just for you.
-Whether you're a small shop, service provider, startup, or personal brand — we design and develop apps tailored to your unique needs.
-     </p>
-
-     <ul class="text-left text-gray-200 space-y-2 my-5">
-      <li>✓ Android & iOS App Development </li>
-      <li>✓ Beautiful, Brand-Focused UI/UX Design</li>
-      <li>✓ For Products, Services, Bookings, Portfolios & More </li>
-      <li>✓ Fast Performance & Seamless User Experience</li>
-      <li>✓ App Store Launch Support Included</li>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About us</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn btn--primary" style="padding:.7rem 1.2rem">Get a quote</a></li>
     </ul>
-
-
-    <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20Mobile%20App%20Development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you." 
-    target="_blank"
-    rel="noopener noreferrer"
-     class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-     ✨ Book Free consultation →
-     </a>
-   </div>
-
-    <!-- Image -->
-    <div class="lg:w-1/2">
-      <img src="./images/image3.png" alt="UI Design Showcase TechFami" class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
-    </div>
-
-  
-   
- </div>
-
- <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 my-36">
-   
-<!-- Image -->
-<div class="lg:w-1/2">
-  <img src="./images/wesideimage.jpg" alt="UI Design Showcase techfami " class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
-</div>
-   
-  <!-- Text Content webside section  -->
-  <div class="lg:w-1/2 px-4 lg:px-0 lg:text-left">
-    <h2 class="text-4xl md:text-4xl font-bold mb-6">
-       Your Business, Powered by a Stunning Website 💻
-    </h2>
-    <p class="text-lg text-gray-400 mb-6">
-      Get a modern, responsive website designed to showcase your brand, sell your products, or promote your services — exactly the way you want.
-    </p>
-
-    <ul class="text-left text-gray-200 space-y-2 my-5">
-     <li>✓ Custom Web Design & Development </li>
-     <li>✓  Fast, Mobile-Responsive Layouts </li>
-     <li>✓ Portfolio, Service, Ecommerce, Booking & More </li>
-     <li>✓ SEO-Friendly & Easy to Manage</li>
-     <li>✓ Built for Individuals, Small Businesses & Startups</li>
-     <li>✓  Hosting & Launch Support Available </li>
-   </ul>
-
-
-   <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20Website%20Development%20services.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you." 
-   target="_blank" 
-   target="_blank"
-   rel="noopener noreferrer"
-    class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-    ✨ Book Free consultation →
-    </a>
+    <button class="menu-btn" id="menu-toggle" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
   </div>
+</header>
 
-   
-
- 
-  
-</div>
-
-<div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 my-36">
-   
-
-     
-    <!-- Text Content webside section  -->
-    <div class="lg:w-1/2 px-4 lg:px-0 lg:text-left">
-      <h2 class="text-4xl md:text-4xl font-bold mb-6">
-        Your Business, Powered by AI Automation 🤖 
-      </h2>
-      <p class="text-lg text-gray-400 mb-6">
-        Reimagine how your business works with intelligent AI solutions — automating tasks, engaging customers, and unlocking new growth opportunities.
-      </p>
-  
-      <ul class="text-left text-gray-200 space-y-2 my-5">
-       <li>✓ AI Chatbots for Websites, Apps & Messaging</li>
-       <li>✓ Customer Support Bots, Virtual Assistants & AI-Powered Helpdesk </li>
-       <li>✓ Business Workflow & Process Automation  </li>
-       <li>✓ Custom GPT & LLM Integrations for Tailored Business Workflows</li>
-       <li>✓ AI-Powered Recommendation Systems & Personalization</li>
-       <li>✓ Predictive Analytics & Smart Data Insights </li>
-     </ul>
-  
-  
-     <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hello%20Techfami%2C%20I%20am%20interested%20in%20your%20AI%20Automation%20Solutions.%20Please%20share%20the%20pricing%2C%20features%2C%20and%20timeframe%20details.%20Thank%20you."
-     target="_blank"
-     rel="noopener noreferrer"
-      class="inline-block bg-white text-gray-900 px-6 py-3 my-10 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
-      ✨ Book Free consultation →
-      </a>
-    </div>
-
-      <!-- Image -->
-  <div class="lg:w-1/2">
-    <img src="/images/ai automation .png" alt="UI Design Showcase techfami " class="rounded-2xl shadow-2xl w-full max-w-[500px] mx-auto">
+<div class="backdrop hidden" id="backdrop"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-label="Menu" aria-hidden="true">
+  <div class="mm-top">
+    <a class="brand" href="#top" aria-label="Techfami home"><img src="./images/logo.png" alt="" width="32" height="32" /><span>Techfami</span></a>
+    <button class="menu-btn mm-close" id="menu-close" aria-label="Close menu"><svg class="icon"><use href="#i-x"/></svg></button>
   </div>
-  
-     
-  
-   
-    
-  </div>
+  <ul>
+    <li><a class="mobilLink" href="#services">Services</a></li>
+    <li><a class="mobilLink" href="products.html">Products</a></li>
+    <li><a class="mobilLink" href="#process">Process</a></li>
+    <li><a class="mobilLink" href="#pricing">Pricing</a></li>
+    <li><a class="mobilLink" href="#reviews">Reviews</a></li>
+    <li><a class="mobilLink" href="#faq">FAQ</a></li>
+  </ul>
+  <a class="btn btn--primary mm-cta mobilLink" href="#contact">Get a quote <svg class="icon"><use href="#i-arrow"/></svg></a>
+</aside>
 
+<main id="top">
 
-</section>      
+<!-- ═══ Hero (dark) ═══ -->
+<section class="hero night" aria-labelledby="hero-title">
+  <div class="wrap hero2">
+    <div class="h2-copy">
+      <h1 id="hero-title" class="display"><span class="sr-only">Got an idea? We’ll build it as a website, a mobile app, an AI chatbot or a SaaS product.</span><span class="h1-vis" aria-hidden="true"><span class="l1" data-line>Got an idea?</span><span class="l2" data-line>We’ll build it as</span><span class="flipline" data-line><span class="flip" id="flip"><span class="fw"><svg class="icon"><use href="#i-globe"/></svg>website</span><span class="fw"><svg class="icon"><use href="#i-phone-app"/></svg>mobile app</span><span class="fw"><svg class="icon"><use href="#i-bot"/></svg>AI chatbot</span><span class="fw"><svg class="icon"><use href="#i-cpu"/></svg>SaaS product</span></span></span></span></h1>
+      <p class="hero-sub" data-hero>Tell us in your own words. We’ll build a free demo for you to see. Like it? We make it real.</p>
 
-
-
-
-
-
-<!-- ═══════════════════════════════════════════════════
-     PRODUCTS SECTION — Techfami GarmentERP
-     ═══════════════════════════════════════════════════ -->
-<section id="products" class="bg-gray-900 py-20 px-4">
-  <div class="max-w-6xl mx-auto text-center">
-
-    <!-- Section Header -->
-    <div class="flex flex-col justify-center items-center mb-14">
-      <span class="text-sm text-indigo-400 uppercase tracking-widest mb-3">Built by Techfami</span>
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Products</h2>
-      <p class="text-gray-400 max-w-2xl">
-        Beyond services, we build and own software products that solve real industry problems.
-        These are live platforms you can start using today.
-      </p>
-      <div class="w-36 h-1 bg-indigo-500 rounded-lg mt-5"></div>
-    </div>
-
-    <!-- Product Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
-      <!-- Techfami ERP Card -->
-      <div class="relative bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-indigo-900/40 hover:shadow-2xl text-left flex flex-col">
-
-        <!-- Top gradient banner -->
-        <div class="h-2 w-full bg-gradient-to-r from-indigo-500 to-purple-600"></div>
-
-        <div class="p-7 flex flex-col flex-1">
-          <!-- Badge + Icon -->
-          <div class="flex items-center justify-between mb-5">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-xl bg-indigo-900/60 border border-indigo-700 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white">Techfami ERP</h3>
-                <p class="text-xs text-indigo-400 font-medium">erp.techfami.com</p>
-              </div>
-            </div>
-            <span class="text-xs bg-green-900/60 text-green-400 border border-green-700 px-3 py-1 rounded-full font-semibold">Live</span>
-          </div>
-
-          <!-- Description -->
-          
-<!-- Description -->
-<p class="text-gray-400 text-sm mb-5 leading-6">
-  A powerful cloud-based ERP designed for garment, textile, manufacturing, trading, and other growing businesses. Manage production, inventory, GST billing, challans, payments, and business operations — all from one integrated platform.
-</p>
-
-
-
-          <!-- Features -->
-          
-<!-- Features -->
-<ul class="text-gray-300 text-sm space-y-2 mb-6">
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    GST Invoice & Bill Generation
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Sales, Purchase & Expense Management
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Production & Process Tracking
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Raw Material & Inventory Management
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Delivery Challan & LR Tracking
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Advance Payment & Outstanding Tracking
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Analytics Dashboard & Excel Export
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-    Role-based Multi-user Access
-  </li>
-</ul>
-
-
-
-          <!-- Tags -->
-       
-<!-- Tags -->
-<div class="flex flex-wrap gap-2 mb-7">
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">Cloud ERP</span>
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">Production Management</span>
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">Inventory Management</span>
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">GST Billing</span>
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">Multi-Industry</span>
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">Business Analytics</span>
-  <span class="text-xs bg-gray-700 text-gray-300 px-2.5 py-1 rounded-full">Made in India</span>
-</div>
-
-
-
-          <!-- CTA Button -->
-          <div class="mt-auto flex gap-3">
-            <a href="https://erp.techfami.com" target="_blank" rel="noopener noreferrer"
-              class="flex-1 text-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold py-2.5 px-5 rounded-xl hover:opacity-90 transition duration-300 text-sm">
-              Visit Techfami ERP →
-            </a>
-            <a href="https://erp.techfami.com/signup" target="_blank" rel="noopener noreferrer"
-              class="text-center border border-indigo-500 text-indigo-400 font-semibold py-2.5 px-5 rounded-xl hover:bg-indigo-900/30 transition duration-300 text-sm">
-              Sign Up Free
-            </a>
-          </div>
+      <form class="idea" id="ideaForm" data-hero autocomplete="off">
+        <label class="idea-label" for="idea">I want to build</label>
+        <div class="idea-box">
+          <input id="idea" type="text" placeholder="a booking app for my salon" maxlength="120" aria-describedby="ideaErr" />
+          <button type="submit" class="btn btn--light">Get my free demo <svg class="icon"><use href="#i-arrow"/></svg></button>
         </div>
-      </div>
+        <p class="idea-err" id="ideaErr" role="alert" hidden>Tell us a few words about your idea first.</p>
+      </form>
 
-      <!-- Coming Soon Card -->
-      <div class="relative bg-gray-800/50 rounded-2xl border border-dashed border-gray-600 flex flex-col items-center justify-center p-10 text-center min-h-[400px]">
-        <div class="w-14 h-14 rounded-2xl bg-gray-700 flex items-center justify-center mb-5">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-              d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-400 mb-2">More Products Coming Soon</h3>
-        <p class="text-gray-500 text-sm max-w-xs">
-          We're building more industry-specific software solutions. Stay tuned for upcoming products from Techfami.
-        </p>
-        <a href="https://api.whatsapp.com/send?phone=919930870979&text=Hi%20Techfami%2C%20I%20have%20a%20product%20idea%20I%27d%20like%20to%20discuss."
-          target="_blank" rel="noopener noreferrer"
-          class="mt-6 text-sm border border-gray-600 text-gray-400 px-5 py-2 rounded-xl hover:border-indigo-500 hover:text-indigo-400 transition duration-300">
-          Share a Product Idea →
-        </a>
-      </div>
-
+      <ul class="trust" data-hero>
+        <li><svg class="icon"><use href="#i-check"/></svg>Free demo</li>
+        <li><svg class="icon"><use href="#i-check"/></svg>No payment upfront</li>
+        <li><svg class="icon"><use href="#i-check"/></svg>Support after launch</li>
+      </ul>
     </div>
+
+    <figure class="h2-vis" data-hero>
+      <div class="stage" id="reveal" style="--x:50">
+        <svg class="layer re" viewBox="0 0 460 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <defs><linearGradient id="gi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f74f5"/><stop offset="1" stop-color="#0f3db5"/></linearGradient></defs>
+  <rect width="460" height="380" fill="#eaf0fb"/>
+  <rect x="24" y="24" width="412" height="332" rx="12" fill="#fff" stroke="#dce3f0"/>
+  <path d="M24 60H436V36a12 12 0 0 0-12-12H36a12 12 0 0 0-12 12z" fill="#f3f6fc"/>
+  <circle cx="44" cy="42" r="4" fill="#ff7a4d"/><circle cx="58" cy="42" r="4" fill="#ffb020"/><circle cx="72" cy="42" r="4" fill="#22d3a6"/>
+  <circle cx="52" cy="92" r="12" fill="#1d5fe8"/><text x="70" y="97" font-family="Geist,system-ui,sans-serif" font-size="14" font-weight="700" fill="#0b1530">Kora Salon</text>
+  <g font-family="Geist,system-ui,sans-serif" font-size="11" font-weight="500" fill="#475069"><text x="170" y="96">Services</text><text x="236" y="96">Prices</text><text x="288" y="96">Contact</text></g>
+  <rect x="366" y="80" width="50" height="24" rx="7" fill="#1d5fe8"/><text x="391" y="96" text-anchor="middle" font-family="Geist,system-ui,sans-serif" font-size="11" font-weight="600" fill="#fff">Book</text>
+  <g font-family="Geist,system-ui,sans-serif" font-weight="700" font-size="25" fill="#0b1530"><text x="52" y="158">Book your next</text><text x="52" y="188">cut <tspan fill="#1d5fe8">in seconds.</tspan></text></g>
+  <text x="52" y="214" font-family="Geist,system-ui,sans-serif" font-size="12" fill="#475069">Pick a time. Pay online. Get a reminder.</text>
+  <rect x="52" y="240" width="118" height="36" rx="10" fill="#1d5fe8"/><text x="111" y="263" text-anchor="middle" font-family="Geist,system-ui,sans-serif" font-size="13" font-weight="600" fill="#fff">Book now</text>
+  <rect x="270" y="130" width="146" height="146" rx="14" fill="url(#gi)"/>
+  <circle cx="343" cy="186" r="30" fill="rgba(255,255,255,.18)"/><path d="M329 186l10 10 18-20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="284" y="234" width="118" height="30" rx="9" fill="#fff"/><circle cx="298" cy="249" r="4" fill="#22d3a6"/><text x="308" y="253" font-family="Geist,system-ui,sans-serif" font-size="10" font-weight="600" fill="#0b1530">Booking confirmed</text>
+  <g font-family="Geist,system-ui,sans-serif" font-size="11" font-weight="600" fill="#0b1530">
+    <rect x="44" y="302" width="108" height="42" rx="10" fill="#f6f8fc" stroke="#dce3f0"/><circle cx="66" cy="323" r="10" fill="#e4edff"/><circle cx="66" cy="323" r="4" fill="#1d5fe8"/><text x="84" y="327">Pick a time</text>
+    <rect x="176" y="302" width="108" height="42" rx="10" fill="#f6f8fc" stroke="#dce3f0"/><circle cx="198" cy="323" r="10" fill="#fff1d6"/><circle cx="198" cy="323" r="4" fill="#ffb020"/><text x="216" y="327">Pay online</text>
+    <rect x="308" y="302" width="108" height="42" rx="10" fill="#f6f8fc" stroke="#dce3f0"/><circle cx="330" cy="323" r="10" fill="#dff7ef"/><circle cx="330" cy="323" r="4" fill="#22d3a6"/><text x="348" y="327">Reminders</text>
+  </g>
+</svg>
+        <svg class="layer sk" viewBox="0 0 460 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <defs><pattern id="bp" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="1"/></pattern></defs>
+  <rect width="460" height="380" fill="#0d2b73"/><rect width="460" height="380" fill="url(#bp)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-dasharray="5 4" stroke-linecap="round">
+    <rect x="24" y="24" width="412" height="332" rx="12"/>
+    <path d="M24 60H436"/>
+    <circle cx="44" cy="42" r="4"/><circle cx="58" cy="42" r="4"/><circle cx="72" cy="42" r="4"/>
+    <circle cx="52" cy="92" r="12"/>
+    <path d="M150 92q10-8 20 0t20 0t20 0"/><path d="M230 92q10-8 20 0t20 0"/><path d="M290 92q10-8 20 0t20 0"/>
+    <rect x="366" y="80" width="50" height="24" rx="6"/>
+    <path d="M52 150q15-10 30 0t30 0t30 0t30 0t30 0t30 0"/><path d="M52 180q15-10 30 0t30 0t30 0t30 0"/>
+    <path d="M52 208H206"/><path d="M52 222H170"/>
+    <rect x="52" y="240" width="118" height="36" rx="8"/>
+    <rect x="270" y="130" width="146" height="146" rx="14"/><path d="M270 130L416 276M416 130L270 276"/>
+    <rect x="44" y="302" width="108" height="42" rx="8"/><rect x="176" y="302" width="108" height="42" rx="8"/><rect x="308" y="302" width="108" height="42" rx="8"/>
+  </g>
+</svg>
+        <span class="tagpill tl">Your idea</span><span class="tagpill tr">Finished product</span>
+        <div class="handle" aria-hidden="true"><span class="knob"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span></div>
+        <input type="range" min="0" max="100" value="50" step="0.5" aria-label="Drag to turn a rough idea into a finished website" />
+      </div>
+    </figure>
   </div>
 </section>
-<!-- ═══════════════════════════════════════════════════ -->
 
-
-<!-- ═══════════════════════════════════════════════════
-     TECHFAMI ERP DETAIL SECTION
-     ═══════════════════════════════════════════════════ -->
-<section id="garment-erp" class="bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 py-24 px-4">
-  <div class="max-w-6xl mx-auto">
-
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <span class="text-sm text-indigo-400 uppercase tracking-widest font-semibold">Deep Dive</span>
-      <h2 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
-        Techfami <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">ERP</span>
-      </h2>
-
-<p class="text-gray-400 max-w-2xl mx-auto text-lg">
-  Everything your business needs to work smarter — from billing, inventory, purchasing, and sales to production, payments, reporting, and analytics — all in one powerful ERP platform, built in India.
-</p>
-
-
-      <div class="flex items-center justify-center gap-4 mt-6">
-        <a href="https://erp.techfami.com" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition text-sm">
-          Visit Live Platform →
-        </a>
-        <a href="https://erp.techfami.com/signup" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 border border-indigo-500 text-indigo-400 font-semibold px-6 py-3 rounded-xl hover:bg-indigo-900/30 transition text-sm">
-          Create Free Account
-        </a>
-      </div>
+<!-- ═══ Services ═══ -->
+<!-- ═══ Promise ═══ -->
+<section class="promise" aria-labelledby="promise-title">
+  <div class="wrap">
+    <div class="pr-head" data-r>
+      <h2 id="promise-title" class="display">Don’t worry. <span class="dim">You don’t pay first.</span></h2>
+      <p class="lede">Tell us your idea. Our team understands it and builds a demo you can actually see. The demo costs you nothing. We only continue after you confirm.</p>
     </div>
-
-
-<!-- What is TECHFAMI ERP -->
-<div class="bg-gray-800/60 border border-gray-700 rounded-2xl p-8 md:p-12 mb-10">
-  <h3 class="text-2xl font-bold text-white mb-4">What is Techfami ERP?</h3>
-
-  <p class="text-gray-400 leading-relaxed mb-4">
-    Techfami ERP is a powerful, cloud-based Enterprise Resource Planning platform designed to help businesses manage their day-to-day operations from one centralized system.
-  </p>
-
-  <p class="text-gray-400 leading-relaxed mb-4">
-    Built for garment, textile, manufacturing, trading, and other growing businesses, Techfami ERP brings essential operations such as billing, sales, purchases, inventory, production, payments, reporting, and analytics together in one easy-to-use platform.
-  </p>
-
-  <p class="text-gray-400 leading-relaxed">
-    It runs entirely in a web browser, so there is no complicated installation or infrastructure required. Simply sign up, log in, and manage your business from anywhere, on any device.
-  </p>
-</div>
-
-
-
-
-<!-- Who is it for -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-
-  <!-- Manufacturers -->
-  <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-    <div class="w-12 h-12 rounded-xl bg-indigo-900/50 border border-indigo-700 flex items-center justify-center mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-      </svg>
-    </div>
-
-    <h4 class="text-white font-bold text-lg mb-2">
-      Manufacturers
-    </h4>
-
-    <p class="text-gray-400 text-sm leading-6">
-      Manufacturing businesses that need to manage production, raw materials,
-      inventory, sales, purchases, billing, and daily operations from one system.
-    </p>
-  </div>
-
-  <!-- Textile & Garment -->
-  <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-purple-600 transition-all duration-300">
-    <div class="w-12 h-12 rounded-xl bg-purple-900/50 border border-purple-700 flex items-center justify-center mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2.5 2.5 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
-      </svg>
-    </div>
-
-    <h4 class="text-white font-bold text-lg mb-2">
-      Garment & Textile Businesses
-    </h4>
-
-    <p class="text-gray-400 text-sm leading-6">
-      Garment and textile businesses can manage production processes,
-      stock, client orders, challans, deliveries, GST invoices, and
-      business records in one centralized platform.
-    </p>
-  </div>
-
-  <!-- Trading & Distribution -->
-  <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-600 transition-all duration-300">
-    <div class="w-12 h-12 rounded-xl bg-green-900/50 border border-green-700 flex items-center justify-center mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-      </svg>
-    </div>
-
-    <h4 class="text-white font-bold text-lg mb-2">
-      Traders & Distributors
-    </h4>
-
-    <p class="text-gray-400 text-sm leading-6">
-      Trading and distribution businesses can manage customers, suppliers,
-      sales, purchases, inventory, payments, outstanding balances, and
-      business performance with ease.
-    </p>
-  </div>
-
-</div>
-
-
-
-    <!-- Core Modules -->
-    <div class="mb-10">
-      <h3 class="text-2xl font-bold text-white mb-8 text-center">Core Modules — Everything You Need</h3>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- Billing -->
-        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex gap-5">
-          <div class="w-12 h-12 rounded-xl bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-base mb-1">GST Billing & Invoice</h4>
-            <p class="text-gray-400 text-sm leading-relaxed">Generate professional GST-compliant invoices and bills instantly. Supports custom product fields like MRP, color, size, and fabric type. Export as PDF in one click. Manage financial year-wise billing records with full history.</p>
-          </div>
-        </div>
-
-        <!-- Challan -->
-        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex gap-5">
-          <div class="w-12 h-12 rounded-xl bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l-3-3m3 3l3-3"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-base mb-1">Challan Management</h4>
-            <p class="text-gray-400 text-sm leading-relaxed">Create and track delivery challans with LR number, transport details, and delivery location. Update status in real time — Pending, Delivered, or Returned. View challan analytics with date-range filtering and export full reports to Excel.</p>
-          </div>
-        </div>
-
-        <!-- Inventory -->
-        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex gap-5">
-          <div class="w-12 h-12 rounded-xl bg-green-900/50 border border-green-700 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-base mb-1">Raw Stock & Inventory</h4>
-            <p class="text-gray-400 text-sm leading-relaxed">Track raw fabric and material stock month by month across financial years. Manage products by color, category, and custom fields. Search and filter inventory instantly, and export full stock reports to Excel for audits or review.</p>
-          </div>
-        </div>
-
-        <!-- Advance Payments -->
-        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex gap-5">
-          <div class="w-12 h-12 rounded-xl bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-base mb-1">Advance Payment Tracking</h4>
-            <p class="text-gray-400 text-sm leading-relaxed">Record advance payments received from clients with multiple payment modes. Automatically tracks status — Pending, Fully Adjusted, or Extra. Generates advance receipt PDFs. Never lose track of how much a client owes or has paid in advance.</p>
-          </div>
-        </div>
-
-        <!-- Analytics -->
-        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex gap-5">
-          <div class="w-12 h-12 rounded-xl bg-blue-900/50 border border-blue-700 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-base mb-1">Analytics Dashboard</h4>
-            <p class="text-gray-400 text-sm leading-relaxed">A powerful business intelligence dashboard with sales trend charts, product performance reports, challan analytics, MRP value tracking, and monthly comparisons. Filter by date range and export all data to Excel instantly.</p>
-          </div>
-        </div>
-
-        <!-- Access Control -->
-        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 flex gap-5">
-          <div class="w-12 h-12 rounded-xl bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-white font-bold text-base mb-1">Multi-user Role Access</h4>
-            <p class="text-gray-400 text-sm leading-relaxed">Invite your staff with role-based permissions — control who can view, create, edit, or delete each module. Admin sees everything; staff only sees what they need. Keeps your business data secure and organized.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-<!-- Core Modules -->
-<div class="mb-10">
-  <h3 class="text-2xl font-bold text-white mb-3 text-center">
-    Core Modules — Everything You Need
-  </h3>
-  <p class="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-8">
-    Manage your complete business workflow — from product development and sampling
-    to production, inventory, billing, payments, employees, and reporting.
-  </p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-    <!-- Product Management -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-indigo-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Product Management</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Create and manage products with flexible, dynamic information.
-            Add product details based on your business requirements instead of
-            being limited to fixed fields.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dynamic Fields -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-purple-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h10"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Dynamic Fields & Columns</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            No rigid data structure. Add and manage custom fields according to
-            your business needs. Use flexible information across products,
-            challans, invoices, and other records.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sampling -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-pink-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-pink-900/50 border border-pink-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 3h6m-7 4h8m-9 4h10m-9 4h8m-7 4h6"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Sampling Management</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Manage product and garment samples from creation to completion.
-            Track sampling details, categories, status, dates, quantities,
-            and sample-related information in one place.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Production -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-green-900/50 border border-green-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M9 10h.01M12 10h.01M15 10h.01"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Production Management</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Create production orders, assign products and quantities, monitor
-            progress, and track completed and remaining production from start
-            to finish.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Production Process -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-cyan-900/50 border border-cyan-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h10m-10 6h16M18 9l3 3-3 3"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Production Process Tracking</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Define multiple production processes such as knitting, dyeing,
-            cutting, stitching, finishing, and more. Track process-wise
-            quantities, completed work, remaining quantities, and progress.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Employee Production -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-amber-600 transition">
-      <div class="w-12 h-12 rounded-xl bg-amber-900/50 border border-amber-700 flex items-center justify-center flex-shrink-0">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2m9-10a4 4 0 100-8 4 4 0 000 8zm5-3v6m3-3h-6"/>
-        </svg>
-      </div>
-      <div>
-        <h4 class="text-white font-bold text-base mb-1">Employee & Production Payments</h4>
-        <p class="text-gray-400 text-sm leading-relaxed">
-          Track employee or worker production work and calculate payments
-          based on completed quantities or production processes. Monitor
-          completed work, payable amounts, and payment records.
-        </p>
-      </div>
-    </div>
-
-    <!-- Billing -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-indigo-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-indigo-900/50 border border-indigo-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">GST Billing & Invoices</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Create professional GST invoices and bills with flexible product
-            information, custom columns, PDF generation, and financial
-            year-wise records.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Challan -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-purple-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-purple-900/50 border border-purple-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l-3-3m3 3l3-3"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Delivery Challan & LR</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Create and manage delivery challans with flexible product
-            information, LR numbers, transport details, delivery locations,
-            status tracking, PDF documents, and Excel reports.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Inventory -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-green-900/50 border border-green-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Inventory & Stock Management</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Track raw materials, finished products, stock movements, opening
-            balances, categories, colors, quantities, and inventory history
-            with powerful search and filtering.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sales & Purchase -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-blue-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-blue-900/50 border border-blue-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 3h18v4H3V3zm2 8h14v10H5V11zm4 3h6m-6 3h4"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Sales & Purchase Management</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Manage customers, suppliers, sales, purchases, product quantities,
-            transactions, and business records while keeping your operational
-            data connected.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Payments -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-rose-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-rose-900/50 border border-rose-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Payments & Outstanding</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Record advances and payments, track outstanding balances, monitor
-            adjustments, and maintain complete payment history with
-            downloadable PDF records.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Analytics -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-cyan-900/50 border border-cyan-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 19V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Analytics & Reports</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Understand your business with dashboards, production reports,
-            sales trends, inventory information, payment data, date-range
-            filtering, and Excel exports.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Access Control -->
-    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-emerald-600 transition">
-      <div class="flex gap-5">
-        <div class="w-12 h-12 rounded-xl bg-emerald-900/50 border border-emerald-700 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-white font-bold text-base mb-1">Multi-user & Role Access</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Give your team controlled access with role-based permissions.
-            Manage who can view, create, edit, or delete information across
-            different modules.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-<!-- Why Techfami ERP over generic software -->
-<div class="bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border border-indigo-700/50 rounded-2xl p-8 md:p-12 mb-10">
-
-  <h3 class="text-2xl font-bold text-white mb-3">
-    Why Techfami ERP — Not Generic Software?
-  </h3>
-
-  <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-3xl">
-    Techfami ERP combines the flexibility of modern cloud software with the
-    practical features businesses need to manage their daily operations.
-    Built to adapt to different industries, workflows, and business requirements.
-  </p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-    <!-- Left Column -->
-    <div class="space-y-5">
-
-      <!-- Multi Industry -->
-      <div class="flex items-start gap-3">
-        <span class="w-6 h-6 rounded-full bg-indigo-500 text-white text-xs flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
-          ✓
-        </span>
-
-        <div>
-          <p class="text-white font-semibold text-sm">
-            Built for Multiple Industries
-          </p>
-
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Designed for manufacturing, garment, textile, trading, distribution,
-            and other growing businesses — with workflows that can adapt to
-            different business requirements.
-          </p>
-        </div>
-      </div>
-
-      <!-- Flexible -->
-      <div class="flex items-start gap-3">
-        <span class="w-6 h-6 rounded-full bg-indigo-500 text-white text-xs flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
-          ✓
-        </span>
-
-        <div>
-          <p class="text-white font-semibold text-sm">
-            Flexible & Customizable
-          </p>
-
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Your business does not have to follow a fixed software structure.
-            Configure products, workflows, information, and fields according
-            to how your business operates.
-          </p>
-        </div>
-      </div>
-
-      <!-- Dynamic Fields -->
-      <div class="flex items-start gap-3">
-        <span class="w-6 h-6 rounded-full bg-indigo-500 text-white text-xs flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
-          ✓
-        </span>
-
-        <div>
-          <p class="text-white font-semibold text-sm">
-            Dynamic Fields & Data
-          </p>
-
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Add business-specific fields and information instead of being
-            restricted to predefined software fields. Keep your data flexible
-            as your business grows.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Right Column -->
-    <div class="space-y-5">
-
-      <!-- Production -->
-      <div class="flex items-start gap-3">
-        <span class="w-6 h-6 rounded-full bg-purple-500 text-white text-xs flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
-          ✓
-        </span>
-
-        <div>
-          <p class="text-white font-semibold text-sm">
-            Complete Business Workflow
-          </p>
-
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Connect products, sales, purchases, inventory, production,
-            processes, billing, payments, employees, and reports in one
-            centralized ERP system.
-          </p>
-        </div>
-      </div>
-
-      <!-- Cloud -->
-      <div class="flex items-start gap-3">
-        <span class="w-6 h-6 rounded-full bg-purple-500 text-white text-xs flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
-          ✓
-        </span>
-
-        <div>
-          <p class="text-white font-semibold text-sm">
-            Cloud-Based & Accessible Anywhere
-          </p>
-
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Access your business from desktop, tablet, or mobile through a web
-            browser. No complicated local installation or dedicated server
-            setup required.
-          </p>
-        </div>
-      </div>
-
-      <!-- Reports -->
-      <div class="flex items-start gap-3">
-        <span class="w-6 h-6 rounded-full bg-purple-500 text-white text-xs flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
-          ✓
-        </span>
-
-        <div>
-          <p class="text-white font-semibold text-sm">
-            Powerful Reports & Document Export
-          </p>
-
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Generate professional PDFs and export business data to Excel for
-            invoices, challans, payments, inventory, production, analytics,
-            and other important records.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Bottom Highlight -->
-  <div class="mt-8 pt-6 border-t border-gray-700/70">
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-
-      <div>
-        <p class="text-white font-semibold text-sm">
-          One ERP. Flexible for your business.
-        </p>
-
-        <p class="text-gray-500 text-xs mt-1">
-          Start with what you need and scale as your business grows.
-        </p>
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        <span class="text-xs bg-gray-800 border border-gray-700 text-gray-400 px-3 py-1.5 rounded-full">
-          Manufacturing
-        </span>
-
-        <span class="text-xs bg-gray-800 border border-gray-700 text-gray-400 px-3 py-1.5 rounded-full">
-          Garment
-        </span>
-
-        <span class="text-xs bg-gray-800 border border-gray-700 text-gray-400 px-3 py-1.5 rounded-full">
-          Textile
-        </span>
-
-        <span class="text-xs bg-gray-800 border border-gray-700 text-gray-400 px-3 py-1.5 rounded-full">
-          Trading
-        </span>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-
-
-
-
-<!-- Stats row -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-
-  <div class="bg-gray-800 rounded-2xl p-6 text-center border border-gray-700 hover:border-indigo-500/50 transition">
-    <p class="text-4xl font-bold text-indigo-400 mb-1">12+</p>
-    <p class="text-gray-400 text-sm">Business Modules</p>
-  </div>
-
-  <div class="bg-gray-800 rounded-2xl p-6 text-center border border-gray-700 hover:border-purple-500/50 transition">
-    <p class="text-4xl font-bold text-purple-400 mb-1">100%</p>
-    <p class="text-gray-400 text-sm">Cloud Based</p>
-  </div>
-
-  <div class="bg-gray-800 rounded-2xl p-6 text-center border border-gray-700 hover:border-green-500/50 transition">
-    <p class="text-4xl font-bold text-green-400 mb-1">24/7</p>
-    <p class="text-gray-400 text-sm">Access Anywhere</p>
-  </div>
-
-  <div class="bg-gray-800 rounded-2xl p-6 text-center border border-gray-700 hover:border-amber-500/50 transition">
-    <p class="text-4xl font-bold text-amber-400 mb-1">∞</p>
-    <p class="text-gray-400 text-sm">Flexible & Scalable</p>
-  </div>
-
-</div>
-
-
-
-
-<!-- Final CTA -->
-<div class="relative overflow-hidden text-center bg-gradient-to-br from-gray-800 via-gray-800 to-indigo-950/40 border border-gray-700 rounded-3xl p-10 md:p-14">
-
-  <!-- Background Glow -->
-  <div class="absolute -top-24 -right-24 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl"></div>
-  <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl"></div>
-
-  <div class="relative">
-    <span class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold px-4 py-2 rounded-full mb-5">
-      <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-      Built to Grow With Your Business
-    </span>
-
-    <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-      Ready to Run Your Business Smarter?
-    </h3>
-
-    <p class="text-gray-400 mb-8 max-w-2xl mx-auto leading-6">
-      Bring billing, sales, purchases, inventory, production, payments,
-      employees, reports, and analytics together in one powerful ERP platform.
-      Start with what you need and scale as your business grows.
-    </p>
-
-    <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-
-      <a
-        href="https://erp.techfami.com/signup"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:opacity-90 hover:shadow-lg hover:shadow-indigo-900/30 transition-all duration-300 text-sm"
-      >
-        Start Free →
-      </a>
-
-      <a
-        href="https://erp.techfami.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-indigo-500/50 bg-indigo-500/5 text-indigo-400 font-semibold px-8 py-3.5 rounded-xl hover:bg-indigo-500/10 hover:border-indigo-400 transition-all duration-300 text-sm"
-      >
-        Explore Techfami ERP
-      </a>
-
-      <a
-        href="https://api.whatsapp.com/send?phone=919930870979&text=Hi%20Techfami%2C%20I%20want%20to%20know%20more%20about%20Techfami%20ERP%20for%20my%20business."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-green-600/60 text-green-400 font-semibold px-8 py-3.5 rounded-xl hover:bg-green-900/20 transition-all duration-300 text-sm"
-      >
-        Talk to Us on WhatsApp
-      </a>
-
-    </div>
-
-    <!-- Trust Text -->
-    <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-gray-500">
-      <span>✓ Cloud Based</span>
-      <span>✓ No Installation</span>
-      <span>✓ Multi-User</span>
-      <span>✓ Flexible & Scalable</span>
-    </div>
-  </div>
-</div>
-
-
-
+    <ol class="pr-steps">
+      <li data-r><span class="pr-ico"><svg class="icon"><use href="#i-chat"/></svg></span><h3>You tell us your idea</h3><p>Share it in your own words, however rough it is. A message or a short call is enough.</p></li>
+      <li data-r><span class="pr-ico"><svg class="icon"><use href="#i-sparkles"/></svg></span><h3>We create your demo <span class="free-tag">No charge</span></h3><p>Our team understands your idea and builds a demo of it, then shows it to you. You pay nothing for this.</p></li>
+      <li data-r><span class="pr-ico"><svg class="icon"><use href="#i-check"/></svg></span><h3>You confirm, we continue</h3><p>Happy with what you see? Say yes and we build it properly. Not sure? No pressure and no bill.</p></li>
+    </ol>
   </div>
 </section>
-<!-- ═══════════════════════════════════════════════════ -->
 
-
- <!-- service section new  -->
-<section id="services" class="bg-gray-900 py-20">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <div class="px-4 mb-10 mx-auto text-left max-w-3xl">
-      
-      <h2 class="text-4xl font-semibold text-white mb-3 text-center">Consultancy Services</h2>
-      <span class="text-sm text-indigo-400 uppercase tracking-widest mb-2 block text-center">Design & Strategy</span>
-      <p class="text-gray-300">
-        Build smarter digital products with expert guidance. At DigiDrafts, we offer consultancy in full-stack web & app development, scalable cloud architectures, and DevOps strategy. Our team helps turn your ideas into production-ready solutions—fast, efficient, and built to scale.
-      </p>
+<section class="section" id="services">
+  <div class="wrap shead" data-r>
+    <h2 class="display">Everything you need <span class="dim">to go digital.</span></h2>
+    <div>
+      <p class="lede">From a first website to full-stack apps, AI and SaaS products, we cover design, engineering and DevOps under one roof, so you never juggle five vendors.</p>
+      <a href="#contact" class="btn btn--primary" style="margin-top:1.6rem">Start a project <svg class="icon"><use href="#i-arrow"/></svg></a>
     </div>
-    
-    
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!--weside Service Card -->
-      <div class="relative h-[480px]  ">
-        <!-- Gradient border effect using ::before -->
-        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
-             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
-        </div>
-      
-        <!-- Actual Card Content -->
-        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
-          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm0 0c-1.5 2-1.5 4 0 6s1.5 4 0 6" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Website Development & Design</h3>
-          
-          <p class="text-gray-400 text-sm">
-            We craft modern, user-friendly websites tailored to your brand, focusing on speed, responsiveness, and functionality.
-          </p>
-          <p class="text-gray-400 text-sm mt-2">
-            Whether you're building a portfolio, an eCommerce store, or a business website, we deliver scalable solutions to bring your vision online.
-          </p>
-        
-          <!-- Bullet Points -->
-          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
-            <li>Custom UI/UX Web Design</li>
-            <li>Responsive Layouts (Mobile & Desktop)</li>
-            <li>Landing Pages & Business Sites</li>
-            <li>eCommerce Store Integration</li>
-            <li>SEO-Optimized Development</li>
-            <li>Performance Optimization</li>
-          </ul>
-        
-          
-        </div>
-        <!-- Button fixed at bottom -->
-        <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="get-started-btn  bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
-          data-service="Website Development & Design"
-          >
-            Get Started →
-          </button>
-        </div>
-        
-      </div>
-      
-      
+  </div>
 
-      <!--app  Service Card -->
-      <div class="relative md:h-[480px] h-[500px]">
-        <!-- Gradient border effect using ::before -->
-        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
-             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
-        </div>
-      
-        <!-- Actual Card Content -->
-        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
-          <!-- Modern App Icon -->
-          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
-            <!-- Mobile App Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M7 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z" />
-            </svg>
-          </div>
-      
-          <h3 class="text-xl font-semibold text-white mb-2">App Development & Design</h3>
-      
-          <p class="text-gray-400 text-sm">
-            We build high-performance, scalable mobile apps that deliver smooth user experiences across Android and iOS.
-          </p>
-          <p class="text-gray-400 text-sm mt-2">
-            From idea to deployment, we work closely with you to design, develop, and launch apps that meet real-world needs.
-          </p>
-      
-          <!-- Bullet Points -->
-          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
-            <li>Custom Android & iOS App Development</li>
-            <li>Cross-Platform Development (React Native)</li>
-            <li>User-Centric UI/UX Design</li>
-            <li>API Integration & Firebase Backend</li>
-            <li>Push Notifications & Analytics</li>
-            <li>App Store Deployment & Support</li>
-          </ul>
-        </div>
-      
-        <!-- Button fixed at bottom -->
-        <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="get-started-btn  bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
-          data-service="App Development & Design"
-          >
-             Get Started →
-          </button>
-        </div>
-      </div>
-      
+  <p class="wrap stack-hint" data-r>Scroll down. Each service slides in on top of the last one.</p>
 
-      <!-- chat ai Service Card -->
-      <div class="relative h-[480px]">
-        <!-- Gradient border effect using ::before -->
-        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
-             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+  <div class="wrap sbento" id="sbento">
+      <article class="stile s-web">
+        <div class="st-top">
+          <h3>Website Development &amp; Design</h3>
+          <p>Fast, responsive, search-ready websites, from one-page sites to dynamic builds with admin panels.</p>
+          <ul class="chips"><li>One-page to 5-page sites</li><li>Admin panel</li><li>On-page SEO</li><li>Contact forms &amp; WhatsApp</li><li>eCommerce &amp; landing pages</li></ul>
+          <a class="st-more" href="website-development.html">How we build websites <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
-      
-        <!-- Actual Card Content -->
-        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
-          <!-- Icon -->
-          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M7 8h10M7 12h6m-6 4h10M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H7l-4 4V6a2 2 0 012-2z" />
-            </svg>
-          </div>
-      
-          <!-- Heading -->
-          <h3 class="text-xl font-semibold text-white mb-2">AI Chatbot Integration</h3>
-      
-          <!-- Description -->
-          <p class="text-gray-400 text-sm">
-            Deploy intelligent chatbots that interact with your users in real-time across platforms like websites, mobile apps, and messaging apps.
-          </p>
-          <p class="text-gray-400 text-sm mt-2">
-            Automate support, increase engagement, and boost conversions using AI-driven responses trained to match your business needs.
-          </p>
-      
-          <!-- Bullet Points -->
-          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
-            <li>Live Website Chatbots</li>
-            <li>Mobile App Chatbot Integration</li>
-            <li>WhatsApp & Messenger Bots</li>
-            <li>Customer Assistant Bots</li>
-            <li>AI-Powered FAQ & Helpdesk</li>
-            <li>Lead Generation via Conversational UI</li>
-          </ul>
+        <div class="st-vis" aria-hidden="true"><div class="v-browser"><div class="vb-bar"><i></i><i></i><i></i></div><div class="vb-body"><b>Your business, online.</b><span class="vb-line"></span><span class="vb-line short"></span><span class="vb-btn">Get started</span></div></div></div>
+        <button class="get-started-btn st-btn" data-service="Website Development & Design">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-app">
+        <div class="st-top">
+          <h3>App Development &amp; Design</h3>
+          <p>Native-quality Android and iOS apps with API, database and push-notification support.</p>
+          <ul class="chips"><li>Android &amp; iOS</li><li>API &amp; database</li><li>Push notifications</li><li>Play Store deployment</li><li>Multi-vendor ecommerce apps</li></ul>
+          <a class="st-more" href="mobile-app-development.html">How we build apps <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
-      
-        <!-- Button -->
-        <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="get-started-btn  bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
-          data-service="AI Chatbot Integration"
-          >       
-          Get Started →
-          </button>
+        <div class="st-vis" aria-hidden="true"><div class="v-phone"><div class="vp-screen"><span class="vp-title">Today</span><div class="vp-row"><i style="background:#22d3a6"></i>New order received</div><div class="vp-row"><i style="background:#ffb020"></i>Out for delivery</div><div class="vp-row"><i style="background:#1d5fe8"></i>Payment confirmed</div></div></div></div>
+        <button class="get-started-btn st-btn" data-service="App Development & Design">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-chat">
+        <div class="st-top">
+          <h3>AI Chatbot Integration</h3>
+          <p>Chatbots on your website and WhatsApp that answer customers and capture leads around the clock.</p>
+          <ul class="chips"><li>Website &amp; WhatsApp</li><li>Lead capture</li><li>Advanced chatbot flows</li><li>WhatsApp &amp; Messenger bots</li></ul>
+          <a class="st-more" href="ai-solutions.html">AI chatbots in detail <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
-      </div>
-      
+        <div class="st-vis" aria-hidden="true"><div class="v-chat"><p class="b l">Hi! Do you build mobile apps?</p><p class="b r">Yes. Tell us about your idea.</p><p class="b l">Great, can we talk today?</p></div></div>
+        <button class="get-started-btn st-btn" data-service="AI Chatbot Integration">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-saas">
+        <div class="st-top">
+          <h3>SaaS Product Development</h3>
+          <p>Turn your idea into subscription software, from first version to launch, with the dashboards and logins customers expect.</p>
+          <ul class="chips"><li>Idea to first version</li><li>Multi-user access</li><li>Admin dashboard</li><li>Secure payments</li></ul>
+          <a class="st-more" href="saas-development.html">How we build SaaS products <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="st-vis" aria-hidden="true"><div class="v-dash"><div class="vd-head"><span>Dashboard</span><em>Pro plan</em></div><div class="vd-bars"><i style="--h:38%"></i><i style="--h:55%"></i><i style="--h:44%"></i><i style="--h:72%"></i><i style="--h:60%"></i><i style="--h:88%"></i></div></div></div>
+        <button class="get-started-btn st-btn" data-service="SaaS Product Development">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-ux">
+        <div class="st-top">
+          <h3>UI / UX Design</h3>
+          <p>Clear interfaces and user flows, designed around how your customers actually use your product.</p>
+          <ul class="chips"><li>User flows</li><li>Responsive layouts</li><li>Approval before code</li><li>Wireframes &amp; prototypes</li></ul>
+        </div>
+        <div class="st-vis" aria-hidden="true"><div class="v-ux"><div class="vu-aa">Aa</div><div class="vu-dots"><i style="background:#1d5fe8"></i><i style="background:#ffb020"></i><i style="background:#ff7a4d"></i><i style="background:#0a1228"></i></div><svg class="icon vu-cur" viewBox="0 0 24 24"><path d="m4 3 7 17 2.5-7L21 10.5z" fill="#111" stroke="#fff"/></svg></div></div>
+        <button class="get-started-btn st-btn" data-service="UI / UX Design">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-gen">
+        <div class="st-top">
+          <h3>Generative AI</h3>
+          <p>Content, search and assistant features built on modern language and image models.</p>
+          <ul class="chips"><li>AI assistants</li><li>Content generation</li><li>Text &amp; image models</li><li>Custom GPT &amp; LLM</li></ul>
+          <a class="st-more" href="ai-solutions.html">Our AI work <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="st-vis" aria-hidden="true"><div class="v-gen"><div class="vg-box"><svg class="icon"><use href="#i-sparkles"/></svg><span>Write a product description for my new shop<b class="caret"></b></span></div><p class="vg-res">Hand-poured soy candles, made in small batches. Warm scents for slow evenings.</p></div></div>
+        <button class="get-started-btn st-btn" data-service="Generative AI">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-aidev">
+        <div class="st-top">
+          <h3>AI Development</h3>
+          <p>Custom AI and automation that removes manual work from your daily operations.</p>
+          <ul class="chips"><li>Workflow automation</li><li>Custom AI integrations</li><li>Real-time chat &amp; bots</li><li>Predictive analytics</li></ul>
+          <a class="st-more" href="ai-solutions.html">Our AI work <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="st-vis" aria-hidden="true"><div class="v-flow"><span class="vf-n">Customer message</span><svg class="icon"><use href="#i-arrow"/></svg><span class="vf-n hot">AI model</span><svg class="icon"><use href="#i-arrow"/></svg><span class="vf-n">Task done</span></div></div>
+        <button class="get-started-btn st-btn" data-service="AI Development">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="stile s-maint">
+        <div class="st-top">
+          <h3>Maintenance &amp; New Features</h3>
+          <p>Keep the software, website or app you already have running smoothly, and add new features without starting over.</p>
+          <ul class="chips"><li>Bug fixes &amp; updates</li><li>New features</li><li>Websites, web apps &amp; mobile apps</li><li>Speed &amp; reliability</li></ul>
+          <a class="st-more" href="software-maintenance.html">How we improve existing software <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="st-vis" aria-hidden="true"><div class="v-maint"><div class="vm-head"><b>Update ready</b><span>v2.4 → v2.5</span></div><ul><li><i></i>Bug fixed</li><li><i></i>New feature added</li><li><i></i>Faster loading</li></ul></div></div>
+        <button class="get-started-btn st-btn" data-service="Maintenance & New Features">Enquire <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </article>
+  </div>
 
+  <div class="wrap included" data-r>
+    <h3>Included in every project</h3>
+    <ul>
+      <li><b>Responsive on every device</b><span>Phones, tablets and desktops, tested before launch.</span></li>
+      <li><b>SEO-ready structure</b><span>Clean markup and metadata so search engines can read your site.</span></li>
+      <li><b>WhatsApp and contact forms</b><span>Customers reach you in one tap, and enquiries land in your inbox.</span></li>
+      <li><b>12 months free support</b><span>On the Starter plan and the Pro Business app option.</span></li>
+    </ul>
+  </div>
 
-      <!--ui/ux desing  Service Card -->
-      <div class="relative h-[480px]">
-        <!-- Gradient border effect using ::before -->
-        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
-             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
-        </div>
-      
-        <!-- Actual Card Content -->
-        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
-          <!-- Icon -->
-          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 10l4.553 2.276A2 2 0 0121 14.118V18a2 2 0 01-2 2H5a2 2 0 01-2-2v-3.882a2 2 0 011.447-1.842L9 10m6 0V6a3 3 0 00-6 0v4m6 0H9" />
-            </svg>
-          </div>
-      
-          <!-- Title -->
-          <h3 class="text-xl font-semibold text-white mb-2">UI / UX Design</h3>
-      
-          <!-- Description -->
-          <p class="text-gray-400 text-sm">
-            We design modern, intuitive user interfaces that enhance user experience, usability, and brand engagement across all devices.
-          </p>
-          <p class="text-gray-400 text-sm mt-2">
-            From wireframes to interactive prototypes, our design approach is focused on user behavior, functionality, and brand alignment.
-          </p>
-      
-          <!-- Bullet Points -->
-          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
-            <li>High-Fidelity Prototypes</li>
-            <li>Wireframing & User Flows</li>
-            <li>Mobile & Web App UI Design</li>
-            <li>Interactive Design Systems</li>
-            <li>Brand-Centered Visuals</li>
-            <li>User Testing & Iteration</li>
-          </ul>
-        </div>
-      
-        <!-- Button -->
-        <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="get-started-btn  bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
-          data-service="UI / UX Design"
-          >              Get Started →
-          </button>
-        </div>
-      </div>
-      
+</section>
 
-
-      <!--gen ai  Service Card -->
-      <div class="relative h-[480px]">
-        <!-- Gradient border effect using ::before -->
-        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
-             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
-        </div>
-      
-        <!-- Actual Card Content -->
-        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
-          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9.75 3a1 1 0 011-1h2.5a1 1 0 011 1v1.25h-4.5V3zM4 7.5A2.5 2.5 0 016.5 5h11A2.5 2.5 0 0120 7.5v2.086a1.5 1.5 0 010 2.828V16.5a2.5 2.5 0 01-2.5 2.5h-11A2.5 2.5 0 014 16.5v-4.086a1.5 1.5 0 010-2.828V7.5z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Generative AI</h3>
-          
-          <p class="text-gray-400 text-sm">
-            We build intelligent generative AI solutions that produce text, images, code, and more—automating workflows and enhancing creativity.
-          </p>
-          <p class="text-gray-400 text-sm mt-2">
-            Unlock new levels of efficiency and personalization with AI models tailored for your business operations, customer support, and content generation.
-          </p>
-      
-          <!-- Bullet Points -->
-          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
-            <li>AI Chatbots & Virtual Assistants</li>
-            <li>Custom GPT & LLM Integrations</li>
-            <li>Content & Copy Generation</li>
-            <li>AI-Based Design & Media Tools</li>
-            <li>Voice & Language AI Solutions</li>
-            <li>Workflow Automation with AI</li>
-          </ul>
-        </div>
-      
-        <!-- Button fixed at bottom -->
-        <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="get-started-btn  bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
-          data-service="Generative AI"
-          >   
-            Get Started →
-          </button>
-        </div>
-      </div>
-      
-
-
-      <!-- ai dev   Service Card -->
-      <div class="relative md:h-[480px] h-[520px]">
-        <!-- Gradient border effect using ::before -->
-        <div class="absolute inset-0 border-t border-l border-r border-gray-700 rounded-t-2xl pointer-events-none"
-             style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
-        </div>
-      
-        <!-- Actual Card Content -->
-        <div class="relative bg-transparent border-t border-l border-r border-gray-800 hover:bg-gray-900 p-3 rounded-t-2xl rounded-b-none h-80 transition text-left">
-          <div class="text-4xl mb-4 text-indigo-500 w-16 h-16 border border-gray-700 flex justify-center items-center rounded-full">
-            🤖
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-2">AI Development</h3>
-          
-          <p class="text-gray-400 text-sm">
-            We build intelligent AI-driven solutions to help automate processes, improve decision-making, and transform digital experiences.
-          </p>
-          <p class="text-gray-400 text-sm mt-2">
-            From idea to deployment, we develop machine learning models, chatbots, and automation pipelines tailored to your goals.
-          </p>
-      
-          <!-- Bullet Points -->
-          <ul class="list-disc list-inside text-gray-400 text-sm mt-2 space-y-1">
-            <li>AI Chatbot Development (OpenAI, Rasa, etc.)</li>
-            <li>Custom Machine Learning Solutions</li>
-            <li>Business Workflow Automation</li>
-            <li>AI-Powered Recommendation Systems</li>
-            <li>Natural Language Processing (NLP)</li>
-            <li>Predictive Analytics & Forecasting</li>
-          </ul>
-        </div>
-      
-        <!-- Button fixed at bottom -->
-        <div class="absolute bottom-3 left-0 w-full flex justify-center">
-          <button class="get-started-btn  bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-indigo-500 text-white font-semibold py-2 px-4 w-72 rounded-full transition shadow-md"
-          data-service="AI Development"
-          >    Get Started →
-          </button>
-        </div>
-      </div>
-      
-
-
+<!-- ═══ Products teaser ═══ -->
+<section class="section section--tint" id="products">
+  <div class="wrap teaser" data-r>
+    <div>
+      <h2 class="display">We also build and <span class="dim">run our own software.</span></h2>
+      <p class="lede" style="margin-top:1.2rem">Alongside client work, Techfami develops products for real industry problems. Our first, Techfami ERP, is live today for garment, textile, manufacturing and trading businesses.</p>
+    </div>
+    <div class="teaser-act">
+      <a class="btn btn--primary" href="products.html">View our products <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a class="link-arrow" href="https://erp.techfami.com" target="_blank" rel="noopener noreferrer">Open Techfami ERP <svg class="icon"><use href="#i-upright"/></svg></a>
     </div>
   </div>
 </section>
 
-
-
-
-
-<!-- why schoose us section -->
-<div class="container mx-auto px-4 py-16 md:py-24">
-  <div class="flex flex-col justify-center items-center mb-12 md:mb-16">
-    <h1 class="text-2xl sm:text-3xl md:text-5xl text-indigo-400 font-bold text-center leading-snug">
-      Why Choose <span class="text-white">Our Agency</span><br/> 
-      <span class="text-lg sm:text-xl md:text-2xl text-white">to Win in Your Market</span>
-    </h1>
-    
-    
-    <p class="text-gray-300 max-w-2xl text-center">
-      In today’s fast-moving digital world, staying ahead isn’t optional — it’s survival.  
-      We don’t just keep you in the race — we put you in pole position.
-    </p>
-    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
+<!-- ═══ Process ═══ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div data-r style="max-width:46rem">
+      <h2 class="display">From idea to launch, <span class="dim">you see it before you pay.</span></h2>
+      <p class="lede" style="margin-top:1.4rem">No jargon and no surprises. The demo is free, and you only commit once you have seen your idea working.</p>
+    </div>
+    <div class="road" id="road">
+      <svg class="road-svg" aria-hidden="true" focusable="false">
+        <path class="road-bed"></path>
+        <path class="road-prog"></path>
+        <path class="road-dash"></path>
+        <circle class="road-car" r="9"></circle>
+      </svg>
+      <ol class="stops">
+        <li class="stop">
+          <span class="pin"><svg class="icon"><use href="#i-chat"/></svg><b>1</b></span>
+          <div class="stop-body"><h3>Tell us <span class="free-tag">Free</span></h3><p>Share your idea and goals in your own words. A message or a short call is enough.</p></div>
+        </li>
+        <li class="stop">
+          <span class="pin"><svg class="icon"><use href="#i-sparkles"/></svg><b>2</b></span>
+          <div class="stop-body"><h3>See your demo <span class="free-tag">Free</span></h3><p>Our team understands your idea and creates a demo to show you. No charge.</p></div>
+        </li>
+        <li class="stop">
+          <span class="pin"><svg class="icon"><use href="#i-check"/></svg><b>3</b></span>
+          <div class="stop-body"><h3>You confirm</h3><p>Like it? Say yes and we move ahead with a clear quote. Not sure? No pressure.</p></div>
+        </li>
+        <li class="stop">
+          <span class="pin"><svg class="icon"><use href="#i-globe"/></svg><b>4</b></span>
+          <div class="stop-body"><h3>Build, launch &amp; support</h3><p>We build it properly, launch it, and support you after it goes live.</p></div>
+        </li>
+      </ol>
+    </div>
   </div>
+</section>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-5 lg:px-20 xl:px-48 2xl:px-[20rem] py-10">
-
-    <!-- Expertise & Innovation -->
-    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-      <div>
-        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Elite Expertise & Future-Ready Innovation</h2>
-        <p class="text-gray-400 leading-relaxed">
-          From AI-powered chatbots to high-performing full-stack platforms — we deliver 
-          cutting-edge solutions your competitors can’t match.  
-          <span class="text-white font-semibold">Work with us, and stay 3 steps ahead.</span>
-        </p>
-      </div>
+<!-- ═══ Pricing ═══ -->
+<section class="section section--tint" id="pricing">
+  <div class="wrap">
+    <div data-r style="max-width:46rem">
+      <h2 class="display">Plans for individuals, <span class="dim">startups and enterprises.</span></h2>
+      <p class="lede" style="margin-top:1.4rem">Clear starting prices, shown in ₹ for India and in $ everywhere else. And you see a free demo of your idea first. You pay only after you approve it.</p>
     </div>
 
-    <!-- Custom Development -->
-    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m-6 0H5V7h14v10h-4" />
-      </svg>
-      <div>
-        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">100% Tailored to Your Business</h2>
-        <p class="text-gray-400 leading-relaxed">
-          No cookie-cutter templates. Every product is engineered for your unique vision,  
-          so you stand out in a crowded market — and make your competition irrelevant.
-        </p>
-      </div>
-    </div>
+    <div class="plans">
+      <article class="plan" data-r>
+        <h3>Starter</h3>
+        <p class="tag">One-page website for individuals and small businesses</p>
+        <div class="price"><span class="inr" data-val="19999" data-sym="₹" data-loc="en-IN">₹19,999</span><span class="usd hidden" data-val="250" data-sym="$" data-loc="en-US">$250</span></div>
+        <ul><li><svg class="icon"><use href="#i-check"/></svg>One-page modern website</li><li><svg class="icon"><use href="#i-check"/></svg>WhatsApp chat integration</li><li><svg class="icon"><use href="#i-check"/></svg>Responsive mobile design</li><li><svg class="icon"><use href="#i-check"/></svg>SEO-ready structure</li><li><svg class="icon"><use href="#i-check"/></svg>Delivery in 15 days</li></ul>
+        <details class="more"><summary>See everything included</summary><ul><li><svg class="icon"><use href="#i-check"/></svg>Email contact form</li><li><svg class="icon"><use href="#i-check"/></svg>Basic analytics setup</li><li><svg class="icon"><use href="#i-check"/></svg>Google Maps showcase</li><li><svg class="icon"><use href="#i-check"/></svg>12 months free custom domain</li><li><svg class="icon"><use href="#i-check"/></svg>12 months free support</li></ul></details>
+        <a class="btn btn--ghost" href="https://wa.me/919930870979?text=Hello%20Techfami%2C%20I%20am%20interested%20in%20the%20Starter%20Plan.%20Please%20provide%20more%20details." target="_blank" rel="noopener noreferrer">Choose Starter <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </article>
 
-    <!-- Collaboration -->
-    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10a2 2 0 012-2h2M12 12v.01M8 16h.01M16 16h.01" />
-      </svg>
-      <div>
-        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">True Partnership, Not Just a Service</h2>
-        <p class="text-gray-400 leading-relaxed">
-          We work like an extension of your team — giving you instant updates,  
-          fast iterations, and full transparency so you never feel “left in the dark.”
-        </p>
-      </div>
-    </div>
-
-    <!-- Measurable ROI -->
-    <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-lg hover:shadow-2xl transition duration-300 flex items-start space-x-4">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 11V3h2v8h5l-6 9-6-9h5z" />
-      </svg>
-      <div>
-        <h2 class="text-xl md:text-2xl font-semibold mb-2 text-indigo-400">Results That Actually Pay Off</h2>
-        <p class="text-gray-400 leading-relaxed">
-          Every project is laser-focused on boosting revenue, engagement, and brand authority.  
-          <span class="text-white font-semibold">If it doesn’t grow your business, it’s not good enough for us.</span>
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="flex justify-center mt-8">
-    
-    <a href="https://wa.me/919930870979?text=Hi%20there!%20🚀%20I%27m%20looking%20for%20a%20professional%20team%20to%20help%20me%20build%20and%20grow%20my%20business%20online.%20I%27m%20interested%20in%20your%20web%2Fapp%20development%20and%20AI%20solutions.%20Can%20we%20discuss%20my%20project%20details%20and%20get%20a%20quote%3F" 
-    target="_blank" 
-    class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold text-lg transition duration-300 flex items-center space-x-2">
-   <span>🚀 Let’s Build Your Next Big Win</span>
- </a>
- 
-
-  </div>
-</div>
-
-
-<!-- Contact Section -->
-<section id="ContactUs" class="bg-gray-900 text-white py-16 px-4">
-  <div class="text-center flex justify-center items-center flex-col">
-  <h2 class="text-4xl md:text-5xl font-bold mb-4">Start Your Project</h2>
-  <p class="text-gray-400 mb-5">Your ideas, our expertise — crafting websites, apps, and AI solutions that truly stand out.</p>
-  <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 "></div>
-</div>
-
-
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-10">
-    <!-- contact info section  -->
-    <div class="w-full 2  p-5 h-full ">
-        <h1 class="text-4xl"> Get In Touch  </h1>
-        <div class="w-32 h-1 bg-[#3b82f6]"> </div>
-
-
-        <div class="my-10">
-          <div class="flex flex-row gap-1 items-center">
-            <img src="./images/logo.png" alt=" techfami logo" class="w-20 h-20"  />
-            <h1 class="text-2xl"> TechFami</h1>
-          </div>
-          <p>
-            At TechFami, we specialize in cutting-edge web and app design and development tailored to bring your ideas to life. 
-            Our expertise extends to AI-powered solutions that help businesses innovate and automate smarter workflows. 
-            We are passionate about delivering quality, creativity, and technology combined with dedication to fuel your growth. 
-            Let’s work together to build impactful digital experiences that inspire and motivate success.
-          </p>
-          
+      <article class="plan plan--dark night" data-r>
+        <span class="badge">Most popular</span>
+        <h3>Pro Business</h3>
+        <p class="tag">Pick one build: a website or a mobile app</p>
+        <div class="price"><span class="inr" data-val="39999" data-sym="₹" data-loc="en-IN">₹39,999</span><span class="usd hidden" data-val="450" data-sym="$" data-loc="en-US">$450</span></div>
+        <div class="tabs" id="proTabs" role="tablist" aria-label="Choose your Pro Business build" data-i="0">
+          <span class="tab-ind" aria-hidden="true"></span>
+          <button type="button" role="tab" id="tab-web" aria-controls="pp-web" aria-selected="true">Website</button>
+          <button type="button" role="tab" id="tab-app" aria-controls="pp-app" aria-selected="false" tabindex="-1">Mobile app</button>
         </div>
-
-        <div class="flex flex-row gap-6 md:gap-5 my-10 mb-5 items-center"> 
-        
-            <i class="fa-solid fa-envelope text-2xl  text-[#3b82f6]"></i>
-              <a href="mailto:info@techfami.com">
-           <h1 class="text-xl">info@techfami.com <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
-          </a>
-           
-        </div>   
-
-
-        <div class="flex flex-row gap-6 md:gap-5 my-7 items-center ">
-          
-          <i class="fa-solid fa-phone-flip  text-2xl  text-[#3b82f6]"></i>
-          <div class="flex flex-col">
-          <a href="tel:+9199308709797" >
-          <h1 class="text-xl ">+91 99308709797 <i class="fa-solid fa-arrow-up-right-from-square"></i></h1></a>
+        <div class="tab-prog" aria-hidden="true"><i></i></div>
+        <div class="tabpanels">
+          <ul role="tabpanel" id="pp-web" aria-labelledby="tab-web" class="on">
+          <li><svg class="icon"><use href="#i-check"/></svg>5-page dynamic website + admin panel</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Server backend &amp; database integration</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>On-page SEO optimisation</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Social media integration</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Custom contact &amp; newsletter forms</li>
+        </ul>
+          <ul role="tabpanel" id="pp-app" aria-labelledby="tab-app">
+          <li><svg class="icon"><use href="#i-check"/></svg>Native Android &amp; iOS app</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>API &amp; database connectivity</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Push notifications &amp; advanced chatbot</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Google Play Store deployment</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>12 months free support &amp; maintenance</li>
+        </ul>
         </div>
-        </a>
-        </div>     
+        <a class="btn btn--light" href="https://wa.me/919930870979?text=Hello%20Techfami%2C%20I%20am%20interested%20in%20the%20Pro%20Business%20Plan.%20Please%20provide%20more%20details." target="_blank" rel="noopener noreferrer">Choose Pro <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </article>
 
+      <article class="plan" data-r>
+        <h3>Enterprise</h3>
+        <p class="tag">A complete multi-platform business ecosystem</p>
+        <div class="price"><span class="inr" data-val="49999" data-sym="₹" data-loc="en-IN" data-suf=" and up">₹49,999<small> and up</small></span><span class="usd hidden" data-val="700" data-sym="$" data-loc="en-US" data-suf=" and up">$700<small> and up</small></span></div>
+        <ul><li><svg class="icon"><use href="#i-check"/></svg>Android &amp; iOS app for customers</li><li><svg class="icon"><use href="#i-check"/></svg>Android &amp; iOS app for sellers &amp; delivery staff</li><li><svg class="icon"><use href="#i-check"/></svg>Responsive business website</li><li><svg class="icon"><use href="#i-check"/></svg>Full-featured, scalable admin dashboard</li></ul>
+        <details class="more"><summary>See everything included</summary><ul><li><svg class="icon"><use href="#i-check"/></svg>Multi-user access control</li><li><svg class="icon"><use href="#i-check"/></svg>Secure payments &amp; order management</li><li><svg class="icon"><use href="#i-check"/></svg>Real-time chat &amp; AI bot integration</li><li><svg class="icon"><use href="#i-check"/></svg>Ongoing maintenance &amp; upgrades</li></ul></details>
+        <a class="btn btn--ghost" href="https://wa.me/919930870979?text=Hello%20Techfami%2C%20I%20am%20interested%20in%20the%20Enterprise%20Plan.%20Please%20provide%20more%20details." target="_blank" rel="noopener noreferrer">Talk to us <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+
+    <div class="planhelp" data-r>
+      <p><b>Not sure which plan fits?</b> Tell us your idea. We’ll create a free demo first, then recommend a plan with a clear quote. You pay nothing until you approve.</p>
+      <a class="btn btn--primary" href="#contact">Get my free demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Why Techfami ═══ -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div data-r style="max-width:46rem">
+      <h2 class="display">Why businesses <span class="dim">choose Techfami.</span></h2>
+    </div>
+    <div class="why">
+      <div data-r><h3>Elite expertise, future-ready</h3><p>Modern engineering and AI know-how, applied to problems your business actually has.</p></div>
+      <div data-r><h3>100% tailored to you</h3><p>No templates forced onto your idea. We shape the product around your workflow and customers.</p></div>
+      <div data-r><h3>A partner, not just a vendor</h3><p>We stay on after launch with support, maintenance and upgrades as you grow.</p></div>
+      <div data-r><h3>Results that pay off</h3><p>Fast sites, clear funnels and automation that saves your team real hours every week.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Reviews ═══ -->
+<section class="section section--tint" id="reviews">
+  <div class="wrap reviews-grid">
+    <div data-r>
+      <h2 class="display">What clients say about <span class="dim">working with us.</span></h2>
+      <p class="lede" style="margin-top:1.4rem">Hover the cards to pause and read.</p>
+    </div>
+    <div class="deck" id="deck" aria-live="off">
+      <figure class="rcard"><div><div class="stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div><blockquote>“Our new website is fast, modern, and user-friendly. Perfect!”</blockquote></div><figcaption class="who-r"><span class="avatar">VK</span><span><b>Vishal K.</b><span>Web project</span></span></figcaption></figure>
+      <figure class="rcard"><div><div class="stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div><blockquote>“The AI solution they built saved us hours of manual work.”</blockquote></div><figcaption class="who-r"><span class="avatar">SM</span><span><b>Sneha M.</b><span>AI solutions</span></span></figcaption></figure>
+      <figure class="rcard"><div><div class="stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div><blockquote>“The mobile app exceeded our expectations and runs flawlessly.”</blockquote></div><figcaption class="who-r"><span class="avatar">RS</span><span><b>Rahul S.</b><span>App project</span></span></figcaption></figure>
+      <figure class="rcard"><div><div class="stars" aria-label="5 out of 5 stars"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div><blockquote>“The website redesign boosted our sales and engagement.”</blockquote></div><figcaption class="who-r"><span class="avatar">AP</span><span><b>Ananya P.</b><span>Web project</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Contact ═══ -->
+<!-- ═══ FAQ ═══ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div data-r>
+      <h2 class="display">Got questions? <span class="dim">Just tap one.</span></h2>
+      <p class="lede" style="margin-top:1.2rem">Pick a question and we answer it right here, like a chat. If yours is not on the list, message us and we will reply.</p>
+      <a class="btn btn--ghost" style="margin-top:1.6rem" href="https://wa.me/919930870979?text=Hello%20Techfami%2C%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer">Ask on WhatsApp <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="faq-right" data-r>
+      <div class="faq-list" id="faqList">
+      <details class="qa" open><summary>Do I really not pay anything first?</summary><p>Correct. You tell us your idea, our team understands it and creates a demo for you to see. The demo is free. We only continue after you confirm.</p></details>
+      <details class="qa"><summary>What if I do not like the demo?</summary><p>Then nothing happens. You owe us nothing for the demo and there is no bill.</p></details>
+      <details class="qa"><summary>What can you build?</summary><p>Websites, mobile apps for Android and iOS, AI chatbots and generative AI features, custom AI development, UI/UX design and SaaS products. We also maintain software you already have and add new features to existing websites, web apps and mobile apps. And we build and run our own product, Techfami ERP.</p></details>
+      <details class="qa"><summary>How much does it cost?</summary><p>The Starter website plan starts at ₹19,999 (about $250). Pro Business is ₹39,999 ($450) for a dynamic website or a mobile app, and Enterprise starts at ₹49,999 ($700). You always get a clear quote before we build.</p></details>
+      <details class="qa"><summary>How long does a project take?</summary><p>A Starter one-page website is delivered in 15 days. Larger projects depend on what you need, and we give you the timeline together with your quote.</p></details>
+      <details class="qa"><summary>Do you support the project after launch?</summary><p>Yes. The Starter plan and the Pro Business app option include 12 months of free support, and Enterprise includes ongoing maintenance and upgrades.</p></details>
+      <details class="qa"><summary>What is Techfami ERP?</summary><p>A cloud ERP for garment, textile, manufacturing and trading businesses, covering GST billing, challans, stock, production and payments. You can try it at erp.techfami.com, and read more on our <a href="products.html" style="text-decoration:underline">products page</a>.</p></details>
+      <details class="qa"><summary>How do I get started?</summary><p>Type your idea in the box at the top of this page, or message us on WhatsApp at +91 9930870979. We will reply, usually within one working day.</p></details>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ContactUs">
+  <div class="wrap contact-grid" id="contact">
+    <div data-r>
+      <h2 class="display">Tell us your idea, <span class="dim">see your demo first.</span></h2>
+      <p class="lede" style="margin-top:1.4rem">Tell us your idea. Our team will understand it and create a free demo for you to see. You pay nothing until you confirm. We usually reply within one working day.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:info@techfami.com"><span class="ci"><svg class="icon"><use href="#i-mail"/></svg></span><span class="t">info@techfami.com</span></a></li>
+        <li><a href="tel:+919930870979"><span class="ci"><svg class="icon"><use href="#i-tel"/></svg></span><span class="t">+91 9930870979</span></a></li>
+        <li><a href="https://wa.me/919930870979" target="_blank" rel="noopener noreferrer"><span class="ci"><svg class="icon"><use href="#i-chat"/></svg></span><span class="t">Chat on WhatsApp</span></a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://instagram.com/techfami" target="_blank" rel="noopener noreferrer" aria-label="Techfami on Instagram"><svg class="icon"><use href="#i-insta"/></svg></a>
+        <a href="https://linkedin.com/company/tech-fami" target="_blank" rel="noopener noreferrer" aria-label="Techfami on LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+        <a href="https://twitter.com/tech_fami" target="_blank" rel="noopener noreferrer" aria-label="Techfami on X"><svg class="icon"><use href="#i-x-social"/></svg></a>
+      </div>
+    </div>
+
+    <div class="form-card" data-r>
+      <form id="contactForm" novalidate>
+        <div><label for="f-name">Full name</label><input maxlength="120" id="f-name" type="text" name="name" required placeholder="John Doe" autocomplete="name" /></div>
+        <div><label for="f-email">Email address</label><input maxlength="160" id="f-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" /></div>
+        <div><label for="f-phone">Phone number</label><input maxlength="20" id="f-phone" type="tel" name="phone" required placeholder="+91 9876543210" autocomplete="tel" /></div>
+        <div><label for="f-company">Company name</label><input maxlength="160" id="f-company" type="text" name="companyname" required placeholder="Your company" autocomplete="organization" /></div>
+        <div><label for="f-loc">Your location</label><input maxlength="160" id="f-loc" type="text" name="location" required placeholder="Mumbai, India" /></div>
         <div>
-          <h1 class="text-2xl"> Social Media </h1>
-          <div class="w-28 h-1 bg-[#3b82f6]"> </div>
-          <div class="flex flex-row gap-3 my-5 lg:gap-10">
-            <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
-              <a href="https://instagram.com/techfami" target="_blank" rel="noopener noreferrer">
-             <i class="fa-brands fa-instagram text-4xl" ></i>
-            </a>
-            </div>
-          
-            <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
-              <a href="https://linkedin.com/company/tech-fami" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-linkedin text-4xl"></i>
-            </a>
-             </div>
-
-             <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
-              <a href="https://twitter.com/tech_fami" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-twitter text-4xl hover:text-blue-500"></i>
-            </a>
-             </div>
-          
-             <div class=" flex  w-14 h-14 rounded-full bg-gray-800 items-center justify-center">
-              <i class="fa-brands fa-facebook text-4xl"></i>
-             </div>
-         
-        </div>
-
-  
-
-        </div>
-
-      
-
-    </div>
-    
-    <!-- Right Side: Contact Form -->
-    <div class="relative">
-      <!-- Contact Form -->
-      <form id="contactForm" class="space-y-6 bg-[#0B1220]/90 backdrop-blur-xl
-      border border-white/10 shadow-2xl p-6 sm:p-8 rounded-xl " >
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-sm font-bold text-gray-300 mb-1">Full Name</label>
-            <input type="text" name="name" required placeholder="John Doe"
-              class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white " />
-          </div>
-          <div>
-            <label class="block text-sm font-bold text-gray-300 mb-1">Email Address</label>
-            <input type="email" name="email" required placeholder="you@example.com"
-            class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white " />
-          </div>
-          <div>
-            <label class="block text-sm font-bold text-gray-300 mb-1">Phone Number</label>
-            <input type="tel" name="phone" required placeholder="+91 9876543210"
-            class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white " />
-          </div>
-
-          <div>
-            <label class="block text-sm font-bold text-gray-300 mb-1">Company Name </label>
-            <input type="text" name="companyname" required placeholder="TechFami pvt ltd "
-            class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white " />
-          </div>
-          <div>
-            <label class="block text-sm font-bold text-gray-300 mb-1">Your Location</label>
-            <input type="text" name="location" required placeholder="Mumbai, India"
-            class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white " />
-          </div>
-        </div>
-    
-        <div>
-          <label class="block text-sm font-bold text-gray-300 mb-1">I'm looking for</label>
-          <select name="service" required
-          class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white ">
+          <label for="f-service">I’m looking for</label>
+          <select id="f-service" name="service" required>
             <option value="">Select a service</option>
             <option value="Website Development">Website Development</option>
             <option value="Mobile App Development">Mobile App Development</option>
-            <option value="Both Web & App">Both Web & App</option>
+            <option value="Both Web & App">Both Web &amp; App</option>
             <option value="AI Development">AI Development</option>
             <option value="Generative AI">Generative AI</option>
-            <option value="chatbot AI Chatbots">AI Chatbots</option>
+            <option value="AI Chatbots">AI Chatbots</option>
           </select>
         </div>
-    
-        <div>
-          <label class="block text-sm font-bold text-gray-300 mb-1">Your Message</label>
-          <textarea name="message" rows="5" required placeholder="Tell us about your idea or project..."
-          class="w-full p-3 rounded-lg bg-[#121a2a] border border-white/10 focus:outline-none focus:border-indigo-500 text-white " ></textarea>
-        </div>
-    
-        <div>
-          <button type="submit"
-            class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">
-            Send Message
-          </button>
-        </div>
+        <div class="full"><label for="f-msg">Your message</label><textarea maxlength="3000" id="f-msg" name="message" rows="5" required placeholder="Tell us about your idea or project..."></textarea></div>
+        <div class="full"><button type="submit">Get my free demo</button><p class="form-note">No payment needed. The demo is free.</p></div>
       </form>
-    
-      <!-- Right-Side Popup -->
-      <div id="popupMessage"
-  class="hidden fixed top-20 text-sm right-0 transform translate-x-full bg-green-300 text-white px-6 py-3 rounded-lg shadow-lg font-medium transition-all duration-500 ease-in-out z-50">
-  ✅ Your message has been sent! We'll be in touch shortly.
-</div>
-    </div>
-  </div>
-
-</section>
-
-
- <!--  pricing section   -->
- <section id="pricing" class="bg-gray-900 py-20 px-4">
-  <div class="max-w-7xl mx-auto text-center">
-    <div class="flex flex-col justify-center items-center mb-12 ">
-    <h2 class="md:text-5xl text-3xl font-extrabold text-white mb-4">
-      Global Plans for Every Business
-    </h2>
-    <p class="text-gray-400  max-w-2xl mx-auto">
-      Flexible digital solutions tailored for individuals, startups, and enterprises across the globe. Choose the plan that fits your business needs.
-    </p>
-    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
-  </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Starter Plan -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
-        <div class="mb-6">
-          <h3 class="text-2xl font-bold  text-white mb-4">Starter Plan</h3>
-         
-          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
-          
-          <ul class="text-left text-gray-300 space-y-2">
-            <li>✓ One-Page Modern Website</li>
-            <li>✓ WhatsApp Chat Integration</li>
-            <li>✓ Responsive Mobile Design</li>
-            <li>✓ SEO Ready Structure</li>
-            <li>✓ Delivery in 15 Days</li>
-            <li>✓ Email Contact Form</li>
-            <li>✓ Basic Analytics Setup</li>
-            <li>✓ Google Maps Showcase</li>
-            <li>✓ 12 Months Free Custom Domain</li>
-            <li>✓ 12 Months Free Support</li>
-          </ul>
-        </div>
-        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
-
-        <div class="text-center">
-          <div class="StarterPlan text-4xl font-bold mb-4">
-            
-            <span class="inr text-green-600">₹19,999</span>
-            
-            <span class="usd text-green-600 hidden">$250</span>
-          </div>
-          <a href="https://wa.me/919930870979?text=Hello Techfami,%20I%20am%20interested%20in%20the%20Starter%20Plan%20🚀%20Please%20provide%20more%20details."
-          target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp to discuss your project and get a quote">
-          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition"
-          data-service="Website Development & Design">
-         
-            Choose Plan →
-          </button>
-        </a>
-        </div>
-      </div>
-
-      <!-- Pro Business Plan -->
-      <div class="bg-green-900 border-2 border-green-500 rounded-2xl shadow-xl p-8 flex flex-col justify-between scale-105">
-        <div class="mb-6">
-          <h3 class="text-2xl font-bold text-center text-green-100 ">Pro Business Plan</h3>
-          <h5 class="text-center text-sm">✨Choose any ONE service✨</h5>
-          <div class="w-full h-[1px] bg-gray-500 my-5"></div>
-
-          <ul class="text-left text-green-100 space-y-2 my-3 mb-2">
-            <li class="text-center font-bold text-xl ">🌐 Option A:👇🏻</li>
-            <li class="text-sm  sm:text-md">✓ 5 Pages Dynamic Website + Admin Panel</li>
-            <li class="text-sm  sm:md">✓ Server Backend & Database Integration</li>
-            <li class="text-sm  sm:md">✓ On-Page SEO Optimization</li>
-            <li class="text-sm  sm:md">✓ Social Media Integration</li>
-            <li class="text-sm  sm:md">✓ Custom Contact & Newsletter Forms</li>
-            <li class="text-center font-bold text-xl">📱 Option B:👇🏻</li>
-            <li class="text-sm  sm:md">✓ Native Android & iOS App Development</li>
-            <li class="text-sm  sm:md">✓ API & Database Connectivity</li>
-            <li class="text-sm  sm:md">✓ Push Notifications & Advanced Chatbot</li>
-            <li class="text-sm  sm:md">✓ Google Play Store Deployment</li>
-            <li class="text-sm  sm:md">✓ 12 Months Free Support & Maintenance</li>
-          </ul>
-        </div>
-        <div class="w-full h-[1px] bg-gray-500 my-3"></div>
-        <div class="text-center">
-          
-          <div class="BusinessPlan text-4xl font-bold mb-4">
-            <span class="inr text-white">₹39,999</span>
-            <span class="usd text-white hidden">$450</span>
-          </div>
-          <a href="https://wa.me/919930870979?text=Hello Techfami, %20I%20am%20interested%20in%20the%20Pro%20Business%20Plan%20🚀%20%20Please%20provide%20more%20details."
-           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
-          <button class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">
-            Choose Plan
-          </button>
-          </a>
-        </div>
-      </div>
-
-      <!-- Enterprise Plan -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-105 transition">
-        <div class="mb-6">
-          <h3 class="text-2xl font-bold text-center text-white mb-4">✨ Enterprise Plan</h3>
-          <div class="w-full h-[1px] bg-gray-700 my-6"></div>
-
-          <ul class="text-left text-gray-300 space-y-2">
-            <li>✓ Complete Multi-Platform Business Ecosystem</li>
-            <li>✓ Android & iOS App for Customers</li>
-            <li>✓ Android & iOS App for Sellers & Delivery Staff</li>
-            <li>✓ Responsive Business Website </li>
-            <li>✓ Full-featured Admin Dashboard</li>
-            <li>✓ Real-time Chat & Bot Integration</li>
-            <li>✓ Scalable Admin Dashboard</li>
-            <li>✓ Multi-user Access Control</li>
-            <li>✓ Secure Payments & Order Management</li>
-            <li>✓ Real-time Chat & AI Bot Integration</li>
-            <li>✓ Ongoing Maintenance & Upgrades</li>
-          </ul>
-        </div>
-        <div class="w-full h-[1px] bg-gray-700 my-3"></div>
-
-        <div class="text-center">
-          <div class="EnterprisePlan text-4xl font-bold mb-4">
-            <span class="inr text-green-600">₹49,999 +</span>
-            <span class="usd text-green-600 hidden">$700+</span>
-          </div>
-          <a href="https://wa.me/919930870979?text=Hello Techfami ,%20I%20am%20interested%20in%20the%20Enterprise%20Plan.%20🚀%20Please%20provide%20more%20details."
-           target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
-          <button class="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
-            Contact Us
-          </button>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  
-
-
-</section>
-
-<!-- reviews section -->
-<section class="relative  py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 text-center ">
-    <div class="flex flex-col justify-center items-center mb-16">
-    <h2 class="text-4xl md:text-5xl font-bold text-white ">
-      What Our Clients Say
-    </h2>
-    <div class="w-1/2 h-1 bg-[#3b82f6] rounded-lg md:w-36 my-5"></div>
-
-  </div>
-    <!-- Top Row -->
-    <div class="swiper topSwiper mb-12">
-      <div class="swiper-wrapper">
-        <!-- Review Card -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Our new website is fast, modern, and <br/>user-friendly. Perfect!”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=sana" class="w-8 h-8 rounded-full" alt="Priya K"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Vishal K.</h4>
-              <p class="text-xs text-gray-400">Web Project</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The design and development process was <br/>smooth and professional.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=amit" class="w-8 h-8 rounded-full" alt="Amit R"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Amit R.</h4>
-              <p class="text-xs text-gray-400">Design & Dev</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The AI solution they built saved us hours of <br/>manual work.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=sarfarz" class="w-8 h-8 rounded-full" alt="Sneha M"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Sneha M.</h4>
-              <p class="text-xs text-gray-400">AI Solutions</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“AI integration made our workflows faster <br/>and more accurate.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=vikram" class="w-8 h-8 rounded-full" alt="Vikram J"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Vikram J.</h4>
-              <p class="text-xs text-gray-400">AI Solutions</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The e-commerce platform is sleek, fast, <br/>and user-friendly.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=aditya" class="w-8 h-8 rounded-full" alt="Aditya M"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Aditya M.</h4>
-              <p class="text-xs text-gray-400">Web Project</p>
-            </div>
-          </div>
-        </div>
-        <!-- Duplicate 4+ -->
-        <!-- Add more swiper-slide cards here -->
-      </div>
-    </div>
-
-    <!-- Bottom Row -->
-    <div class="swiper bottomSwiper">
-      <div class="swiper-wrapper">
-
-         
-        <!-- AI Review -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“AI automation cut our processing time <br/>in half.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=isha" class="w-8 h-8 rounded-full" alt="Isha D"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Isha D.</h4>
-              <p class="text-xs text-gray-400">AI Solutions</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Web Review -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The website redesign boosted our <br/>sales and engagement.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=ananya" class="w-8 h-8 rounded-full" alt="Ananya P"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Ananya P.</h4>
-              <p class="text-xs text-gray-400">Web Project</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- App Review -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“Our business app runs smoothly and <br/>scales perfectly.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=kavya" class="w-8 h-8 rounded-full" alt="Kavya R"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Kavya R.</h4>
-              <p class="text-xs text-gray-400">App Project</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- E-Commerce Web Review -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The AI solution saved us hours and improved<br/> accuracy.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=siddharth" class="w-8 h-8 rounded-full" alt="Siddharth M"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Siddharth M.</h4>
-              <p class="text-xs text-gray-400">AI Solutions</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Automation AI Review -->
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The app integration improved workflow <br/>efficiency greatly.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?img=16" class="w-8 h-8 rounded-full" alt="Neha R"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Neha R.</h4>
-              <p class="text-xs text-gray-400">App Project</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide w-64 bg-gray-800 rounded-xl p-5 text-left text-white shadow-md">
-          <div class="mb-2 text-yellow-400">★★★★★</div>
-          <p class="text-sm mb-4">“The mobile app exceeded our expectations and <br/>runs flawlessly.”</p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/100?u=rahul" class="w-8 h-8 rounded-full" alt="Rahul S"/>
-            <div class="text-left">
-              <h4 class="text-sm font-semibold">Rahul S.</h4>
-              <p class="text-xs text-gray-400">App Project</p>
-            </div>
-          </div>
-        </div>
-       
-      </div>
     </div>
   </div>
 </section>
 
+</main>
 
-  <!-- Footer -->
-<footer class="bg-gray-800 text-gray-300 py-10 mt-20">
-  <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
-    
-    <!-- Logo & About -->
-    <div>
-      <!-- <h2 class="text-2xl font-bold text-white mb-3">YourBrand</h2> -->
-      <img src="./images/logo.png" alt="techfami.com  Logo" class="w-16 h-16 mb-3">
-      <h1 class="text-xl text-white font-bold">Bringing Your Ideas to Life — Web & App Made Simple.</h1>
-      <p class="my-5 text-md">We build sleek, responsive websites and apps for individuals and businesses — fast, modern, and built to grow with you.</p>
-
-
-    </div>
-
-
-    <!-- Links -->
-    <div>
-      <h3 class="text-white text-2xl font-bold  mb-3">Quick Links</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white transition">Home</a></li>
-        <li><a href="#" class="hover:text-white transition">About</a></li>
-        <li><a href="#services" class="hover:text-white transition">Services</a></li>
-        <li><a href="#" class="hover:text-white transition">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div>
-      <h3 class="text-white text-2xl font-bold  mb-3">Services</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#services" class="hover:text-blue-500 transition">Web Design & Development</a></li>
-        <li><a href="#services" class="hover:text-white transition">Mobile Apps Development</a></li>
-        <li><a href="#services" class="hover:text-white transition">AI-powered solutions</a></li>
-        <li><a href="#services" class="hover:text-white transition ">Let’s Automate Now</a></li>
-      </ul>
-    </div>
-
-    <!-- Social -->
-    <div>
-      <h3 class="text-white text-2xl font-bold  mb-3">Follow Us</h3>
-      <div class="flex space-x-4">
-        
-        <a href="https://wa.me/+919930870979" target="_blank">
-          <img src="./images/whatsapp-cta-btn.webp" alt="WhatsApp techfami" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
-        </a>
-        <a href="https://instagram.com/techfami" target="_blank">
-          <img src="./images/instagram-2.webp" alt="Instagram techfami" class="w-36 h-13 cursor-pointer hover:opacity-80 transition">
-        </a>
+<!-- ═══ Footer (dark) ═══ -->
+<footer class="site-footer night">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><img src="./images/logo.png" alt="" width="38" height="38" /><span>Techfami</span></a>
+        <p class="foot-tag">Your ideas. Our tech.</p>
+        <p class="foot-promise">Free demo first. Pay only after you approve.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="website-development.html">Web design &amp; development</a></li>
+          <li><a href="mobile-app-development.html">Mobile app development</a></li>
+          <li><a href="ai-solutions.html">AI-powered solutions</a></li>
+          <li><a href="saas-development.html">SaaS product development</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="https://instagram.com/techfami" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://linkedin.com/company/tech-fami" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://twitter.com/tech_fami" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+        </ul>
       </div>
     </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Techfami. All rights reserved.</span>
+      <span>Websites · Mobile apps · AI-powered solutions</span>
+    </div>
   </div>
-
-  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-    &copy; 2025 TechFami. All rights reserved.
-  </div>
+  <div class="wordmark" aria-hidden="true">Techfami</div>
 </footer>
 
+<!-- WhatsApp floating button -->
+<div class="fab-stack">
+  <a class="fab fab--call" href="tel:+919930870979" aria-label="Call Techfami at +91 9930870979">
+    <span class="ping" aria-hidden="true"></span>
+    <svg class="fab-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+    <span class="fab-label">Call Techfami<small>+91 9930870979</small></span>
+  </a>
+  <a class="fab fab--wa" href="https://wa.me/919930870979?text=Hello%20Techfami!%20%F0%9F%91%8B%20I%20have%20an%20idea%20and%20I%27d%20like%20a%20free%20demo%20of%20it." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <span class="ping" aria-hidden="true"></span>
+    <svg class="fab-ico wa" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.002 3C9.374 3 4 8.373 4 15c0 2.385.687 4.61 1.88 6.5L4 29l7.75-1.844A12.93 12.93 0 0016.002 28C22.628 28 28 22.627 28 16S22.628 3 16.002 3zm0 23.5a11.44 11.44 0 01-5.82-1.585l-.417-.248-4.6 1.094 1.12-4.48-.27-.434A11.44 11.44 0 014.5 15c0-6.34 5.16-11.5 11.502-11.5S27.5 8.66 27.5 15 22.34 26.5 16.002 26.5zm6.34-8.585c-.347-.173-2.057-1.014-2.376-1.13-.32-.117-.552-.173-.785.174-.232.347-.9 1.13-1.103 1.362-.203.232-.406.26-.753.087-.347-.174-1.464-.54-2.788-1.72-1.03-.918-1.726-2.052-1.927-2.4-.203-.347-.022-.534.152-.707.156-.156.347-.406.52-.61.174-.203.232-.347.347-.578.116-.232.058-.434-.03-.607-.087-.174-.784-1.89-1.073-2.59-.283-.68-.57-.587-.784-.598-.203-.01-.434-.012-.666-.012-.232 0-.61.087-.928.434-.32.347-1.218 1.19-1.218 2.9s1.247 3.362 1.421 3.595c.173.232 2.453 3.745 5.944 5.252.83.358 1.48.572 1.985.732.834.265 1.594.228 2.194.138.67-.1 2.057-.84 2.348-1.653.29-.812.29-1.508.203-1.653-.087-.145-.319-.232-.667-.406z"/></svg>
+    <span class="fab-label">Chat on WhatsApp<small>+91 9930870979</small></span>
+  </a>
+</div>
 
-<!-- Modal enqury form  -->
-<div id="serviceModal" class="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center hidden">
-  <div class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 w-full max-w-lg rounded-2xl shadow-2xl p-8 relative border border-gray-700">
-    
-    <!-- Close Button -->
-    <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-white text-lg">✖</button>
-    
-    <!-- Modal Title -->
-    <h2 id="modalTitle" class="text-2xl text-indigo-400 font-bold mb-6">Plan Inquiry</h2>
-    
-    <!-- Form -->
-    <form id="inquiryForm" class="space-y-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" name="fullName" placeholder="Full Name" class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500" required>
-        <input type="email" name="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500" required>
+<!-- Consultation popup (wired by js/book_consultation.js) -->
+<div id="consultPopup" class="consult opacity-0 translate-x-16 transition-all duration-700 ease-out" role="dialog" aria-label="Book a free consultation">
+  <button id="closePopupBtn" class="x" aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+  <div id="textdata">
+    <h4>Book a free consultation</h4>
+    <p class="sub">Let’s discuss your website or mobile app idea in a quick call.</p>
+  </div>
+
+  <div id="actionButtons" class="acts">
+    <button id="callbackBtn" class="b1">Request a call back</button>
+  </div>
+
+  <form id="callbackForm" class="hidden" style="margin-top:1rem;display:grid;gap:.7rem">
+    <div style="display:flex;gap:.6rem">
+      <select id="countryCodeSelect" style="width:34%" aria-label="Country code">
+        <option value="" disabled>Code</option>
+        <option value="+91" selected>🇮🇳 +91</option>
+        <option value="+1">🇺🇸 +1</option>
+        <option value="+44">🇬🇧 +44</option>
+        <option value="+971">🇦🇪 +971</option>
+        <option value="other">Other</option>
+      </select>
+      <input id="manualCountryCode" type="text" placeholder="+Code" class="hidden" style="width:34%" />
+      <input maxlength="24" type="tel" name="phone" required placeholder="Phone number" autocomplete="tel-national" style="flex:1" />
+    </div>
+    <input maxlength="24" type="tel" name="whatsapp" required placeholder="WhatsApp number" />
+    <input maxlength="160" type="email" name="email" required placeholder="Email address" autocomplete="email" />
+    <button id="submitCallback" type="submit">Submit request</button>
+  </form>
+
+  <div id="successMsg" class="hidden" style="margin-top:1rem">
+    <p style="color:#86efac;font-weight:600;margin:0;font-size:.95rem">Request sent successfully</p>
+    <p class="sub" style="margin:.2rem 0 0">Our team will contact you shortly.</p>
+  </div>
+</div>
+
+<!-- Service inquiry modal (wired by js/inquiry.js) -->
+<div id="serviceModal" class="modal-bg hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <button id="closeModal" aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <h2 id="modalTitle">Plan inquiry</h2>
+    <form id="inquiryForm">
+      <div class="grid2">
+        <input maxlength="120" type="text" name="fullName" placeholder="Full Name" />
+        <input maxlength="160" type="email" name="email" placeholder="Email Address" />
       </div>
-
-      <div class="grid grid-cols-3 gap-4">
-        <!-- Country Code -->
-        <select name="countryCode" class="p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500">
+      <div class="grid3">
+        <select name="countryCode" aria-label="Country code">
           <option value="+1">🇺🇸 +1</option>
           <option value="+44">🇬🇧 +44</option>
           <option value="+61">🇦🇺 +61</option>
@@ -2468,31 +657,20 @@ Whether you're a small shop, service provider, startup, or personal brand — we
           <option value="+33">🇫🇷 +33</option>
           <option value="+86">🇨🇳 +86</option>
         </select>
-
-        <!-- Phone Number -->
-        <input type="tel" name="phone" placeholder="Phone Number" class="col-span-2 p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500" required>
+        <input maxlength="24" type="tel" name="phone" placeholder="Phone Number" />
       </div>
-
-      <textarea name="message" placeholder="Tell us about your idea or project..." class="w-full p-3 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:border-indigo-500 h-28" required></textarea>
-      
-      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg shadow-lg transition duration-300">
-        <span class="btn-text">Send Inquiry</span>
-        <span class="loader hidden border-2 border-white border-t-transparent rounded-full w-5 h-5 animate-spin"></span>
-      </button>
+      <textarea maxlength="3000" name="message" rows="4" placeholder="Tell us about your idea or project..."></textarea>
+      <button type="submit"><span class="btn-text">Send Inquiry</span><span class="loader hidden border-2 border-white border-t-transparent rounded-full w-5 h-5 animate-spin"></span></button>
     </form>
   </div>
 </div>
 
-</main>
+<div id="popupMessage" class="hidden fixed top-20 text-sm right-0 transform translate-x-full bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg font-medium transition-all duration-500 ease-in-out z-[100]"></div>
 
-    <!-- circle dot  -->
-  <div id="cursor-shape" class="fixed top-0 left-0 w-10 h-10 bg-indigo-500 rounded-full pointer-events-none z-50 mix-blend-difference">  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="./js/index.js"> </script>
-  <script src="./js/submitForm.js" type="module"></script>
-  <script src="./js/inquiry.js" type="module"> </script>
-  <script src="./js/book_consultation.js" type="module"> </script>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha384-d+vyQ0dYcymoP8ndq2hW7FGC50nqGdXUEgoOUGxbbkAJwZqL7h+jKN0GGgn9hFDS" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="./js/index.js?v=20261118m" defer></script>
+<script src="./js/submitForm.js?v=20261118m" type="module"></script>
+<script src="./js/inquiry.js?v=20261118m" type="module"></script>
+<script src="./js/book_consultation.js?v=20261118m" type="module"></script>
 </body>
 </html>
