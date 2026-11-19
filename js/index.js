@@ -84,16 +84,22 @@
       fit();
       document.fonts?.ready.then(fit);
       addEventListener("resize", fit);
+      let busy = false;
       const next = () => {
-        if (document.hidden) return;
-        const from = fws[cur], to = fws[(cur + 1) % fws.length];
+        if (document.hidden || busy) return;
+        busy = true;
+        const from = fws[cur];
         cur = (cur + 1) % fws.length;
-        gsap.timeline()
-          .to(from, { rotationX: -85, yPercent: -35, opacity: 0, duration: .45, ease: "power2.in", transformOrigin: "50% 100%" })
-          .fromTo(to, { rotationX: 85, yPercent: 35, opacity: 0, transformOrigin: "50% 0%" }, { rotationX: 0, yPercent: 0, opacity: 1, duration: .6, ease: "back.out(1.5)" }, "-=.15")
-          .to(flip, { width: widthOf(cur), duration: .5, ease: "power3.inOut" }, "<");
+        const to = fws[cur];
+        gsap.killTweensOf([...fws, flip]);
+        gsap.set(fws.filter(f => f !== from), { opacity: 0 });
+        gsap.timeline({ onComplete: () => { gsap.set(fws.filter(f => f !== to), { opacity: 0, yPercent: 0 }); busy = false; } })
+          .to(from, { yPercent: -70, opacity: 0, duration: .35, ease: "power2.in" })
+          .set(to, { yPercent: 70, opacity: 0 })
+          .to(flip, { width: widthOf(cur), duration: .4, ease: "power2.inOut" })
+          .to(to, { yPercent: 0, opacity: 1, duration: .45, ease: "power3.out" }, "<.1");
       };
-      setTimeout(() => setInterval(next, 2400), 2800);
+      setTimeout(() => setInterval(next, 3000), 2800);
     }
 
     /* word rotator */
@@ -339,14 +345,17 @@
     const measure = () => {
       const r = road.getBoundingClientRect();
       target = Math.min(1, Math.max(0, (innerHeight * 0.68 - r.top) / (r.height * 0.88)));
+      kick();
     };
+    let raf = 0;
     const tick = () => {
-      if (Math.abs(target - cur) > 0.0004) { cur += (target - cur) * 0.14; apply(); }
-      requestAnimationFrame(tick);
+      if (Math.abs(target - cur) > 0.0004) { cur += (target - cur) * 0.14; apply(); raf = requestAnimationFrame(tick); }
+      else { cur = target; apply(); raf = 0; }
     };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
     build();
     if (reduce) { cur = target = 1; apply(); }
-    else { addEventListener("scroll", measure, { passive: true }); measure(); requestAnimationFrame(tick); }
+    else { addEventListener("scroll", measure, { passive: true }); measure(); }
     let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { build(); if (!reduce) measure(); }, 120); });
     if (document.fonts?.ready) document.fonts.ready.then(() => { build(); if (!reduce) measure(); });
   }
@@ -356,20 +365,20 @@
   const sbento = $("#sbento");
   if (sbento && !reduce) {
     const tiles = $$(".stile", sbento);
-    let ticking = false;
+    let ticking = false, near = true;
     const upd = () => {
       ticking = false;
       const on = innerHeight >= 561;
+      const rects = tiles.map(t => t.getBoundingClientRect()); /* read first, write after */
       tiles.forEach((t, i) => {
-        const n = tiles[i + 1];
-        if (!on || !n) { t.style.transform = ""; t.style.filter = ""; return; }
-        const tr = t.getBoundingClientRect(), nr = n.getBoundingClientRect();
-        const p = Math.min(1, Math.max(0, (tr.bottom - nr.top) / tr.height));
-        t.style.transform = "scale(" + (1 - 0.055 * p).toFixed(4) + ")";
-        t.style.filter = "brightness(" + (1 - 0.22 * p).toFixed(3) + ")";
+        if (!on || !rects[i + 1]) { t.style.transform = ""; t.style.setProperty("--dim", "0"); return; }
+        const p = Math.min(1, Math.max(0, (rects[i].bottom - rects[i + 1].top) / rects[i].height));
+        t.style.transform = "scale(" + (1 - 0.055 * p).toFixed(3) + ")";
+        t.style.setProperty("--dim", (0.22 * p).toFixed(3));
       });
     };
-    const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(upd); } };
+    const req = () => { if (near && !ticking) { ticking = true; requestAnimationFrame(upd); } };
+    new IntersectionObserver(([e]) => { near = e.isIntersecting; if (near) req(); }, { rootMargin: "200px 0px" }).observe(sbento);
     addEventListener("scroll", req, { passive: true });
     addEventListener("resize", req);
     upd();
