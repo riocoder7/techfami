@@ -5,7 +5,7 @@
 (function () {
   "use strict";
   var GTM_ID = "GTM-T9LFDSF4";   // Google Tag Manager container (put GA4 and Clarity tags inside it, or use the two IDs below)
-  var GA_ID = "";        // e.g. "G-ABCDE12345"
+  var GA_ID = "G-KDSJDHK6H7";        // Google Analytics 4 Measurement ID
   var CLARITY_ID = "zhs9b6flcm";   // Microsoft Clarity project
 
   if (!/^GTM-[A-Z0-9]{4,12}$/.test(GTM_ID)) GTM_ID = "";
