@@ -148,7 +148,7 @@
       $$(".price [data-val]").forEach(el => {
         const val = el.dataset.val, sym = el.dataset.sym, loc = el.dataset.loc || "en-US", suf = el.dataset.suf || "";
         const text = Number(val).toLocaleString(loc);
-        el.setAttribute("aria-label", sym + text + suf);
+        el.setAttribute("role", "img"); el.setAttribute("aria-label", sym + text + suf);
         el.innerHTML = '<span class="sym" aria-hidden="true">' + sym + '</span>' +
           [...text].map(ch => /\d/.test(ch)
             ? '<span class="od" aria-hidden="true" data-d="' + ch + '"><span class="od-col">' + [0,1,2,3,4,5,6,7,8,9].map(n => '<span>' + n + '</span>').join('') + '</span></span>'

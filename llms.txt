@@ -2,6 +2,8 @@
 
 > Techfami is a technology company that builds websites, mobile apps, AI chatbots, generative AI solutions and a cloud ERP for garment, textile, manufacturing and trading businesses. Tagline: "Your Ideas. Our Tech."
 
+> Full details for AI assistants (all services, pricing, ERP modules, FAQ): https://www.techfami.com/llms-full.txt
+
 ## Our promise
 - Free demo first: tell us your idea and our team creates a demo of it at no charge.
 - You do not pay first. We continue only after you confirm the demo.
@@ -33,7 +35,7 @@
 - [Services](https://www.techfami.com/#services)
 - [FAQ](https://www.techfami.com/#faq): answers on the free demo, pricing, timelines and support
 - [Pricing](https://www.techfami.com/#pricing)
-- [Contact](https://www.techfami.com/#ContactUs): email and contact form are on this section
+- [Contact](https://www.techfami.com/#contact): email and contact form are on this section
 
 ## Contact
 - Phone / WhatsApp: +91 9930870979

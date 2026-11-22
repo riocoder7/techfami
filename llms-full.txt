@@ -1,0 +1,144 @@
+# Techfami: full guide for AI assistants and agents
+
+> Techfami (also written TechFami) is a technology company from India that designs and builds websites, mobile apps (Android and iOS), AI chatbots, generative AI solutions, custom AI development, UI/UX design and SaaS products. It also maintains software that clients already have and adds new features to it, and it builds and runs its own cloud ERP, Techfami ERP. Tagline: "Your Ideas. Our Tech." Website: https://www.techfami.com/
+
+This file is a plain-text summary of the public website. Prices and details are starting points; each project gets a clear quote before work begins. Last updated: 2026-11-23.
+
+## Quick facts
+- Company: Techfami
+- What it does: web development, mobile app development, AI solutions, SaaS development, UI/UX design, software maintenance and new features, Techfami ERP
+- Serves: individuals, startups, growing businesses and enterprises, in India and worldwide
+- Languages: English, Hindi
+- Currency shown: INR for visitors in India, USD elsewhere
+- Email: info@techfami.com
+- Phone and WhatsApp: +91 9930870979
+- Social: https://www.instagram.com/techfami, https://www.linkedin.com/company/tech-fami, https://twitter.com/tech_fami
+- Own product: Techfami ERP, https://erp.techfami.com
+
+## The promise: free demo first
+- You tell us your idea. Our team understands it and creates a demo of it at no charge.
+- You do not pay first. We continue only after you confirm the demo.
+- If you do not like the demo, nothing happens and you owe nothing for it.
+
+## How it works
+1. Tell us: share your idea and goals in your own words. A message or a short call is enough.
+2. See your demo: our team creates a demo to show you, at no charge.
+3. You confirm: if you like it we move ahead with a clear quote. If you are not sure, there is no pressure.
+4. Build, launch and support: we build it, launch it and support it after it goes live.
+
+## Services
+
+### Website development and design
+Page: https://www.techfami.com/website-development.html
+- One-page modern websites and dynamic multi-page websites with an admin panel
+- Landing pages and business websites for services, portfolios, bookings and stores
+- eCommerce store integration
+- Responsive layouts for mobile, tablet and desktop
+- SEO-ready structure and on-page SEO optimisation
+- WhatsApp chat integration, email contact forms and newsletter forms
+- Basic analytics setup and Google Maps showcase
+- Performance optimisation, hosting and launch support
+
+### Mobile app development and design
+Page: https://www.techfami.com/mobile-app-development.html
+- Native Android and iOS apps
+- Cross-platform apps with React Native
+- API integration and Firebase backend
+- Push notifications and analytics
+- App UI/UX design that you approve before development
+- Google Play Store and App Store deployment and support
+- Multi-vendor ecommerce apps: a customer app, apps for sellers and delivery staff, a responsive website and a full admin dashboard, with secure payments and order management
+
+### AI solutions
+Page: https://www.techfami.com/ai-solutions.html
+- AI chatbots for websites, mobile apps, WhatsApp and Messenger
+- Customer support bots, virtual assistants and AI-powered helpdesk and FAQ
+- Lead generation through conversational interfaces
+- Generative AI: text, images and code, content and copy generation, AI-based design and media tools, voice and language AI
+- Custom GPT and LLM integrations tailored to a business
+- Custom AI development: machine learning solutions, natural language processing (NLP), recommendation systems and personalisation, predictive analytics and forecasting
+- Business workflow and process automation with AI
+
+### SaaS product development
+Page: https://www.techfami.com/saas-development.html
+- From idea to a first version people can use
+- Multi-user access, admin dashboard, secure payments
+- Multi-vendor marketplaces that connect customers, sellers and delivery partners
+
+### UI/UX design
+- Wireframes and user flows, high-fidelity prototypes
+- Mobile and web app UI design, interactive design systems
+- Brand-centred visuals, user testing and iteration
+- Approval before any code is written
+
+### Maintenance and new features
+Page: https://www.techfami.com/software-maintenance.html
+- Bug fixes and updates for software, websites, web apps and mobile apps that a client already has, including software built by another company
+- New features for existing websites, web apps and Android and iOS apps, without a rebuild
+- Speed and reliability improvements and support from a team that knows the software
+- Pricing is quoted after reviewing what the client has
+
+### Consultancy
+- Full-stack web and app development, scalable cloud architecture and DevOps strategy
+
+## Pricing (starting prices)
+Prices are shown in INR for India and USD elsewhere. Clear quote before any build.
+
+| Plan | Price | What it is |
+|---|---|---|
+| Starter | INR 19,999 (about USD 250) | One-page modern website for individuals and small businesses |
+| Pro Business | INR 39,999 (USD 450) | Choose one: a 5-page dynamic website with admin panel, or a native Android and iOS app |
+| Enterprise | from INR 49,999 (from USD 700) | A complete multi-platform business ecosystem |
+
+- Starter includes: one-page modern website, WhatsApp chat integration, responsive mobile design, SEO-ready structure, delivery in 15 days, email contact form, basic analytics setup, Google Maps showcase, 12 months free custom domain, 12 months free support.
+- Pro Business, website option: 5-page dynamic website with admin panel, server backend and database integration, on-page SEO optimisation, social media integration, custom contact and newsletter forms.
+- Pro Business, app option: native Android and iOS app, API and database connectivity, push notifications and advanced chatbot, Google Play Store deployment, 12 months free support and maintenance.
+- Enterprise includes: Android and iOS apps for customers, Android and iOS apps for sellers and delivery staff, a responsive business website, a full-featured scalable admin dashboard, multi-user access control, secure payments and order management, real-time chat and AI bot integration, ongoing maintenance and upgrades.
+
+## Product: Techfami ERP
+Page: https://www.techfami.com/products.html — Live product: https://erp.techfami.com (free sign-up at https://erp.techfami.com/signup)
+
+A cloud-based ERP for garment, textile, manufacturing, trading and other growing businesses. It runs in a web browser on desktop, tablet or mobile, with no installation. Built in India.
+
+Who it is for: manufacturers; garment and textile businesses; traders and distributors.
+
+Modules and features:
+- GST billing and invoices: GST-compliant invoices and bills, custom product fields (for example MRP, colour, size, fabric type), PDF export, financial-year-wise records
+- Delivery challans and LR: challans with LR number, transport details and delivery location, status tracking (pending, delivered, returned), PDF documents and Excel reports
+- Inventory and stock: raw materials and finished products, stock movements, opening balances, categories, colours, search and filters, Excel stock reports
+- Sales and purchase management: customers, suppliers, transactions and records
+- Production management and process tracking: production orders, multiple processes such as knitting, dyeing, cutting, stitching and finishing, process-wise quantities and progress
+- Sampling management: sample tracking from creation to completion
+- Employee and production payments: payments based on completed quantities or processes
+- Advance payments and outstanding tracking: payment modes, status (pending, fully adjusted, extra), advance receipt PDFs, outstanding balances
+- Product management with dynamic fields and columns instead of a rigid data structure
+- Analytics dashboard and reports: sales trends, product performance, date-range filtering, Excel export
+- Multi-user role-based access: control who can view, create, edit or delete each module
+
+## Frequently asked questions
+**Do I really not pay anything first?** Correct. You tell us your idea, our team creates a demo for you to see. The demo is free. We only continue after you confirm.
+
+**What if I do not like the demo?** Then nothing happens. You owe nothing for the demo and there is no bill.
+
+**What can you build?** Websites, mobile apps for Android and iOS, AI chatbots and generative AI features, custom AI development, UI/UX design and SaaS products. We also maintain software you already have and add features to it. And we build and run our own product, Techfami ERP.
+
+**How much does it cost?** Starter website plan from INR 19,999 (about USD 250). Pro Business INR 39,999 (USD 450) for a dynamic website or a mobile app. Enterprise from INR 49,999 (USD 700). A clear quote is given before we build.
+
+**How long does a project take?** A Starter one-page website is delivered in 15 days. Larger projects depend on the scope; the timeline comes with the quote.
+
+**Do you support the project after launch?** Yes. The Starter plan and the Pro Business app option include 12 months of free support. Enterprise includes ongoing maintenance and upgrades.
+
+**What is Techfami ERP?** A cloud ERP for garment, textile, manufacturing and trading businesses covering GST billing, challans, stock, production and payments.
+
+**How do I get started?** Type your idea in the box on the home page, or message on WhatsApp at +91 9930870979. Replies usually come within one working day.
+
+## Site map
+- Home: https://www.techfami.com/
+- Website development: https://www.techfami.com/website-development.html
+- Mobile app development: https://www.techfami.com/mobile-app-development.html
+- AI solutions: https://www.techfami.com/ai-solutions.html
+- SaaS development: https://www.techfami.com/saas-development.html
+- Maintenance and new features: https://www.techfami.com/software-maintenance.html
+- Products (Techfami ERP): https://www.techfami.com/products.html
+- About: https://www.techfami.com/about.html
+- Short version of this file: https://www.techfami.com/llms.txt

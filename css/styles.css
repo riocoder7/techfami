@@ -283,7 +283,7 @@ html.js .pfill { transform: scaleX(0); }
 /* ── footer (dark) ── */
 .site-footer { background: var(--night); color: var(--on-night-2); padding: 5rem 0 2.2rem; }
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; }
-.site-footer h4, .site-footer h3 { color: #fff; font-family: var(--sans); font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 1.1rem; }
+.site-footer h4, .site-footer h3, .site-footer h2 { color: #fff; font-family: var(--sans); font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 1.1rem; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
 .site-footer a { text-decoration: none; transition: color .2s; }
 .site-footer a:hover { color: #fff; }
@@ -1127,3 +1127,8 @@ a, button, input, select, textarea, summary, [role=button] { touch-action: manip
 @supports (content-visibility: auto) {
   .site-footer { content-visibility: auto; contain-intrinsic-size: auto 600px; }
 }
+
+/* ── contrast fixes (WCAG AA) on the blue and dark service tiles ── */
+.s-web .chips li { background: rgba(6, 22, 70, .38); color: #fff; }
+.s-web p, .s-saas p, .s-gen p { color: rgba(255, 255, 255, .92); }
+.s-saas .chips li, .s-gen .chips li { background: rgba(255, 255, 255, .16); color: #fff; }
