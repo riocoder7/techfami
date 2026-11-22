@@ -1132,3 +1132,11 @@ a, button, input, select, textarea, summary, [role=button] { touch-action: manip
 .s-web .chips li { background: rgba(6, 22, 70, .38); color: #fff; }
 .s-web p, .s-saas p, .s-gen p { color: rgba(255, 255, 255, .92); }
 .s-saas .chips li, .s-gen .chips li { background: rgba(255, 255, 255, .16); color: #fff; }
+
+/* ── analytics consent bar ── */
+.cc { position: fixed; left: 1rem; bottom: 1rem; z-index: 95; max-width: 26rem; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; padding: 1rem 1.1rem; background: var(--night); color: #fff; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+.cc p { grid-column: 1 / -1; margin: 0; font-size: .88rem; line-height: 1.5; color: rgba(255,255,255,.9); }
+.cc button { font: 600 .9rem var(--sans); padding: .65rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,.35); background: transparent; color: #fff; cursor: pointer; }
+.cc .cc-yes { background: var(--lime); border-color: var(--lime); color: #0a1228; }
+.cc button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (max-width: 560px) { .cc { left: .6rem; right: .6rem; max-width: none; bottom: .6rem; } }
